@@ -529,15 +529,17 @@
         >
           <div class="col-lg-6 relative px-0 px-lg-2 px-xl-2 pl-lg-0 pl-xl-0">
             <div class="t-card upgrade-trello-card">
-              <div class="border-card">
+              <div class="border-card pb-5">
                 <div class="draft-sticker">Draft</div>
                 <div>
-                  <h1 class="n-props text-black fs-13 text-center">
-                    Upgrade to Tellero Pro to get your <br />
-                    Voucher on Your Cloud
+                  <div class="d-flex justify-content-center py-3">
+                    <img src="./assets/img/plusIcon.png" height="80px" />
+                  </div>
+                  <h1 class="n-props clr-blue fs-13 text-center">
+                    Click or drag & drop the File here to upload.
                   </h1>
                   <button class="clr-blue fs-16 font-medium n-props mx-auto">
-                    Upgrade to tellero pro Now
+                    Select file form Attachments
                   </button>
                 </div>
               </div>
@@ -557,7 +559,7 @@
               <div class="t-card step-1 p-4">
                 <!-- links -->
                 <div
-                  onclick="window.location.href=`kob-1.html`"
+                  onclick="window.location.href='kob-1.html'"
                   class="
                     cursor-pointer
                     slectbox
@@ -565,7 +567,7 @@
                     d-flex
                     align-items-center
                     d-flex
-                    inActive-kob
+                    active-kob
                     px-4
                     py-3
                   "
@@ -589,6 +591,7 @@
                         w-full
                         h-full
                       "
+                      checked
                     />
                     <div class="check-icon hidden box bg-blue"></div>
                   </div>
@@ -615,7 +618,7 @@
                     d-flex
                     align-items-center
                     d-flex
-                    active-kob
+                    inActive-kob
                     px-4
                     py-3
                   "
@@ -632,7 +635,6 @@
                   >
                     <input
                       type="checkbox"
-                      checked
                       class="
                         checkbox
                         position-absolute
@@ -777,49 +779,6 @@
                     <div class="w-full position-relative">
                       <select
                         id="beholdning"
-                        required
-                        class="
-                          t-select
-                          w-full
-                          invoice-input
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                          appearance-none
-                        "
-                        name="inventory"
-                      >
-                        <option></option>
-                        <option value="Netto">Netto</option>
-                        <option value="Payoneer">Payoneer</option>
-                        <option value="Paypal">Paypal</option>
-                      </select>
-                      <div
-                        class="
-                          icon
-                          position-absolute
-                          right-0
-                          top-0
-                          cursor-pointer
-                          pointer-events-none
-                          h-100
-                          d-flex
-                          align-items-center
-                          px-3
-                        "
-                      >
-                        <img src="./assets/img/Path.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input_width kob-select-button">
-                    <label class="fs-13 font-medium n-props clr-blue px-2"
-                      >Valute</label
-                    >
-                    <div class="w-full position-relative">
-                      <select
-                        id="valute"
                         required
                         class="
                           t-select
