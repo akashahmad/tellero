@@ -1,0 +1,51 @@
+.clr-light {
+	color: #999;
+}
+.pt-20 {
+	padding-top: 12px;
+}
+.financial-8 .sub-nav {
+	padding: 14px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.financial-8 table tr {
+	padding: 18.3px 1.5px 0.3px 0;
+}
+.financial-8 table th {
+	color: #a7afb7;
+	font-size: 16px;
+	font-weight: 500;
+	border-top: 0;
+}
+.financial-8 table td {
+	padding: 20px;
+	vertical-align: middle;
+	border-top: 0;
+	border-bottom: 1px solid #dee2e6;
+}
+.financial-8 table td .dropwdown {
+	position: absolute;
+	padding: 14px 10px 14px 10px;
+	min-width: 131px;
+	margin-top: 20px;
+}
+.financial-8 .divider {
+	height: 1px;
+    width: 100%;
+    background-color:#d3e3f7;
+}
+.financial-8 .pagination {
+	padding-top: 46px;
+	padding-bottom: 21px;
+}
+.financial-8 .pagination .pagination-button {
+    padding: 5px 17px;
+}
+.financial-8 .pagination .active-page{
+	box-shadow: 0 6px 15px 0 rgba(90, 113, 208, 0.11);
+	background-color: #f6f7fb;
+	padding: 10px 20px;
+	border-radius: 50%;
+
+}
