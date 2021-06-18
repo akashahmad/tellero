@@ -1,9 +1,50 @@
 .clr-light {
 	color: #999;
 }
+.clr-red{
+	color: #de302b;
+}
 .pt-20 {
 	padding-top: 12px;
 }
+.gray-row{
+	border-left:3px solid #b8babf;
+	background-color: #fafafa
+}
+.green-row{
+	border-left:3px solid #26aa80;;
+	background-color: #eef8f5
+}
+.orange-row{
+	border-left:3px solid #e36f1d;
+	background-color: #fdf3ed
+}
+.header-badge{
+	font-size: 7px;
+	padding: 5px 10px;
+	border-radius: 12px;
+}
+.blue-badge{
+	color: #0077ff;
+	background-color: #cee3fe;
+}
+.orange-badge{
+	color: #e36f1d;
+	background-color: #f8e3d3;
+}
+.red-badge{
+	color: #de302b;
+	background-color: #f8d7d6;
+}
+.green-badge{
+	color: #26aa80;
+	background-color: #d5eee5;
+}
+.gray-badge{
+	color: #0e3780;
+	background-color: #d0d8e6;
+}
+/* ---- */
 .financial-8 .sub-nav {
 	padding: 14px;
 	margin-top: 30px;
@@ -48,4 +89,22 @@
 	padding: 10px 20px;
 	border-radius: 50%;
 
+}
+.dropdown-recipt{
+    right: 15px!important;
+    top: -18px!important;
+	margin-top: unset!important;
+}
+.filter-dropdown{
+	padding: 14px 7.5px;
+    z-index: 10;
+    top: 25px;
+    left: -22px;
+	min-width: 150px;
+}
+.filter-dropdown .single-item{
+	padding: 11px 16px;
+}
+.filter-dropdown .border-item{
+border-bottom: 0.7px solid #d3e3f7;
 }

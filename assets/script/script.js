@@ -330,4 +330,8 @@ $(document).ready(function () {
 	$(".toggle-finance-8").click(function (e) {
 		$(this).children(".dropwdown").toggleClass("d-none");
 	});
+	$(".filter-dropdown-opener").click(function (e) {
+		$(this).children(".filter-dropdown").toggleClass("d-none");
+	});
+	
 });
