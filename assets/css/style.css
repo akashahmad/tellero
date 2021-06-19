@@ -3691,5 +3691,50 @@ canvas {
 	padding: 11px 16px;
 }
 .filter-dropdown .border-item{
-border-bottom: 0.7px solid #d3e3f7;
+  border-bottom: 0.7px solid #d3e3f7;
+}
+
+/* financial-year7 */
+.financial-year7-thumbIcon-container{
+  background: #e3ebfc;
+  border-radius: 20px;
+  margin: 0px 0px -33px 0px;
+}
+.financial-year7-thumbIcon-container .icons_main_div{
+  border-radius: 20px;
+}
+.financial-year7-thumbIcon-container .thumb1{
+  background: #e3ebfc;
+}
+.financial-year7-thumbIcon-container .thumb2{
+  background: #fceaea;
+}
+.lists_below_thumbs_sections .hr_financial7_line{
+  background: #dbecff;
+  margin: 10px 0px;
+}
+.lists_below_thumbs_sections .list-tag{
+  background: #dbecff;
+  border-radius: 15px;
+}
+.lists_below_thumbs_sections .more_detail_content p{
+  color: #001737;
+}
+.lists_below_thumbs_sections #financial-more-content{
+  display: none;
+}
+
+
+/* buttons id kob , financial 13, 14 */
+#Gem_button{
+  background: white;
+  color: #0077ff;
+}
+#Godkend_button{
+  background: #0077ff;
+  color: white;
+}
+/* cross icon inside select option none */
+.select2-selection--clearable .select2-selection__clear span{
+  display: none;
 }
