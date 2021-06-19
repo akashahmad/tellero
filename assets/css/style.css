@@ -1280,6 +1280,9 @@ table.dataTable tbody td {
 .min-h-200 {
   min-height: 200px;
 }
+.min-h-150 {
+  min-height: 150px;
+}
 .invoice-edit-card2 textarea {
   color: #11193c;
   resize: none;
@@ -3376,7 +3379,7 @@ canvas {
 .kobs .upgrade-trello-card button {
   background-color: #ffffff;
   box-shadow: 0 3px 20px 0 rgb(33 108 252 / 16%);
-  padding: 13.4px 48.6px 13.4px 48.5px !important;
+  padding: 13.4px 48.6px 13.4px 48.5px;
   margin-top: 32px;
   border-radius: 20px;
   border: 1px dashed rgba(33, 108, 252, 0.16);
@@ -3461,7 +3464,7 @@ canvas {
   border-radius: 10px;
 }
 
-/* financial-year */
+/* financial-year  6 */
 .financial-year-vertical-line-container .financial-year-vertical-line {
   padding: 18px 2px;
   background: #b5b2b2;
@@ -3494,4 +3497,199 @@ canvas {
 .financial-table-container .list-body {
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
+}
+/* financial year 3 */
+.financial-year3-table-container .financial-year3-table-body .gray-text {
+  color: #a7afb7;
+}
+
+.financial-year3-table-container .financial-year3-table-body .darkBlue-text {
+  color: #001737;
+}
+
+.financial-3-header-container .value-container {
+  padding: 3px 13px 3px 13px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px 0 rgba(90, 113, 208, 0.11);
+  background-color: #cee3fe;
+  margin: 0px 5px;
+  font-weight: 500;
+}
+
+/* financial-year 13 */
+.financial-year-13-draft-container .border_draft {
+  border: 1px dashed rgba(33, 108, 252, 0.16);
+  border-radius: 20px;
+}
+.financial-year13-section3-container .common-section-border {
+  padding: 10.2px 50.3px 6.5px 7.1px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px 0 rgba(90, 113, 208, 0.11);
+  border: solid 1px rgba(0, 119, 255, 0.61);
+  background-color: rgba(0, 119, 255, 0.06);
+}
+
+.financial-year13-section3-container .common-section-border p {
+  color: #374c64;
+}
+
+.financial-year13-section3-container .section2-paragraph-container p {
+  color: #374c64;
+}
+
+.financial-year13-section3-container
+  .common-section-border
+  .button-container
+  button {
+  border: 1px solid #0077ff;
+  background: #0077ff;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+}
+.draft-financial-button-container .button {
+  border: 1px solid #0077ff !important;
+  background: #0077ff !important;
+  font-size: 12px;
+  padding: 5px 5px 5px 5px !important;
+  margin-top: 0px !important;
+  border-radius: 4px !important;
+  color: white;
+}
+.financial-year13-section3-container
+  .common-section-border
+  .button-container
+  button:hover,
+.draft-financial-button-container button:hover {
+  border: 1px solid #086fe4;
+  background: #086fe4;
+}
+.financial-year13-section3-container
+  .financial-year-13-draft-container
+  .text_gray {
+  color: #11193c;
+}
+.upgrade-trello-card .financial_t_card_container {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
+  background-color: #ffffff;
+}
+.upgrade-trello-card .table_footer_container .financial-year-13-table-footer {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 20px 0 rgb(33 108 252 / 16%);
+  border-top: 1px dotted #c1ffff;
+}
+.clr-light {
+	color: #999;
+}
+.clr-red{
+	color: #de302b;
+}
+.pt-20 {
+	padding-top: 12px;
+}
+.gray-row{
+	border-left:3px solid #b8babf;
+	background-color: #fafafa
+}
+.green-row{
+	border-left:3px solid #26aa80;;
+	background-color: #eef8f5
+}
+.orange-row{
+	border-left:3px solid #e36f1d;
+	background-color: #fdf3ed
+}
+.header-badge{
+	font-size: 7px;
+	padding: 5px 10px;
+	border-radius: 12px;
+}
+.blue-badge{
+	color: #0077ff;
+	background-color: #cee3fe;
+}
+.orange-badge{
+	color: #e36f1d;
+	background-color: #f8e3d3;
+}
+.red-badge{
+	color: #de302b;
+	background-color: #f8d7d6;
+}
+.green-badge{
+	color: #26aa80;
+	background-color: #d5eee5;
+}
+.gray-badge{
+	color: #0e3780;
+	background-color: #d0d8e6;
+}
+/* ---- */
+.financial-8 .sub-nav {
+	padding: 14px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.financial-8 table tr {
+	padding: 18.3px 1.5px 0.3px 0;
+}
+.financial-8 table th {
+	color: #a7afb7;
+	font-size: 16px;
+	font-weight: 500;
+	border-top: 0;
+}
+.financial-8 table td {
+	padding: 20px;
+	vertical-align: middle;
+	border-top: 0;
+	border-bottom: 1px solid #dee2e6;
+}
+.financial-8 table td .dropwdown {
+	position: absolute;
+	padding: 14px 10px 14px 10px;
+	min-width: 131px;
+	margin-top: 20px;
+}
+.financial-8 .divider {
+	height: 1px;
+    width: 100%;
+    background-color:#d3e3f7;
+}
+.financial-8 .pagination {
+	padding-top: 46px;
+	padding-bottom: 21px;
+}
+.financial-8 .pagination .pagination-button {
+    padding: 5px 17px;
+}
+.financial-8 .pagination .active-page{
+	box-shadow: 0 6px 15px 0 rgba(90, 113, 208, 0.11);
+	background-color: #f6f7fb;
+	padding: 10px 20px;
+	border-radius: 50%;
+
+}
+.dropdown-recipt{
+    right: 15px!important;
+    top: -18px!important;
+	margin-top: unset!important;
+}
+.filter-dropdown{
+	padding: 14px 7.5px;
+    z-index: 10;
+    top: 25px;
+    left: -22px;
+	min-width: 150px;
+}
+.filter-dropdown .single-item{
+	padding: 11px 16px;
+}
+.filter-dropdown .border-item{
+border-bottom: 0.7px solid #d3e3f7;
 }

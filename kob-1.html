@@ -1,1041 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Tellero | KOB</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="./assets/script/formtoObject.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-  </head>
+	<head>
+		<title>Tellero | KOB</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+		<script src="./assets/script/formtoObject.min.js"></script>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
 
-  <body class="invoice-edit-page">
-    <div class="d-flex flex-nowrap wrapper w-full">
-      <!-- page loader -->
-      <div id="loader"></div>
-      <!-- sidebar starts-->
-      <div
-        id="sidebarOverlay"
-        class="position-fixed inset-0 sidebar-overlay"
-      ></div>
-      <div
-        id="sidebar"
-        class="slideOut sidebar w-sidebar top-0 bottom-0 d-flex flex-column"
-      >
-        <div
-          class="
-            sidebar-handle
-            position-absolute
-            right-0
-            d-flex
-            align-items-center
-            justify-content-center
-          "
-        >
-          <svg
-            onclick="sidebarHandler(false)"
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-x"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#2c3e50"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <line x1="18" y1="6" x2="6" y2="18" />
-            <line x1="6" y1="6" x2="18" y2="18" />
-          </svg>
-        </div>
-        <div>
-          <div
-            class="
-              t-card
-              logo-container
-              d-flex
-              align-items-center
-              cursor-pointer
-            "
-          >
-            <a href="./index.html">
-              <img src="./assets/img/Group 2355.png" alt="" srcset="" />
-            </a>
-          </div>
-          <div class="position-relative">
-            <div
-              id="userTrigger"
-              onclick="userHandler()"
-              class="
-                tlb-groups
-                t-card
-                d-flex
-                align-items-center
-                justify-content-between
-                cursor-pointer
-                position-relative
-              "
-            >
-              <div class="d-flex align-items-center">
-                <img
-                  class="mr-12"
-                  src="./assets/img/hand-shake.png"
-                  alt=""
-                  srcset=""
-                />
-                <div>
-                  <h3 class="fs-18 font-semibold mb-0">TLB Groups</h3>
-                  <p class="fs-10 font-light mb-0">Chadi Maher</p>
-                </div>
-              </div>
-              <img
-                class="cursor-pointer"
-                src="./assets/img/Path 8.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-            <div
-              id="userSettings"
-              class="
-                max-h-0
-                popup-7
-                user-settings
-                position-absolute
-                right-0
-                top-0
-              "
-            >
-              <div class="d-flex align-items-center">
-                <img class="mr-10" src="./assets/img/Path 21.png" alt="" />
-                <p class="mb-0 fs-20 clr-dark-grey n-props">Add a business</p>
-              </div>
-              <hr />
-              <p class="fs-17 n-props clr-dark-grey">Settings</p>
-              <p class="fs-17 n-props clr-dark-grey mt-32">Get Help</p>
-              <p class="fs-17 n-props clr-dark-grey mt-32">Log out</p>
-            </div>
-          </div>
-        </div>
-        <ul class="sidemenu">
-          <li class="mb-32">
-            <a href="./index.html">
-              <div class="d-flex align-items-center">
-                <img
-                  class="inactive mr-23"
-                  src="./assets/img/dashboard-inactive.png"
-                  alt=""
-                />
-                <img
-                  class="active mr-23"
-                  src="./assets/img/dashboard-active.png"
-                  alt=""
-                />
-                <span class="fs-18 n-props mb-0 clr-grey">Dashboard</span>
-              </div>
-            </a>
-          </li>
-          <li class="mb-32">
-            <div
-              id="sales"
-              class="d-flex align-items-center justify-content-between"
-            >
-              <div class="d-flex align-items-center">
-                <img
-                  class="inactive mr-23"
-                  src="./assets/img/discount-inactive.png"
-                  alt=""
-                />
-                <img
-                  class="active mr-23"
-                  src="./assets/img/discount-active.png"
-                  alt=""
-                />
-                <span class="fs-18 n-props mb-0 clr-grey">Sales</span>
-              </div>
-              <img
-                class="cursor-pointer"
-                src="./assets/img/Path 8.png"
-                alt=""
-                srcset=""
-              />
-            </div>
-            <ul id="salesList" class="sublist max-h-0">
-              <li class="mb-12">
-                <a class="fs-14 clr-grey" href="#">Current</a>
-              </li>
-              <li class="mb-12">
-                <a class="fs-14 clr-grey" href="#">All</a>
-              </li>
-              <li class="mb-12">
-                <a class="fs-14 clr-grey" href="#">Offer</a>
-              </li>
-              <li class="mb-12">
-                <a class="fs-14 clr-grey" href="#">Products</a>
-              </li>
-              <li class="mb-12">
-                <a class="fs-14 clr-grey" href="#">Subscription</a>
-              </li>
-            </ul>
-          </li>
-          <li class="mb-32">
-            <div class="d-flex align-items-center">
-              <img
-                class="inactive mr-23"
-                src="./assets/img/invoice-inactive.png"
-                alt=""
-              />
-              <img
-                class="active mr-23"
-                src="./assets/img/invoice-active.png"
-                alt=""
-              />
-              <span class="fs-18 n-props mb-0 clr-grey">Bogforing</span>
-            </div>
-          </li>
-          <li class="mb-32">
-            <div class="d-flex align-items-center">
-              <img
-                class="inactive mr-23"
-                src="./assets/img/notebook-inactive.png"
-                alt=""
-              />
-              <img
-                class="active mr-23"
-                src="./assets/img/notebook-active.png"
-                alt=""
-              />
-              <span class="fs-18 n-props mb-0 clr-grey">Contacts</span>
-            </div>
-          </li>
-          <li class="mb-32">
-            <a href="./bank.html">
-              <div class="d-flex align-items-center justify-content-between">
-                <div class="d-flex align-items-center">
-                  <img
-                    class="inactive mr-23"
-                    src="./assets/img/bank-inactive.png"
-                    alt=""
-                  />
-                  <img
-                    class="active mr-23"
-                    src="./assets/img/bank-active.png"
-                    alt=""
-                  />
-                  <span class="fs-18 n-props mb-0 clr-grey">Bank</span>
-                </div>
-                <img
-                  class="cursor-pointer"
-                  src="./assets/img/Path 8.png"
-                  alt=""
-                  srcset=""
-                />
-              </div>
-            </a>
-          </li>
-          <li class="mb-32 clr-grey">
-            <div class="d-flex align-items-center">
-              <img
-                class="inactive mr-23"
-                src="./assets/img/agency-inactive.png"
-                alt=""
-              />
-              <img
-                class="active mr-23"
-                src="./assets/img/agency-active.png"
-                alt=""
-              />
-              <span class="fs-18 n-props mb-0 clr-grey">Danish Agency</span>
-            </div>
-          </li>
-          <li class="mb-32 clr-grey">
-            <div class="d-flex align-items-center">
-              <img
-                class="inactive mr-23"
-                src="./assets/img/skill-inactive.png"
-                alt=""
-              />
-              <img
-                class="active mr-23"
-                src="./assets/img/skill-active.png"
-                alt=""
-              />
-              <span class="fs-18 n-props mb-0 clr-grey">Integrations</span>
-            </div>
-          </li>
-        </ul>
-        <div class="user bottom-0">
-          <div class="profile-img d-flex align-items-center">
-            <img
-              class="mr-12"
-              src="./assets/img/Image 1.jpg"
-              alt=""
-              srcset=""
-            />
-            <h5 class="n-props clr-grey fs-18 mb-0">Chadi Maher</h5>
-          </div>
-          <div class="mt-18 d-flex align-items-center justify-content-between">
-            <h4 class="mr-20 fs-18 clr-grey">
-              Your Plan:<span class="clr-blue"> Basic</span>
-            </h4>
-            <button class="upgrade-btn">Upgrade</button>
-          </div>
-          <div
-            class="
-              mt-30
-              t-card
-              signoff
-              d-flex
-              align-items-center
-              cursor-pointer
-            "
-          >
-            <img
-              class="mr-18"
-              src="./assets/img/signoff.png"
-              alt=""
-              srcset=""
-            />
-            <h5 class="fs-18 mb-0 font-medium">Logout</h5>
-          </div>
-        </div>
-      </div>
-      <div class="w-sidebar flex-shrink-0 desktop"></div>
-      <!-- sidebar ends -->
-      <div class="w-full">
-        <!-- header starts -->
-        <div
-          class="
-            mobile
-            tab
-            top-header
-            t-card
-            d-flex
-            justify-content-between
-            align-items-center
-          "
-        >
-          <img src="./assets/img/Group 2355.png" alt="" />
-          <svg
-            onclick="sidebarHandler(true)"
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-menu-2 cursor-pointer"
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#2c3e50"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <line x1="4" y1="6" x2="20" y2="6" />
-            <line x1="4" y1="12" x2="20" y2="12" />
-            <line x1="4" y1="18" x2="20" y2="18" />
-          </svg>
-        </div>
-        <div class="no-overflow">
-          <header
-            class="
-              header
-              t-card
-              d-flex
-              justify-content-between
-              align-items-center
-              position-relative
-            "
-          >
-            <div class="d-flex align-items-center">
-              <img class="mr-18" src="./assets/img/profit-report.png" alt="" />
-              <h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">
-                KOB
-              </h1>
-            </div>
-            <svg
-              onClick="headerHandler(true)"
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-chevron-left mobile"
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="#2c3e50"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <polyline points="15 6 9 12 15 18" />
-            </svg>
-            <div
-              id="headerContent"
-              class="icons-dd d-flex align-items-center slide-out"
-            >
-              <div
-                onclick="languagesHandler()"
-                id="languagesTrigger"
-                class="
-                  cursor-pointer
-                  d-flex
-                  align-items-center
-                  country-dropdown
-                  poition-relative
-                "
-              >
-                <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
-                <img
-                  class="cursor-pointer flex-shrink-0"
-                  src="./assets/img/Path 8.png"
-                  alt=""
-                  srcset=""
-                />
-              </div>
-              <div
-                id="languagesContent"
-                class="absolute languages top-0 max-h-0"
-              >
-                <div class="d-flex align-items-center">
-                  <img
-                    class="denmark-flag mr-10"
-                    src="./assets/img/denmark-flag.png"
-                    srcset=""
-                  />
-                  <p class="mb-0 fs-16">Danish</p>
-                </div>
-                <div class="d-flex align-items-center">
-                  <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
-                  <p class="mb-0 fs-16">English UK</p>
-                </div>
-              </div>
-              <svg
-                class="info"
-                xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-question-mark"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"
-                />
-                <line x1="12" y1="19" x2="12" y2="19.01" />
-              </svg>
-              <button
-                id="financeTrigger"
-                onclick="financeDropdown()"
-                class="
-                  position-relative
-                  finance-btn
-                  d-flex
-                  justify-content-between
-                  align-items-center
-                  fs-18
-                  n-props
-                  clr-dark-grey
-                "
-              >
-                <div class="d-flex align-items-center mr-50">
-                  <span>Finance-2021</span>
-                </div>
-                <img
-                  class="cursor-pointer flex-shrink-0"
-                  src="./assets/img/Path 8.png"
-                  alt=""
-                  srcset=""
-                />
-                <div
-                  id="finance"
-                  class="
-                    max-h-0
-                    popup-10
-                    finance-dropdown
-                    position-absolute
-                    top-0
-                    right-0
-                    text-left
-                  "
-                >
-                  <p class="fs-16 clr-dark-grey n-props mb-15">
-                    Finance Year 2021
-                  </p>
-                  <p class="fs-16 clr-dark-grey n-props mb-0">
-                    Create new Finance Year
-                  </p>
-                </div>
-              </button>
-              <img
-                onClick="headerHandler(false)"
-                class="close-icon mobile ml-6 mr-10 cursor-pointer"
-                src="./assets/img/Group 2255.png"
-                alt=""
-              />
-            </div>
-          </header>
-        </div>
-        <!-- header ends -->
-        <div class="col-lg-6 mt-32 kobs relative pl-lg-0">
-          <button
-            class="
-              notes-button
-              border-0
-              d-flex
-              align-items-center
-              fs-12
-              n-props
-              font-medium
-              clr-black
-              mr-10
-            "
-          >
-            <img class="mr-12" src="./assets/img/Group 38755.png" alt="" />
-            <span>Notes (0)</span>
-          </button>
-        </div>
-        <div
-          class="
-            content-container
-            mt-lg-32
-            kobs
-            d-flex
-            flex-column flex-lg-row flex-xl-row
-            no-overflow
-            kobs-container
-          "
-        >
-          <div class="col-lg-6 relative px-0 px-lg-2 px-xl-2 pl-lg-0 pl-xl-0">
-            <div class="t-card upgrade-trello-card">
-              <div class="border-card pb-5">
-                <div class="draft-sticker">Draft</div>
-                <div>
-                  <div class="d-flex justify-content-center py-3">
-                    <img src="./assets/img/plusIcon.png" height="80px" />
-                  </div>
-                  <h1 class="n-props clr-blue fs-13 text-center">
-                    Click or drag & drop the File here to upload.
-                  </h1>
-                  <button class="clr-blue fs-16 font-medium n-props mx-auto">
-                    Select file form Attachments
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="t-card download-card">
-              <!-- <p class="fs-12 font-medium">Download Tellero app then you can upload attachments</p> -->
-              <img src="./assets/img/im123.png" />
-            </div>
-          </div>
-          <div
-            class="col-lg-6 d-flex px-0 px-lg-2 px-xl-2 my-3 my-lg-0 my-xl-0"
-          >
-            <div class="px-lg-1 px-xl-1 d-none d-lg-block d-xl-block">
-              <img src="./assets//img/line11.png" />
-            </div>
-            <div class="t-card kob-steps-card w-full">
-              <div class="t-card step-1 p-4">
-                <!-- links -->
-                <div
-                  onclick="window.location.href='kob-1.html'"
-                  class="
-                    cursor-pointer
-                    slectbox
-                    mb-0
-                    d-flex
-                    align-items-center
-                    d-flex
-                    active-kob
-                    px-4
-                    py-3
-                  "
-                >
-                  <!-- checkbox -->
-                  <div
-                    class="
-                      custom-checkbox
-                      flex flex-shrink-0
-                      justify-content-center
-                      align-items-center
-                      relative
-                    "
-                  >
-                    <input
-                      type="checkbox"
-                      class="
-                        checkbox
-                        position-absolute
-                        cursor-pointer
-                        w-full
-                        h-full
-                      "
-                      checked
-                    />
-                    <div class="check-icon hidden box bg-blue"></div>
-                  </div>
-                  <!-- title and content -->
-                  <div class="px-3">
-                    <h1 class="n-props text-black fs-13 mb-0">
-                      Lorem Ipsum is simply dummy
-                    </h1>
-                    <p class="fs-10 n-props clr-dark-grey mb-0 py-2">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type
-                    </p>
-                  </div>
-                </div>
-                <div
-                  onclick="window.location.href=`kob.html`"
-                  class="
-                    cursor-pointer
-                    slectbox
-                    my-3
-                    d-flex
-                    align-items-center
-                    d-flex
-                    inActive-kob
-                    px-4
-                    py-3
-                  "
-                >
-                  <!-- checkbox -->
-                  <div
-                    class="
-                      custom-checkbox
-                      flex flex-shrink-0
-                      justify-content-center
-                      align-items-center
-                      relative
-                    "
-                  >
-                    <input
-                      type="checkbox"
-                      class="
-                        checkbox
-                        position-absolute
-                        cursor-pointer
-                        w-full
-                        h-full
-                      "
-                    />
-                    <div class="check-icon hidden box bg-blue"></div>
-                  </div>
-                  <!-- title and content -->
-                  <div class="px-3">
-                    <h1 class="n-props text-black fs-13 mb-0">
-                      Lorem Ipsum is simply dummy
-                    </h1>
-                    <p class="fs-10 n-props clr-dark-grey mb-0 py-2">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the 1500s, when an unknown
-                      printer took a galley of type and scrambled it to make a
-                      type
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="kob-input-component my-4">
-                <!-- 1st row -->
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-lg-row flex-xl-row
-                    align-items-center
-                    justify-content-lg-between justify-content-xl-between
-                    py-3
-                  "
-                >
-                  <div class="input_width">
-                    <label class="fs-13 font-medium n-props clr-blue px-2"
-                      >Billagsdato
-                    </label>
-                    <div
-                      class="
-                        px-0
-                        my-2 my-lg-0 my-xl-0
-                        position-relative
-                        calendar-trigger
-                      "
-                    >
-                      <input
-                        id="date_picker"
-                        type="date"
-                        class="
-                          appearance-none
-                          w-full
-                          invoice-input
-                          font-light
-                          fs-16
-                          n-props
-                          border-0
-                          mb-0
-                          clr-dark-grey
-                          py-3
-                        "
-                        value="12-02-2012"
-                      />
-                      <div
-                        class="
-                          icon
-                          position-absolute
-                          right-0
-                          top-0
-                          cursor-pointer
-                          pointer-events-none
-                          h-100
-                          d-flex
-                          align-items-center
-                          px-3
-                        "
-                      >
-                        <img src="./assets/img/calendar (1).png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="input_width kob-select-button">
-                    <label class="fs-13 font-medium n-props clr-blue px-2"
-                      >Bought from</label
-                    >
-                    <div class="w-full position-relative">
-                      <select
-                        id="bought-from"
-                        required
-                        class="
-                          t-select
-                          w-full
-                          invoice-input
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                          appearance-none
-                        "
-                        name="inventory"
-                      >
-                        <option></option>
-                        <option value="Netto">Netto</option>
-                        <option value="Payoneer">Payoneer</option>
-                        <option value="Paypal">Paypal</option>
-                      </select>
-                      <div
-                        class="
-                          icon
-                          position-absolute
-                          right-0
-                          top-0
-                          cursor-pointer
-                          pointer-events-none
-                          h-100
-                          d-flex
-                          align-items-center
-                          px-3
-                        "
-                      >
-                        <img src="./assets/img/Path.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- 2nd row -->
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-lg-row flex-xl-row
-                    align-items-center
-                    justify-content-lg-between justify-content-xl-between
-                    py-3
-                  "
-                >
-                  <div class="input_width kob-select-button">
-                    <label class="fs-13 font-medium n-props clr-blue px-2"
-                      >Beholdning*</label
-                    >
-                    <div class="w-full position-relative">
-                      <select
-                        id="beholdning"
-                        required
-                        class="
-                          t-select
-                          w-full
-                          invoice-input
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                          appearance-none
-                        "
-                        name="inventory"
-                      >
-                        <option></option>
-                        <option value="Netto">Netto</option>
-                        <option value="Payoneer">Payoneer</option>
-                        <option value="Paypal">Paypal</option>
-                      </select>
-                      <div
-                        class="
-                          icon
-                          position-absolute
-                          right-0
-                          top-0
-                          cursor-pointer
-                          pointer-events-none
-                          h-100
-                          d-flex
-                          align-items-center
-                          px-3
-                        "
-                      >
-                        <img src="./assets/img/Path.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="kob-input-component2 my-4">
-                <div class="t-card px-3 py-2 text-center line-text-container">
-                  <p class="fs-13 n-props clr-blue mb-0">line No.1</p>
-                </div>
-                <!-- 1st row -->
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-lg-row flex-xl-row
-                    align-items-center
-                    justify-content-lg-between justify-content-xl-between
-                    py-4
-                  "
-                >
-                  <div class="input_width">
-                    <label class="fs-13 font-medium n-props clr-blue pl-2"
-                      >Belob inkl. moms</label
-                    >
-                    <div class="w-full position-relative">
-                      <input
-                        name="reminder fee per month"
-                        required=""
-                        class="
-                          w-full
-                          invoice-input
-                          py-3
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                        "
-                        type="text"
-                        placeholder="0.00"
-                      />
-                    </div>
-                  </div>
-                  <div class="input_width kob-select-button">
-                    <label class="fs-13 font-medium n-props clr-blue pl-2"
-                      >Moms</label
-                    >
-                    <div class="w-full position-relative">
-                      <input
-                        name="reminder fee per month"
-                        required=""
-                        class="
-                          w-full
-                          invoice-input
-                          py-3
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                        "
-                        type="text"
-                        placeholder="0.00"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <!-- 2nd row -->
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-lg-row flex-xl-row
-                    align-items-center
-                    justify-content-lg-between justify-content-xl-between
-                    py-3
-                  "
-                >
-                  <div class="col-12 px-0">
-                    <label class="fs-13 font-medium n-props clr-blue pl-2"
-                      >Brshkriv hvad du har kobt - fx "varekob",
-                      "blomster".</label
-                    >
-                    <div class="w-full position-relative">
-                      <input
-                        name="reminder fee per month"
-                        required=""
-                        class="
-                          w-full
-                          invoice-input
-                          py-3
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                        "
-                        type="text"
-                        placeholder=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <!-- 3rd row -->
-                <div
-                  class="
-                    d-flex
-                    flex-column flex-lg-row flex-xl-row
-                    align-items-center
-                    justify-content-lg-between justify-content-xl-between
-                    py-3
-                  "
-                >
-                  <div class="col-12 px-0 kob-select-button">
-                    <label class="fs-13 font-medium n-props clr-blue px-2"
-                      >Konto*</label
-                    >
-                    <div class="w-full position-relative">
-                      <select
-                        id="konto"
-                        required
-                        class="
-                          t-select
-                          w-full
-                          invoice-input
-                          font-light
-                          fs-13
-                          n-props
-                          border-0
-                          appearance-none
-                        "
-                        name="inventory"
-                      >
-                        <option></option>
-                        <option value="Netto">Netto</option>
-                        <option value="Payoneer">Payoneer</option>
-                        <option value="Paypal">Paypal</option>
-                      </select>
-                      <div
-                        class="
-                          icon
-                          position-absolute
-                          right-0
-                          top-0
-                          cursor-pointer
-                          pointer-events-none
-                          h-100
-                          d-flex
-                          align-items-center
-                          px-3
-                        "
-                      >
-                        <img src="./assets/img/Path.png" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- new line text -->
-                <div class="px-3 py-2 text-right">
-                  <p class="fs-13 n-props clr-blue mb-0">New Line +</p>
-                </div>
-              </div>
-              <div class="my-3 py-3 kob-total-detail-component">
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <p class="fs-13 n-props clr-dark-grey mb-0 font-bold">
-                      Kobt fra
-                    </p>
-                  </div>
-                  <div class="d-flex kob-denmark-flag align-items-center">
-                    <img src="./assets/img/Flag-Denmark.png" />
-                    <p class="fs-13 clr-dark-grey mb-0 px-2 font-bold">Dk</p>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between py-2">
-                  <p class="fs-13 n-props clr-dark-grey mb-0 font-bold">
-                    Subtotal
-                  </p>
-                  <p class="fs-13 n-props clr-dark-grey mb-0 px-2 font-bold">
-                    7,500.00
-                  </p>
-                </div>
-                <div
-                  class="d-flex justify-content-between total-price-container"
-                >
-                  <p class="fs-16 n-props clr-blue mb-0 font-bold">TOTAL SEK</p>
-                  <p class="fs-13 n-props clr-blue mb-0 px-2 font-bold">
-                    9375,00
-                  </p>
-                </div>
-                <div class="d-flex justify-content-end button-container pt-5">
-                  <button
-                    class="
-                      t-card
-                      mx-3
-                      border-0
-                      bg-white
-                      font-medium
-                      save-button
-                      font-bold
-                      px-5
-                      py-3
-                      clr-blue
-                    "
-                  >
-                    Gem Kiadde
-                  </button>
-                  <button
-                    class="
-                      border-0
-                      bg-blue
-                      font-medium
-                      save-button
-                      font-bold
-                      px-5
-                      py-4
-                      text-white
-                    "
-                  >
-                    Godkend
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="./assets/script/script.js"></script>
-    <script src="./assets/script/kob.js"></script>
-  </body>
+	<body class="invoice-edit-page">
+		<div class="d-flex flex-nowrap wrapper w-full">
+			<!-- page loader -->
+			<div id="loader"></div>
+			<!-- sidebar starts-->
+			<div id="sidebarOverlay" class="position-fixed inset-0 sidebar-overlay"></div>
+			<div id="sidebar" class="slideOut sidebar w-sidebar top-0 bottom-0 d-flex flex-column">
+				<div class="sidebar-handle position-absolute right-0 d-flex align-items-center justify-content-center">
+					<svg onclick="sidebarHandler(false)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<line x1="18" y1="6" x2="6" y2="18" />
+						<line x1="6" y1="6" x2="18" y2="18" />
+					</svg>
+				</div>
+				<div>
+					<div class="t-card logo-container d-flex align-items-center cursor-pointer">
+						<a href="./index.html">
+							<img src="./assets/img/Group 2355.png" alt="" srcset="" />
+						</a>
+					</div>
+					<div class="position-relative">
+						<div id="userTrigger" onclick="userHandler()" class="tlb-groups t-card d-flex align-items-center justify-content-between cursor-pointer position-relative">
+							<div class="d-flex align-items-center">
+								<img class="mr-12" src="./assets/img/hand-shake.png" alt="" srcset="" />
+								<div>
+									<h3 class="fs-18 font-semibold mb-0">TLB Groups</h3>
+									<p class="fs-10 font-light mb-0">Chadi Maher</p>
+								</div>
+							</div>
+							<img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
+						</div>
+						<div id="userSettings" class="max-h-0 popup-7 user-settings position-absolute right-0 top-0">
+							<div class="d-flex align-items-center">
+								<img class="mr-10" src="./assets/img/Path 21.png" alt="" />
+								<p class="mb-0 fs-20 clr-dark-grey n-props">Add a business</p>
+							</div>
+							<hr />
+							<p class="fs-17 n-props clr-dark-grey">Settings</p>
+							<p class="fs-17 n-props clr-dark-grey mt-32">Get Help</p>
+							<p class="fs-17 n-props clr-dark-grey mt-32">Log out</p>
+						</div>
+					</div>
+				</div>
+				<ul class="sidemenu">
+					<li class="mb-32">
+						<a href="./index.html">
+							<div class="d-flex align-items-center">
+								<img class="inactive mr-23" src="./assets/img/dashboard-inactive.png" alt="" />
+								<img class="active mr-23" src="./assets/img/dashboard-active.png" alt="" />
+								<span class="fs-18 n-props mb-0 clr-grey">Dashboard</span>
+							</div>
+						</a>
+					</li>
+					<li class="mb-32">
+						<div id="sales" class="d-flex align-items-center justify-content-between">
+							<div class="d-flex align-items-center">
+								<img class="inactive mr-23" src="./assets/img/discount-inactive.png" alt="" />
+								<img class="active mr-23" src="./assets/img/discount-active.png" alt="" />
+								<span class="fs-18 n-props mb-0 clr-grey">Sales</span>
+							</div>
+							<img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
+						</div>
+						<ul id="salesList" class="sublist max-h-0">
+							<li class="mb-12">
+								<a class="fs-14 clr-grey" href="#">Current</a>
+							</li>
+							<li class="mb-12">
+								<a class="fs-14 clr-grey" href="#">All</a>
+							</li>
+							<li class="mb-12">
+								<a class="fs-14 clr-grey" href="#">Offer</a>
+							</li>
+							<li class="mb-12">
+								<a class="fs-14 clr-grey" href="#">Products</a>
+							</li>
+							<li class="mb-12">
+								<a class="fs-14 clr-grey" href="#">Subscription</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mb-32">
+						<div class="d-flex align-items-center">
+							<img class="inactive mr-23" src="./assets/img/invoice-inactive.png" alt="" />
+							<img class="active mr-23" src="./assets/img/invoice-active.png" alt="" />
+							<span class="fs-18 n-props mb-0 clr-grey">Bogforing</span>
+						</div>
+					</li>
+					<li class="mb-32">
+						<div class="d-flex align-items-center">
+							<img class="inactive mr-23" src="./assets/img/notebook-inactive.png" alt="" />
+							<img class="active mr-23" src="./assets/img/notebook-active.png" alt="" />
+							<span class="fs-18 n-props mb-0 clr-grey">Contacts</span>
+						</div>
+					</li>
+					<li class="mb-32">
+						<a href="./bank.html">
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="d-flex align-items-center">
+									<img class="inactive mr-23" src="./assets/img/bank-inactive.png" alt="" />
+									<img class="active mr-23" src="./assets/img/bank-active.png" alt="" />
+									<span class="fs-18 n-props mb-0 clr-grey">Bank</span>
+								</div>
+								<img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
+							</div>
+						</a>
+					</li>
+					<li class="mb-32 clr-grey">
+						<div class="d-flex align-items-center">
+							<img class="inactive mr-23" src="./assets/img/agency-inactive.png" alt="" />
+							<img class="active mr-23" src="./assets/img/agency-active.png" alt="" />
+							<span class="fs-18 n-props mb-0 clr-grey">Danish Agency</span>
+						</div>
+					</li>
+					<li class="mb-32 clr-grey">
+						<div class="d-flex align-items-center">
+							<img class="inactive mr-23" src="./assets/img/skill-inactive.png" alt="" />
+							<img class="active mr-23" src="./assets/img/skill-active.png" alt="" />
+							<span class="fs-18 n-props mb-0 clr-grey">Integrations</span>
+						</div>
+					</li>
+				</ul>
+				<div class="user bottom-0">
+					<div class="profile-img d-flex align-items-center">
+						<img class="mr-12" src="./assets/img/Image 1.jpg" alt="" srcset="" />
+						<h5 class="n-props clr-grey fs-18 mb-0">Chadi Maher</h5>
+					</div>
+					<div class="mt-18 d-flex align-items-center justify-content-between">
+						<h4 class="mr-20 fs-18 clr-grey">Your Plan:<span class="clr-blue"> Basic</span></h4>
+						<button class="upgrade-btn">Upgrade</button>
+					</div>
+					<div class="mt-30 t-card signoff d-flex align-items-center cursor-pointer">
+						<img class="mr-18" src="./assets/img/signoff.png" alt="" srcset="" />
+						<h5 class="fs-18 mb-0 font-medium">Logout</h5>
+					</div>
+				</div>
+			</div>
+			<div class="w-sidebar flex-shrink-0 desktop"></div>
+			<!-- sidebar ends -->
+			<div class="w-full">
+				<!-- header starts -->
+				<div class="mobile tab top-header t-card d-flex justify-content-between align-items-center">
+					<img src="./assets/img/Group 2355.png" alt="" />
+					<svg onclick="sidebarHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 cursor-pointer" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+						<line x1="4" y1="6" x2="20" y2="6" />
+						<line x1="4" y1="12" x2="20" y2="12" />
+						<line x1="4" y1="18" x2="20" y2="18" />
+					</svg>
+				</div>
+				<div class="no-overflow">
+					<header class="header t-card d-flex justify-content-between align-items-center position-relative">
+						<div class="d-flex align-items-center">
+							<img class="mr-18" src="./assets/img/profit-report.png" alt="" />
+							<h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">KOB</h1>
+						</div>
+						<svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<polyline points="15 6 9 12 15 18" />
+						</svg>
+						<div id="headerContent" class="icons-dd d-flex align-items-center slide-out">
+							<div onclick="languagesHandler()" id="languagesTrigger" class="cursor-pointer d-flex align-items-center country-dropdown poition-relative">
+								<img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
+								<img class="cursor-pointer flex-shrink-0" src="./assets/img/Path 8.png" alt="" srcset="" />
+							</div>
+							<div id="languagesContent" class="absolute languages top-0 max-h-0">
+								<div class="d-flex align-items-center">
+									<img class="denmark-flag mr-10" src="./assets/img/denmark-flag.png" srcset="" />
+									<p class="mb-0 fs-16">Danish</p>
+								</div>
+								<div class="d-flex align-items-center">
+									<img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
+									<p class="mb-0 fs-16">English UK</p>
+								</div>
+							</div>
+							<svg class="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+								<path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" />
+								<line x1="12" y1="19" x2="12" y2="19.01" />
+							</svg>
+							<button id="financeTrigger" onclick="financeDropdown()" class="position-relative finance-btn d-flex justify-content-between align-items-center fs-18 n-props clr-dark-grey">
+								<div class="d-flex align-items-center mr-50">
+									<span>Finance-2021</span>
+								</div>
+								<img class="cursor-pointer flex-shrink-0" src="./assets/img/Path 8.png" alt="" srcset="" />
+								<div id="finance" class="max-h-0 popup-10 finance-dropdown position-absolute top-0 right-0 text-left">
+									<p class="fs-16 clr-dark-grey n-props mb-15">Finance Year 2021</p>
+									<p class="fs-16 clr-dark-grey n-props mb-0">Create new Finance Year</p>
+								</div>
+							</button>
+							<img onClick="headerHandler(false)" class="close-icon mobile ml-6 mr-10 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
+						</div>
+					</header>
+				</div>
+				<!-- header ends -->
+				<div class="col-lg-6 mt-32 kobs relative pl-lg-0">
+					<button class="notes-button border-0 d-flex align-items-center fs-12 n-props font-medium clr-black mr-10">
+						<img class="mr-12" src="./assets/img/Group 38755.png" alt="" />
+						<span>Notes (0)</span>
+					</button>
+				</div>
+				<div class="content-container mt-lg-32 kobs d-flex flex-column flex-lg-row flex-xl-row no-overflow kobs-container">
+					<div class="col-lg-6 relative px-0 px-lg-2 px-xl-2 pl-lg-0 pl-xl-0">
+						<div class="t-card upgrade-trello-card">
+							<div class="border-card pb-5">
+								<div class="draft-sticker">Draft</div>
+								<div>
+									<div class="d-flex justify-content-center py-3">
+										<img src="./assets/img/plusIcon.png" height="80px" />
+									</div>
+									<h1 class="n-props clr-blue fs-13 text-center">Click or drag & drop the File here to upload.</h1>
+									<button class="clr-blue fs-16 font-medium n-props mx-auto">Select file form Attachments</button>
+								</div>
+							</div>
+						</div>
+						<div class="t-card download-card">
+							<!-- <p class="fs-12 font-medium">Download Tellero app then you can upload attachments</p> -->
+							<img src="./assets/img/im123.png" alt="" class="w-50" />
+						</div>
+					</div>
+					<div class="col-lg-6 d-flex px-0 px-lg-2 px-xl-2 my-3 my-lg-0 my-xl-0">
+						<div class="px-lg-1 px-xl-1 d-none d-lg-block d-xl-block">
+							<img src="./assets//img/line11.png" />
+						</div>
+						<div class="t-card kob-steps-card w-full">
+							<div class="t-card step-1 p-4">
+								<!-- links -->
+								<div onclick="window.location.href='kob-1.html'" class="cursor-pointer slectbox mb-0 d-flex align-items-center d-flex active-kob px-4 py-3">
+									<!-- checkbox -->
+									<div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+										<input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" checked />
+										<div class="check-icon hidden box bg-blue"></div>
+									</div>
+									<!-- title and content -->
+									<div class="px-3">
+										<h1 class="n-props text-black fs-13 mb-0">Lorem Ipsum is simply dummy</h1>
+										<p class="fs-10 n-props clr-dark-grey mb-0 py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+									</div>
+								</div>
+								<div onclick="window.location.href=`kob.html`" class="cursor-pointer slectbox my-3 d-flex align-items-center d-flex inActive-kob px-4 py-3">
+									<!-- checkbox -->
+									<div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+										<input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+										<div class="check-icon hidden box bg-blue"></div>
+									</div>
+									<!-- title and content -->
+									<div class="px-3">
+										<h1 class="n-props text-black fs-13 mb-0">Lorem Ipsum is simply dummy</h1>
+										<p class="fs-10 n-props clr-dark-grey mb-0 py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+									</div>
+								</div>
+							</div>
+							<div class="kob-input-component my-4">
+								<!-- 1st row -->
+								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-3">
+									<div class="input_width">
+										<label class="fs-13 font-medium n-props clr-blue px-2">Billagsdato </label>
+										<div class="px-0 my-2 my-lg-0 my-xl-0 position-relative calendar-trigger">
+											<input id="date_picker" type="date" class="appearance-none w-full invoice-input font-light fs-16 n-props border-0 mb-0 clr-dark-grey py-3" value="12-02-2012" />
+											<div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+												<img src="./assets/img/calendar (1).png" alt="" />
+											</div>
+										</div>
+									</div>
+									<div class="input_width kob-select-button">
+										<label class="fs-13 font-medium n-props clr-blue px-2">Bought from</label>
+										<div class="w-full position-relative">
+											<select id="bought-from" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
+												<option></option>
+												<option value="Netto">Netto</option>
+												<option value="Payoneer">Payoneer</option>
+												<option value="Paypal">Paypal</option>
+											</select>
+											<div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+												<img src="./assets/img/Path.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- 2nd row -->
+								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-3">
+									<div class="input_width kob-select-button">
+										<label class="fs-13 font-medium n-props clr-blue px-2">Beholdning*</label>
+										<div class="w-full position-relative">
+											<select id="beholdning" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
+												<option></option>
+												<option value="Netto">Netto</option>
+												<option value="Payoneer">Payoneer</option>
+												<option value="Paypal">Paypal</option>
+											</select>
+											<div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+												<img src="./assets/img/Path.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="kob-input-component2 my-4">
+								<div class="t-card px-3 py-2 text-center line-text-container">
+									<p class="fs-13 n-props clr-blue mb-0">line No.1</p>
+								</div>
+								<!-- 1st row -->
+								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-4">
+									<div class="input_width">
+										<label class="fs-13 font-medium n-props clr-blue pl-2">Belob inkl. moms</label>
+										<div class="w-full position-relative">
+											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="0.00" />
+										</div>
+									</div>
+									<div class="input_width kob-select-button">
+										<label class="fs-13 font-medium n-props clr-blue pl-2">Moms</label>
+										<div class="w-full position-relative">
+											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="0.00" />
+										</div>
+									</div>
+								</div>
+								<!-- 2nd row -->
+								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-3">
+									<div class="col-12 px-0">
+										<label class="fs-13 font-medium n-props clr-blue pl-2">Brshkriv hvad du har kobt - fx "varekob", "blomster".</label>
+										<div class="w-full position-relative">
+											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="" />
+										</div>
+									</div>
+								</div>
+								<!-- 3rd row -->
+								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-3">
+									<div class="col-12 px-0 kob-select-button">
+										<label class="fs-13 font-medium n-props clr-blue px-2">Konto*</label>
+										<div class="w-full position-relative">
+											<select id="konto" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
+												<option></option>
+												<option value="Netto">Netto</option>
+												<option value="Payoneer">Payoneer</option>
+												<option value="Paypal">Paypal</option>
+											</select>
+											<div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+												<img src="./assets/img/Path.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- new line text -->
+								<div class="px-3 py-2 text-right">
+									<p class="fs-13 n-props clr-blue mb-0">New Line +</p>
+								</div>
+							</div>
+							<div class="my-3 py-3 kob-total-detail-component">
+								<div class="d-flex justify-content-between">
+									<div>
+										<p class="fs-13 n-props clr-dark-grey mb-0 font-bold">Kobt fra</p>
+									</div>
+									<div class="d-flex kob-denmark-flag align-items-center">
+										<img src="./assets/img/Flag-Denmark.png" />
+										<p class="fs-13 clr-dark-grey mb-0 px-2 font-bold">Dk</p>
+									</div>
+								</div>
+								<div class="d-flex justify-content-between py-2">
+									<p class="fs-13 n-props clr-dark-grey mb-0 font-bold">Subtotal</p>
+									<p class="fs-13 n-props clr-dark-grey mb-0 px-2 font-bold">7,500.00</p>
+								</div>
+								<div class="d-flex justify-content-between total-price-container">
+									<p class="fs-16 n-props clr-blue mb-0 font-bold">TOTAL SEK</p>
+									<p class="fs-13 n-props clr-blue mb-0 px-2 font-bold">9375,00</p>
+								</div>
+								<div class="d-flex justify-content-end button-container pt-5">
+									<button class="t-card mx-3 border-0 bg-white font-medium save-button font-bold px-2 px-lg-5 px-xl-5 py-lg-4 py-xl-4 py-2 clr-blue">Gem Kiadde</button>
+									<button class="border-0 bg-blue font-medium save-button font-bold px-2 px-lg-5 px-xl-5 py-lg-4 py-xl-4 py-2 text-white">Godkend</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./assets/script/script.js"></script>
+		<script src="./assets/script/kob.js"></script>
+	</body>
 </html>

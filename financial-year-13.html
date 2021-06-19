@@ -168,8 +168,8 @@
 				<div class="no-overflow">
 					<header class="header t-card d-flex justify-content-between align-items-center position-relative">
 						<div class="d-flex align-items-center">
-							<img class="mr-18" src="./assets/img/profit-report.png" alt="" />
-							<h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">KOB</h1>
+							<img class="mr-18" src="./assets/img/invoice.png" alt="" />
+							<h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">Bilagsoversigt</h1>
 						</div>
 						<svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -216,17 +216,126 @@
 						<span>Notes (0)</span>
 					</button>
 				</div>
-				<div class="content-container mt-lg-32 kobs d-flex flex-column flex-lg-row flex-xl-row no-overflow kobs-container">
-					<div class="col-lg-6 relative px-0 px-lg-2 px-xl-2 pl-lg-0 pl-xl-0">
+				<div class="content-container fakture mt-lg-32 kobs d-flex flex-column flex-lg-row flex-xl-row no-overflow kobs-container">
+					<div class="col-lg-6 relative px-0 px-lg-2 px-xl-2 pl-lg-0 pl-xl-0 financial-year-13-draft-container">
 						<div class="t-card upgrade-trello-card">
-							<div class="border-card">
-								<div class="draft-sticker">Draft</div>
-								<div>
-									<h1 class="n-props text-black fs-13 text-center">
-										Upgrade to Tellero Pro to get your <br />
-										Voucher on Your Cloud
-									</h1>
-									<button class="clr-blue fs-16 font-medium n-props mx-auto">Upgrade to tellero pro Now</button>
+							<div class="pt-3 pb-5 px-2 d-flex justify-content-center">
+								<div class="t-card py-2 px-0 px-lg-2 px-xl-2 d-flex flex-column flex-lg-row flex-xl-row px-lg-3 px-xl-3 px-1 justify-content-lg-between justify-content-xl-between align-items-center">
+									<!-- left side -->
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="./assets/img/leftPath.png" alt="" />
+										</div>
+										<div class="px-3">
+											<h6 class="m-0">1/1</h6>
+										</div>
+										<div>
+											<img src="./assets/img/rightPath.png" alt="" />
+										</div>
+									</div>
+									<!-- right side -->
+									<div class="d-flex draft-financial-button-container pl-3 py-2 py-lg-0 py-xl-0">
+										<button class="bg-blue py-2 fs-12 button">
+											<img src="./assets/img/cross.png" alt="" height="10px" />
+											Download fill
+										</button>
+										<button class="bg-blue mx-2 py-2 fs-12 button">
+											<img src="./assets/img/cross.png" alt="" height="10px" />
+											Slet fill
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="invoice position-relative border_draft">
+								<div class="draft-label position-absolute left-0 top-0 fs-13 font-medium n-props">Draft</div>
+								<div class="d-flex justify-content-end w-full px-35 py-5 align-items-center">
+									<div class="pt-3">
+										<img src="./assets/img/Group 2355.png" alt="" srcset="" />
+									</div>
+								</div>
+								<div class="mb-12 px-2 px-lg-4 px-xl-4">
+									<p class="fs-12 font-semibold n-props clr-dark-grey">Net Office Stockholm AB</p>
+									<p class="fs-10 n-props clr-dark-grey mb-10">Fleminggatan</p>
+									<p class="fs-10 n-props clr-dark-grey mb-10">75, 112 33 Stockholm</p>
+									<p class="fs-10 n-props clr-dark-grey mb-10">Sweden</p>
+									<p class="fs-10 n-props clr-dark-grey mb-10">Att: Harry Lainio</p>
+									<p class="fs-10 n-props clr-dark-grey mb-0">Vat No: SE556723-B21961</p>
+									<div class="mt-18 d-flex align-items-center justify-content-between">
+										<p class="fs-11 n-props clr-dark-grey mb-10">
+											Date: &nbsp;&nbsp;
+											<span class="fs-12 font-medium">20/04/2021</span>
+										</p>
+										<p class="fs-11 n-props clr-dark-grey mb-0">
+											Invoice no: &nbsp;&nbsp;&nbsp;
+											<span class="fs-12 font-medium">4086</span>
+										</p>
+									</div>
+									<h5 class="fs-13 mb-0 n-props font-semibold mt-40">Invoice</h5>
+								</div>
+								<div class="table-container t-card overflow-x-auto mx-2 mx-lg-4 mx-xl-4">
+									<table style="white-space: nowrap" class="table mb-0">
+										<thead>
+											<tr class="border-top-0">
+												<th class="fs-10 clr-dark-grey" scope="col">Description</th>
+												<th class="fs-10 clr-dark-grey text-center" scope="col">Quality</th>
+												<th class="fs-10 clr-dark-grey text-center" scope="col">Units</th>
+												<th class="fs-10 clr-dark-grey text-center" scope="col">Unit price</th>
+												<th class="fs-10 clr-dark-grey text-right" scope="col">Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="bg-light-blue">
+												<td class="fs-10 clr-blue">Poading 120</td>
+												<td align="center" class="fs-10 clr-dark-grey">1.00</td>
+												<td align="center" class="fs-10 clr-dark-grey">QTY</td>
+												<td align="center" class="fs-10 clr-dark-grey">7,500.00</td>
+												<td align="right" class="fs-10 clr-blue">7,500.00</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="d-flex w-full justify-content-end px-2 px-lg-4 px-xl-4">
+									<div class="col-4 invoice-total p-0 view-invoice">
+										<div class="pad">
+											<div class="d-flex align-items-center justify-content-between">
+												<p class="mb-0 fs-9 clr-dark-grey n-props font-medium">Subtotal</p>
+												<p class="mb-0 fs-9 clr-dark-grey n-props text-right font-medium">7,500.00</p>
+											</div>
+											<div class="d-flex align-items-center justify-content-between">
+												<p class="mb-0 fs-9 clr-dark-grey n-props font-medium">VAT <span class="font-regular">(25.00%)</span></p>
+												<p class="mb-0 fs-9 clr-dark-grey n-props text-right font-medium">1,875.00</p>
+											</div>
+										</div>
+
+										<div class="d-flex align-items-center justify-content-between bg-light-blue pad">
+											<p class="mb-0 fs-13 clr-blue n-props text-uppercase font-medium">total sek</p>
+											<p class="mb-0 fs-13 clr-blue n-props text-right font-medium">937500</p>
+										</div>
+									</div>
+								</div>
+								<div class="mt-32 px-2 px-lg-4 px-xl-4">
+									<p class="fs-11 n-props clr-dark-grey">
+										Terms of Payment Net 8 days-Due date:
+										<span class="clr-blue">04/05/2021</span>
+										<br />
+										<br />
+										Piease transfer the amount to the account:
+										<br />
+										Revolut / Reg.no. / Account no. / SWIFT:
+										<span class="clr-blue">REVOLT21</span> / IBAN: <span class="clr-blue">LT05 3250 0371 9475 0665</span>.
+										<br />
+										Please note the invoice no.
+										<span class="clr-blue">4087</span> on the transfer.
+										<br />
+										<br />
+										We will charge an interest of 0.70% per month, starting the day after the due date and a fee of 136.37 SEK
+									</p>
+								</div>
+								<div class="invoice-footer mt-80">
+									<div class="px-35 mx-18">
+										<p class="mt-15 fs-10 clr-dark-grey n-props text-center">Revimatch AS / Fjeldhammervej 15/2610 Redovre</p>
+										<p class="fs-10 mb-0 clr-blue n-props text-center">VAT No. DK39204630 / Phone +46 10-750 07 57 / Web: www.revimatch.se/Mait invoice@revimatch.com</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -242,7 +351,7 @@
 						<div class="t-card kob-steps-card w-full">
 							<div class="t-card step-1 p-4">
 								<!-- links -->
-								<div onclick="window.location.href=`kob-1.html`" class="cursor-pointer slectbox mb-0 d-flex align-items-center d-flex inActive-kob px-4 py-3">
+								<div onclick="window.location.href=`financial-year-14.html`" class="cursor-pointer slectbox mb-0 d-flex align-items-center d-flex inActive-kob px-4 py-3">
 									<!-- checkbox -->
 									<div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
 										<input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
@@ -254,10 +363,10 @@
 										<p class="fs-10 n-props clr-dark-grey mb-0 py-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
 									</div>
 								</div>
-								<div onclick="window.location.href=`kob.html`" class="cursor-pointer slectbox my-3 d-flex align-items-center d-flex active-kob px-4 py-3">
+								<div onclick="window.location.href=`financial-year-13.html`" class="cursor-pointer slectbox my-3 d-flex align-items-center d-flex active-kob px-4 py-3">
 									<!-- checkbox -->
 									<div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-										<input type="checkbox" checked class="checkbox position-absolute cursor-pointer w-full h-full" />
+										<input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" checked />
 										<div class="check-icon hidden box bg-blue"></div>
 									</div>
 									<!-- title and content -->
@@ -279,7 +388,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="input_width kob-select-button">
+									<div class="input_width kob-select-button mt-4 mt-md-0">
 										<label class="fs-13 font-medium n-props clr-blue px-2">Bought from</label>
 										<div class="w-full position-relative">
 											<select id="bought-from" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
@@ -310,7 +419,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="input_width kob-select-button">
+									<div class="input_width kob-select-button mt-4 mt-md-0">
 										<label class="fs-13 font-medium n-props clr-blue px-2">Valute</label>
 										<div class="w-full position-relative">
 											<select id="valute" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
@@ -338,36 +447,41 @@
 											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="0.00" />
 										</div>
 									</div>
-									<div class="input_width kob-select-button">
+									<div class="input_width kob-select-button mt-4 mt-md-0">
 										<label class="fs-13 font-medium n-props clr-blue pl-2">Moms</label>
 										<div class="w-full position-relative">
 											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="0.00" />
 										</div>
 									</div>
 								</div>
-								<!-- 2nd row -->
-								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-3">
-									<div class="col-12 px-0">
-										<label class="fs-13 font-medium n-props clr-blue pl-2">Brshkriv hvad du har kobt - fx "varekob", "blomster".</label>
-										<div class="w-full position-relative">
-											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="" />
+								<div class="financial-year13-section3-container">
+									<!-- 2nd row -->
+									<div class="common-section-border py-3">
+										<p class="fs-12 px-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+										<div class="px-2 d-flex flex-column flex-lg-row flex-xl-row button-container">
+											<button class="bg-blue px-3 py-2">Regnskabsprogram</button>
+											<button class="mx-3 px-3 py-2 my-2 my-lg-0 my-xl-0">Fremmed arbejde</button>
 										</div>
 									</div>
-								</div>
-								<!-- 3rd row -->
-								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-3">
-									<div class="col-12 px-0 kob-select-button">
-										<label class="fs-13 font-medium n-props clr-blue px-2">Konto*</label>
-										<div class="w-full position-relative">
-											<select id="konto" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
-												<option></option>
-												<option value="Netto">Netto</option>
-												<option value="Payoneer">Payoneer</option>
-												<option value="Paypal">Paypal</option>
-											</select>
-											<div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-												<img src="./assets/img/Path.png" alt="" />
-											</div>
+									<div class="pt-4 pb-2 section2-paragraph-container">
+										<p class="m-0 fs-12">Lorem Ipsum is simply dummy text of the. "Blomster" *</p>
+									</div>
+									<div class="common-section-border px-2 py-2">
+										<div class="d-flex flex-column flex-lg-row flex-xl-row button-container align-items-center">
+											<button class="bg-blue px-3 py-2">
+												Regnskabsprogram
+												<img src="./assets/img/cross.png" alt="" height="10px" class="ml-2" />
+											</button>
+											<p class="fs-12 mx-3 mb-0 my-2 my-lg-0 my-xl-0">Lorem Ipsum is simply dummy text of the. "Blomster" *</p>
+										</div>
+									</div>
+									<div class="my-4 common-section-border bg-white px-4 py-3 d-flex flex-column flex-lg-row flex-xl-row align-items-center">
+										<div>
+											<img src="./assets/img/checkmark.png" height="30px" />
+										</div>
+										<div class="px-3 my-2 my-xl-0 my-lg-0">
+											<h5 class="clr-blue text-center text-lg-left text-xl-left">Tellero - Lorem Ipsum is simply dummy</h5>
+											<p class="fs-12 m-0 text-center text-lg-left text-xl-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 										</div>
 									</div>
 								</div>
@@ -395,8 +509,8 @@
 									<p class="fs-13 n-props clr-blue mb-0 px-2 font-bold">9375,00</p>
 								</div>
 								<div class="d-flex justify-content-end button-container pt-5">
-									<button class="t-card mx-3 border-0 bg-white font-medium save-button font-bold px-5 py-3 clr-blue">Gem Kiadde</button>
-									<button class="border-0 bg-blue font-medium save-button font-bold px-5 py-4 text-white">Godkend</button>
+									<button class="t-card mx-3 border-0 bg-white font-medium save-button font-bold px-2 px-lg-5 px-xl-5 py-lg-4 py-xl-4 py-2 clr-blue">Gem Kiadde</button>
+									<button class="border-0 bg-blue font-medium save-button font-bold px-2 px-lg-5 px-xl-5 py-lg-4 py-xl-4 py-2 text-white">Godkend</button>
 								</div>
 							</div>
 						</div>
