@@ -14,6 +14,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 		<script src="./assets/script/formtoObject.min.js"></script>
 		<link rel="stylesheet" href="./assets/css/style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 
 	<body class="invoice-edit-page">
@@ -168,8 +169,8 @@
 				<div class="no-overflow">
 					<header class="header t-card d-flex justify-content-between align-items-center position-relative">
 						<div class="d-flex align-items-center">
-							<img class="mr-18" src="./assets/img/checkmark.png" alt="" />
-							<h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">Produkter</h1>
+							<img class="mr-18" src="./assets/img/profit-report.png" alt="" />
+							<h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">Fakturaindstillinger</h1>
 						</div>
 						<svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -210,81 +211,139 @@
 					</header>
 				</div>
 				<!-- header ends -->
-				<div class="content-container mt-lg-32 kobs d-flex flex-column no-overflow kobs-container">
-					<!-- third component -->
-					<div class="financial-year-section3-button-container py-4 col-12 col-lg-7 col-xl-7 d-flex flex-column px-0 px-lg-2 px-xl-2 my-3 my-lg-0 my-xl-0">
-						<!-- title -->
-						<div class="px-3 py-3">
-							<h3 class="text-black">Opret produkt</h3>
+				<div class="financial-year6-container content-container sales mt-lg-32 kobs d-flex flex-column no-overflow kobs-container financial-8 ">
+					<!-- lists -->
+					<div class="t-card px-4 py-4">
+						<h6>Typesetting industry. Lorem Ipsum has been the:</h6>
+						<ul class="py-3 px-3">
+							<ul class="d-flex align-items-center lists-container px-0 py-1">
+								<!-- dot -->
+								<li class="list-dot"></li>
+								<li class="px-2">tellero@Banking.com dummy text ever since the 1500s, when an of printing and terms &</li>
+							</ul>
+							<ul class="d-flex align-items-center lists-container px-0 py-1">
+								<!-- dot -->
+								<li class="list-dot"></li>
+								<li class="px-2">conditions took?Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+							</ul>
+							<ul class="d-flex align-items-center lists-container px-0 py-1">
+								<!-- dot -->
+								<li class="list-dot"></li>
+								<li class="px-2">Lorem Ipsum has been the tellero@Banking.com dummy text ever since the 1500s, when an of printing and terms & conditions took?</li>
+							</ul>
+						</ul>
+						<h6>Dummy text ever since the 1500s, when an of printing and terms & conditions took?</h6>
+					</div>
+					<!-- button -->
+					<div class="financial-6-button-container py-4 px-3">
+						<button class="bg-blue font-medium fs-16 text-white py-3 px-5 save-button">Create Comment</button>
+					</div>
+					<div class="t-card px-4 py-4">
+						<div class="d-flex justify-content-end py-3 align-items-center">
+							<!-- checkbox -->
+							<div class="f-d-c d-flex align-items-center">
+								<div class="slectbox mb-0 d-flex align-items-center mr-10">
+									<div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+										<input id="vat" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+										<div class="check-icon hidden box bg-blue"></div>
+									</div>
+									<p class="fs-10 n-props text-grey mb-0 ml-6">Lorem Ipsum is simply dummy text of the</p>
+								</div>
+							</div>
+							<div class="d-flex align-items-center px-3">
+								<p class="d-flex align-items-center fs-10 clr-blue m-0">Lorem Ipsum is</p>
+								<img src="./assets/img/cloud-computing1.png" alt="" class="mx-1" />
+							</div>
 						</div>
-						<div class="t-card kob-steps-card w-full py-4">
-							<div class="kob-input-component2">
-								<!-- 1st row -->
-								<div class="d-flex flex-column flex-lg-row flex-xl-row justify-content-between">
-									<div class="col-12 col-lg-7 col-xl-7 px-0">
-										<label class="fs-13 font-medium n-props text-black pl-2">Name*</label>
-										<div class="w-full position-relative">
-											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="" />
-										</div>
-									</div>
-									<div class="col-12 col-lg-4 col-xl-4 px-0 py-2 py-lg-0 py-xl-0 mt-4 mt-md-0">
-										<label class="fs-13 font-medium n-props text-black pl-2">Verakode*</label>
-										<div class="w-full position-relative">
-											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="" />
-										</div>
-									</div>
-								</div>
-								<!-- 2nd row -->
-								<div class="d-flex flex-column flex-lg-row flex-xl-row justify-content-between py-2">
-									<div class="px-0 mt-4">
-										<label class="fs-13 font-medium n-props text-black pl-2">Arrtal **</label>
-										<div class="w-full position-relative">
-											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="1.00" />
-										</div>
-									</div>
-									<div class="px-lg-5 px-xl-5 px-0 py-2 py-lg-0 py-xl-0 mt-4">
-										<label class="fs-13 font-medium n-props text-black pl-2">Enhed *</label>
-										<div class="w-full position-relative">
-											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="1.00" />
-										</div>
-									</div>
-									<div class="px-0 mt-4">
-										<label class="fs-13 font-medium n-props text-black pl-2">Pris eksld. moms *</label>
-										<div class="w-full position-relative">
-											<input name="reminder fee per month" required="" class="w-full invoice-input py-3 font-light fs-13 n-props border-0" type="text" placeholder="0.00" />
-										</div>
-									</div>
-								</div>
-								<!-- 3rd row -->
-								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between py-4">
-									<div class="col-12 px-0 kob-select-button">
-										<label class="fs-13 font-medium n-props px-2">Kevnto *</label>
-										<div class="w-full position-relative">
-											<select id="metode" required class="t-select w-full invoice-input font-light fs-13 n-props border-0 appearance-none" name="inventory">
-												<option></option>
-												<option value="Netto">Netto</option>
-												<option value="Payoneer">Payoneer</option>
-												<option value="Paypal">Paypal</option>
-											</select>
-											<div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-												<img src="./assets/img/Path.png" alt="" class="mt-3" />
+						<div class="overflow-x-auto py-5">
+							<table style="white-space: nowrap" class="table mb-0">
+								<thead>
+									<tr class="border-top-0">
+										<th scope="col">Financial Year</th>
+										<th scope="col">Updated Date</th>
+										<th scope="col" class="text-center">Bill Date</th>
+										<th scope="col" class="px-3">Excl. VAT</th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="odd">
+										<td class="clr-blue"></td>
+										<td class="clr-dark-grey font-medium">
+											<h5 class="mb-0">Typesetting</h5>
+										</td>
+										<td class="clr-dark-grey font-medium">
+											<p class="mb-0 text-center"></p>
+										</td>
+										<td>
+											<div class="badge bg-green"></div>
+										</td>
+										<td class="clr-blue">
+											<div class="cursor-pointer d-flex align-items-center justify-content-center">
+												<span></span>
 											</div>
-										</div>
-									</div>
-								</div>
-								<!-- 4th row -->
-								<div class="d-flex flex-column flex-lg-row flex-xl-row align-items-center justify-content-lg-between justify-content-xl-between pt-2 pb-5">
-									<div class="col-12 px-0 kob-select-button">
-										<label class="fs-13 font-medium n-props px-2">Komersterar tii productal</label>
-										<div class="w-full position-relative">
-											<textarea id="description" class="invoice-input border-0 w-full min-h-150 font-light fs-16 n-props">Description here</textarea>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="d-flex justify-content-end px-4">
-								<button class="bg-blue font-medium fs-16 text-white py-3 px-5 save-button position-absolute">Opret produkt</button>
-							</div>
+										</td>
+									</tr>
+									<tr class="odd">
+										<td class="clr-blue"></td>
+										<td class="clr-dark-grey font-normal">
+											<p class="mb-0 fs-11"><span class="font-medium">Typesetting</span> - fra 1000 til 1999</p>
+										</td>
+										<td class="clr-dark-grey font-medium">
+											<p class="mb-0 text-center"></p>
+										</td>
+										<td>
+											<div class="badge bg-green"></div>
+										</td>
+										<td class="clr-blue">
+											<div class="cursor-pointer d-flex align-items-center justify-content-center">
+												<span></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="clr-blue fs-11">1001</td>
+										<td class="clr-dark-grey">
+											<p class="mb-0 fs-11">Typesetting industry. Lorem Ipsum has been the:</p>
+										</td>
+										<td class="clr-dark-grey">
+											<p class="mb-0 text-center fs-11">Indtaegt</p>
+										</td>
+										<td class="px-3 fs-11">Typesetting industry. Lorem Ipsum has been the:</td>
+									</tr>
+									<tr>
+										<td class="clr-blue fs-11">1001</td>
+										<td class="clr-dark-grey">
+											<p class="mb-0 fs-11">Typesetting industry. Lorem Ipsum has been the:</p>
+										</td>
+										<td class="clr-dark-grey">
+											<p class="mb-0 text-center fs-11">Indtaegt</p>
+										</td>
+										<td class="px-3 fs-11">Typesetting industry. Lorem Ipsum has been the:</td>
+									</tr>
+									<tr>
+										<td class="clr-blue fs-11">1001</td>
+										<td class="clr-dark-grey">
+											<p class="mb-0 fs-11">Typesetting industry. Lorem Ipsum has been the:</p>
+										</td>
+										<td class="clr-dark-grey">
+											<p class="mb-0 text-center fs-11">Indtaegt</p>
+										</td>
+										<td class="px-3 fs-11">Typesetting industry. Lorem Ipsum has been the:</td>
+										<td align="right" class="toggle-finance-8 fs-11 clr-dark-grey font-medium"> <p class="clr-blue mb-0 fs-10 cursor-pointer mr-4">more<span> <i class="fa fa-angle-down clr-blue ml-1"></i></span></p> <div class="d-none dropwdown t-card right-0">
+                                            <div class="d-flex align-items-center pb-20">
+                                             <img src="./assets/img/icon-pencil.png" class="mr-2"/>
+                                             <p class="fs-10 clr-dark-grey mb-0 n-props">Redgiger kontext</p>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-flex align-items-center pt-20">
+                                             <img src="./assets/img/icon-close.png" class="mr-2"/>
+                                             <p class="fs-10 clr-dark-grey mb-0  n-props">Siat kontakt</p>
+                                            </div>
+                                         </div></td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
