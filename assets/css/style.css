@@ -3744,9 +3744,7 @@ canvas {
 }
 
 .financial15-modal-container .border-modal-list{
-  border-bottom:1px solid #d8d8d8
-
-  ;
+  border-bottom:1px solid #d8d8d8;
 }
 .financial15-modal-container .modal-content{
   border: none!important;
@@ -3754,6 +3752,26 @@ canvas {
 }
 .financial15-modal-container .modal-header{
   border-bottom: none!important;
+}
+/* adimin */
+.admin-body-container .number_icon h3{
+  font-size: 80px;
+}
+.admin-body-container .range-container{
+  background: #d3d3d3;
+  height: 12px;
+  border-radius: 5px;
+}
+.admin-body-container .range-container .range{
+  border-radius: 5px;
+  height: 100%;
+  background-image:  linear-gradient(to bottom, #0077ff, #01e7ff);;
+}
+.admin-body-container .number_icon .bell_img_container{
+  background: #f3f7fc;
+  border-radius: 50%;
+  padding: 10px 12px;
+  height: fit-content;
 }
 
 
