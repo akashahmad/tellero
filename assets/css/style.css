@@ -3740,7 +3740,8 @@ canvas {
 }
 
 .financial15-modal-container .modal{
-  background: #7d7e7e;
+  /* background: #7d7e7e; */
+  z-index: 999999999999;
 }
 
 .financial15-modal-container .border-modal-list{
@@ -3819,4 +3820,16 @@ canvas {
 /* cross icon inside select option none */
 .select2-selection--clearable .select2-selection__clear span{
   display: none;
+}
+.big-column{
+  width: 100%;
+}
+@media (min-width:1366px) {
+  .big-column{
+    width: 78%;
+  }
+}
+.modal-backdrop{
+height: 100%!important;
+width: 100%!important;
 }
