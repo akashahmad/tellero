@@ -3794,6 +3794,10 @@ canvas {
   background: #0077ff;
   color: white;
 }
+/* common margin */
+.ml--140px{
+  margin-left: -140px;
+}
 /* cross icon inside select option none */
 .select2-selection--clearable .select2-selection__clear span{
   display: none;
