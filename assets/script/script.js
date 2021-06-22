@@ -133,6 +133,8 @@ let periodTrigger = document.getElementById("periodTrigger");
 let dateContent = document.getElementById("dateContent");
 let monthContent = document.getElementById("monthContent");
 let periodContent = document.getElementById("periodContent");
+let DatoinervalTrigger = document.getElementById("Datoinerval");
+let DatoinervalContent = document.getElementById("DatoinervalContent");
 let dateFlag = true;
 const dateHandler = () => {
 	if (dateFlag) {
@@ -170,6 +172,52 @@ const dateSwicher = (type) => {
 			dateContent.classList.add("hidden");
 			monthContent.classList.add("hidden");
 			periodContent.classList.remove("hidden");
+			break;
+		default:
+			break;
+	}
+};
+const filterData = (type) => {
+	switch (type) {
+		case "Mined":
+			dateTrigger.classList.add("active-nav-item");
+			monthTrigger.classList.remove("active-nav-item");
+			periodTrigger.classList.remove("active-nav-item");
+			dateContent.classList.remove("hidden");
+			monthContent.classList.add("hidden");
+			periodContent.classList.add("hidden");
+			DatoinervalContent.classList.add("hidden");
+			DatoinervalTrigger.classList.remove("active-nav-item");
+			break;
+		case "Kvarrtal":
+			dateTrigger.classList.remove("active-nav-item");
+			monthTrigger.classList.add("active-nav-item");
+			periodTrigger.classList.remove("active-nav-item");
+			dateContent.classList.add("hidden");
+			monthContent.classList.remove("hidden");
+			periodContent.classList.add("hidden");
+			DatoinervalContent.classList.add("hidden");
+			DatoinervalTrigger.classList.remove("active-nav-item");
+			break;
+		case "Haivdr":
+			dateTrigger.classList.remove("active-nav-item");
+			monthTrigger.classList.remove("active-nav-item");
+			periodTrigger.classList.add("active-nav-item");
+			dateContent.classList.add("hidden");
+			monthContent.classList.add("hidden");
+			periodContent.classList.remove("hidden");
+			DatoinervalContent.classList.add("hidden");
+			DatoinervalTrigger.classList.remove("active-nav-item");
+			break;
+		case "Datoinerval":
+			dateTrigger.classList.remove("active-nav-item");
+			monthTrigger.classList.remove("active-nav-item");
+			periodTrigger.classList.remove("active-nav-item");
+			DatoinervalTrigger.classList.add("active-nav-item");
+			DatoinervalContent.classList.remove("hidden");
+			dateContent.classList.add("hidden");
+			monthContent.classList.add("hidden");
+			periodContent.classList.add("hidden");
 			break;
 		default:
 			break;
@@ -333,5 +381,4 @@ $(document).ready(function () {
 	$(".filter-dropdown-opener").click(function (e) {
 		$(this).children(".filter-dropdown").toggleClass("d-none");
 	});
-	
 });

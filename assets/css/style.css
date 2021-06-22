@@ -3522,7 +3522,7 @@ canvas {
   border-radius: 20px;
 }
 .financial-year13-section3-container .common-section-border {
-  padding: 10.2px 50.3px 6.5px 7.1px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 6px 20px 0 rgba(90, 113, 208, 0.11);
   border: solid 1px rgba(0, 119, 255, 0.61);
@@ -3722,6 +3722,66 @@ canvas {
 }
 .lists_below_thumbs_sections #financial-more-content{
   display: none;
+}
+/* financial year 15 */
+.financial-year15-header-container .arrow-down-container i {
+  font-size: 14px;
+}
+.financial-year15-header-container .financial15-content-balance-header .balance {
+  color: #26aa80;
+}
+.financial-year15-header-container .financial-year15-table-body .checkbox-container{
+  padding: 5px 16px!important;
+}
+.financial-year15-header-container .financial15-footer .vertical-line{
+  padding: 8px 1px;
+  background: gray;
+  margin: 0px 10px;
+}
+
+.financial15-modal-container .modal{
+  background: #7d7e7e;
+}
+
+.financial15-modal-container .border-modal-list{
+  border-bottom:1px solid #d8d8d8
+
+  ;
+}
+.financial15-modal-container .modal-content{
+  border: none!important;
+  border-radius: 15px;
+}
+.financial15-modal-container .modal-header{
+  border-bottom: none!important;
+}
+
+
+/* common box shadow for fiancial year 15, 16 and font-size 14 */
+.financial-year15-header-container .financial-year15-table-body .t-grayCard{
+  box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
+  background-color: #fafafa;
+  border-radius: 6px;
+}
+.financial-year15-header-container .financial-year15-table-body .t-whiteCard{
+  box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
+  background-color: #fafafa;
+  border-radius: 6px;
+}
+.financial-year15-header-container .financial-year15-table-body .f-19{
+  font-size: 19px;
+}
+.financial-year15-header-container .financial-year15-table-body .f-17{
+  font-size: 17px;
+}
+.financial-year15-header-container .financial-year15-table-body .h_20px{
+  height: 20px;
+}
+.financial-year15-header-container .h_350px{
+  height: 350px;
+}
+.financial-year15-header-container .bg_Graybutton{
+  background: #8d9fa9;
 }
 
 
