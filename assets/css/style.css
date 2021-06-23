@@ -2044,7 +2044,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .slideIn {
   animation: slideIn 0.5s ease-in-out;
-  transform: translateX(0px);
+  transform: translateX(0px)!important;
 }
 .slideOut {
   animation: slideOut 0.5s ease-in-out;
@@ -2322,6 +2322,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .sidebar {
     background: #fff;
     z-index: 50;
+    transform: translateX(-360px);
   }
   .w-sidebar {
     width: 320px;
