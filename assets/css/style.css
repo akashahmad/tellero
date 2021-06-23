@@ -3409,9 +3409,15 @@ canvas {
   border: 1px dashed rgba(33, 108, 252, 0.16);
   border-radius: 18px;
 }
+.kob-steps-card .step-1 .inActive-kob:hover {
+  border: 1px dashed #0077ff;  
+}
 .kob-steps-card .step-1 .active-kob {
   border: 1px dashed #0077ff;
   border-radius: 18px;
+}
+.kob-steps-card .step-1 .active-kob h1 , p {
+  color: #0077ff;
 }
 .kob-steps-card .kob-input-component {
   border-top: 2px dashed rgba(33, 108, 252, 0.16);
