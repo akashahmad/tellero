@@ -18,6 +18,7 @@ const sidebarHandler = (flag) => {
 		sidebar.classList.remove("slideIn");
 		sidebar.classList.add("slideOut");
 	}
+	
 };
 // Sidebar list dropdown
 let sales = document.getElementById("sales");
@@ -146,6 +147,7 @@ const dateHandler = () => {
 		dateDropdown.classList.remove("max-h-ease");
 		dateFlag = true;
 	}
+	$(".toggle-finance-8 .dropwdown").addClass("d-none")
 };
 const dateSwicher = (type) => {
 	switch (type) {
@@ -376,9 +378,27 @@ const footerFormHandler = (event) => {
 };
 $(document).ready(function () {
 	$(".toggle-finance-8").click(function (e) {
+		if ($(dateDropdown).hasClass("max-h-ease")) {
+			$(dateDropdown).addClass("max-h-0")
+		}
+		$(".toggle-finance-8").not(this).each(function (index, value) {
+			if (!$(this).children(".dropwdown").hasClass("d-none")) {
+				$(this).children(".dropwdown").toggleClass("d-none")
+			}
+		})
 		$(this).children(".dropwdown").toggleClass("d-none");
 	});
+
 	$(".filter-dropdown-opener").click(function (e) {
 		$(this).children(".filter-dropdown").toggleClass("d-none");
 	});
+
+	$(".recipt-data").mouseover(function () {
+		$(this).children(".d-none").removeClass("d-none").addClass("opened")
+	})
+
+	$(".recipt-data").mouseout(function () {
+		$(this).children(".opened").addClass("d-none")
+	})
+
 });
