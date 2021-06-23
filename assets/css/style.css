@@ -3848,3 +3848,8 @@ width: 100%!important;
   width: 365px;
   }
 }
+@media (min-width:1366px) and (max-width:1900px) {
+  .table-zoom{
+    zoom: 85%;
+  }
+}
