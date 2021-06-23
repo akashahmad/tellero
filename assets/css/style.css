@@ -2542,6 +2542,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .fs-15 {
     font-size: 12px;
   }
+  .fs-fifteen{
+    font-size: 15px;
+  }
   .dashboard .gallery {
     padding: 16px 18px 23px 18px;
   }
