@@ -449,7 +449,8 @@
                                         <td class="fs-11 clr-dark-grey font-medium">
                                             <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
                                                 <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <img src="./assets/img/attach.png" class="h_20px " />
+                                                    <img src="./assets/img/paper-clip.png" height="32px"  />
+                                                    <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
                                                 </div>
                                                 <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
                                                     <div class="d-flex py-2 px-2 align-items-center">
@@ -472,39 +473,89 @@
                                                 </div>
                                         </td>
                                         <td class="fs-11 clr-dark-grey font-medium">
-                                            <img src="./assets/img/icon-close.png" class="h_20px" /><span>
-                                            <img src="./assets/img/plus.png" class="h_20px mx-1" /><span>
+                                            <img src="./assets/img/icon-close.png" height="25px" /><span>
+                                            <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="clr-light font-medium fs-11 px-3 checkbox-container">
-                                            <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
-                                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                                    <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
-                                                    <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                </tr>
+                                <tr>
+                                    <td class="clr-light font-medium fs-11 px-3 checkbox-container">
+                                        <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
+                                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                                <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
+                                                <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class=" font-medium">
+                                        <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;"> 
+                                            <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                                        </div>
+                                    </td>
+                                    <td class="clr-dark-grey ">
+                                        <div class="px-0 position-relative calendar-trigger t-grayCard">
+                                            <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
+                                            <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+                                                <img src="./assets/img/calendar (1).png" alt="" />
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td align="right" class="fs-11 clr-dark-grey">
+                                        <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                        <div class="d-flex justify-content-between w-100">
+                                            <p class="m-0">-- Vmlg bling --</p>
+                                            <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                                        </div>
+                                        <div class="d-none dropwdown big-dropdown big-dropdown t-card" style="z-index: 1;">
+                                            <h6 class="text-left py-2">Salg</h6>
+                                            <div class="d-flex py-2 px-2">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td class=" font-medium">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td class="clr-dark-grey ">
-                                            <div class="px-0 position-relative calendar-trigger t-grayCard">
-                                                <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
-                                                <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-                                                    <img src="./assets/img/calendar (1).png" alt="" />
+                                            <div class="d-flex py-2 px-2">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td align="right" class=" fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex justify-content-between w-100">
+                                            <div class="d-flex py-2 px-2">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </td>
+                                    <td class="fs-11 clr-dark-grey">
+                                        <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
+                                            <div class="d-flex align-items-center justify-content-between w-100">
                                                 <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                                                <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
                                             </div>
                                             <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
                                                 <h6 class="text-left py-2">Salg</h6>
@@ -549,1028 +600,1201 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <p class="m-0">-- Vmlg bling --</p>
-                                                    <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
+                                    </td>
+                                    <td class="clr-dark-grey">
+                                        <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                            <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                                        </div>
+                                    </td>
+                                    <td class="clr-dark-grey">
+                                        <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                            <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                                        </div>
+                                    </td>
+                                    <td align="right" class="fs-11 clr-dark-grey">
+                                        <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                            <p class="m-0">-- Vmlg bling --</p>
+                                            <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                                        </div>
+                                        <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                            <h6 class="text-left py-2">Omsaetning</h6>
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
                                                 </div>
-                                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                    <h6 class="text-left py-2">Salg</h6>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
+                                                <div class="px-4">
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                                            <div class="divider"></div>
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                                </div>
+                                                <div class="px-4">
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                                            <div class="divider"></div>
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                                </div>
+                                                <div class="px-4">
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                                </div>
                                             </div>
-                                        </td>
-                                        <td align="right" class=" fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                            <div class="divider"></div>
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                                </div>
+                                                <div class="px-4">
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                                </div>
+                                                <div class="px-4">
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                                </div>
+                                            </div>
+                                            <div class="divider"></div>
+                                        </div>
+                                    </div>
+                                    <td class="fs-11 clr-dark-grey font-medium">
+                                        <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
                                             <div class="d-flex align-items-center justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                                                <img src="./assets/img/paper-clip.png" height="32px"  />
+                                                <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
                                             </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Omsaetning</h6>
+                                            <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
                                                 <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>     
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>    
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                                    <div>    
+                                                        <img src="./assets/img/select@3x.png" height="15px" />
+                                                    </div>
+                                                    <div class="px-3 pt-1">
+                                                        <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
                                                     </div>
                                                 </div>
                                                 <div class="divider"></div>
                                                 <div class="d-flex py-2 px-2 align-items-center">
                                                     <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                                        <img src="./assets/img/selection@3x.png" height="18px" />
                                                     </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                                    <div class="px-3 pt-1">
+                                                        <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
                                                     </div>
                                                 </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
+                                            </div>
+                                    </td>
+                                    <td class="fs-11 clr-dark-grey font-medium">
+                                        <img src="./assets/img/icon-close.png" height="25px" /><span>
+                                        <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td class="clr-light font-medium fs-11 px-3 checkbox-container">
+                                    <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
+                                        <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                            <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
+                                            <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class=" font-medium">
+                                    <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;"> 
+                                        <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                                    </div>
+                                </td>
+                                <td class="clr-dark-grey ">
+                                    <div class="px-0 position-relative calendar-trigger t-grayCard">
+                                        <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
+                                        <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+                                            <img src="./assets/img/calendar (1).png" alt="" />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                </td>
+                                <td align="right" class="fs-11 clr-dark-grey">
+                                    <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                    <div class="d-flex justify-content-between w-100">
+                                        <p class="m-0">-- Vmlg bling --</p>
+                                        <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                                    </div>
+                                    <div class="d-none dropwdown big-dropdown big-dropdown t-card" style="z-index: 1;">
+                                        <h6 class="text-left py-2">Salg</h6>
+                                        <div class="d-flex py-2 px-2">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                             </div>
                                         </div>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <img src="./assets/img/attach.png" class="h_20px " />
+                                        <div class="d-flex py-2 px-2">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex py-2 px-2">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                            </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </td>
+                                <td class="fs-11 clr-dark-grey">
+                                    <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
+                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                            <p class="m-0">-- Vmlg bling --</p>
+                                            <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
+                                        </div>
+                                        <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                            <h6 class="text-left py-2">Salg</h6>
+                                            <div class="d-flex py-2 px-2">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
                                                 </div>
-                                                <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/select@3x.png" height="15px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="divider"></div>
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/selection@3x.png" height="18px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
-                                                        </div>
-                                                    </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
                                                 </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <img src="./assets/img/icon-close.png" class="h_20px" /><span>
-                                            <img src="./assets/img/plus.png" class="h_20px mx-1" /><span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="clr-light font-medium fs-11 px-3 checkbox-container">
-                                            <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
-                                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                                    <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
-                                                    <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td class=" font-medium">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td class="clr-dark-grey ">
-                                            <div class="px-0 position-relative calendar-trigger t-grayCard">
-                                                <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
-                                                <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-                                                    <img src="./assets/img/calendar (1).png" alt="" />
+                                            <div class="d-flex py-2 px-2">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                                </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Salg</h6>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
+                                            <div class="d-flex py-2 px-2">
+                                                <div>    
+                                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
                                                 </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
                                                 </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
+                                                <div>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <p class="m-0">-- Vmlg bling --</p>
-                                                    <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                    <h6 class="text-left py-2">Salg</h6>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    </div>
+                                </td>
+                                <td class="clr-dark-grey">
+                                    <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                        <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                                    </div>
+                                </td>
+                                <td class="clr-dark-grey">
+                                    <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                        <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                                    </div>
+                                </td>
+                                <td align="right" class="fs-11 clr-dark-grey">
+                                    <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                    <div class="d-flex align-items-center justify-content-between w-100">
+                                        <p class="m-0">-- Vmlg bling --</p>
+                                        <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                                    </div>
+                                    <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                        <h6 class="text-left py-2">Omsaetning</h6>
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex align-items-center justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Omsaetning</h6>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
+                                            <div class="px-4">
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
                                             </div>
                                         </div>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <img src="./assets/img/attach.png" class="h_20px " />
+                                        <div class="divider"></div>
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                            </div>
+                                            <div class="px-4">
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                            </div>
+                                            <div class="px-4">
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                            </div>
+                                            <div class="px-4">
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                            </div>
+                                            <div class="px-4">
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                            </div>
+                                        </div>
+                                        <div class="divider"></div>
+                                    </div>
+                                </div>
+                                <td class="fs-11 clr-dark-grey font-medium">
+                                    <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
+                                        <div class="d-flex align-items-center justify-content-between w-100">
+                                            <img src="./assets/img/paper-clip.png" height="32px"  />
+                                            <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
+                                        </div>
+                                        <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                    <img src="./assets/img/select@3x.png" height="15px" />
                                                 </div>
-                                                <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/select@3x.png" height="15px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="divider"></div>
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/selection@3x.png" height="18px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <img src="./assets/img/icon-close.png" class="h_20px" /><span>
-                                            <img src="./assets/img/plus.png" class="h_20px mx-1" /><span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="clr-light font-medium fs-11 px-3 checkbox-container">
-                                            <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
-                                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                                    <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
-                                                    <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                                <div class="px-3 pt-1">
+                                                    <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
                                                 </div>
                                             </div>
-                                        </td>
-                                        <td class=" font-medium">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td class="clr-dark-grey ">
-                                            <div class="px-0 position-relative calendar-trigger t-grayCard">
-                                                <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
-                                                <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-                                                    <img src="./assets/img/calendar (1).png" alt="" />
+                                            <div class="divider"></div>
+                                            <div class="d-flex py-2 px-2 align-items-center">
+                                                <div>    
+                                                    <img src="./assets/img/selection@3x.png" height="18px" />
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Salg</h6>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
+                                                <div class="px-3 pt-1">
+                                                    <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <p class="m-0">-- Vmlg bling --</p>
-                                                    <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                    <h6 class="text-left py-2">Salg</h6>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                </td>
+                                <td class="fs-11 clr-dark-grey font-medium">
+                                    <img src="./assets/img/icon-close.png" height="25px" /><span>
+                                    <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td class="clr-light font-medium fs-11 px-3 checkbox-container">
+                                <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
+                                    <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                        <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
+                                        <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class=" font-medium">
+                                <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;"> 
+                                    <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                                </div>
+                            </td>
+                            <td class="clr-dark-grey ">
+                                <div class="px-0 position-relative calendar-trigger t-grayCard">
+                                    <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
+                                    <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+                                        <img src="./assets/img/calendar (1).png" alt="" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                            </td>
+                            <td align="right" class="fs-11 clr-dark-grey">
+                                <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                <div class="d-flex justify-content-between w-100">
+                                    <p class="m-0">-- Vmlg bling --</p>
+                                    <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                                </div>
+                                <div class="d-none dropwdown big-dropdown big-dropdown t-card" style="z-index: 1;">
+                                    <h6 class="text-left py-2">Salg</h6>
+                                    <div class="d-flex py-2 px-2">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-2 px-2">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-2 px-2">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </td>
+                            <td class="fs-11 clr-dark-grey">
+                                <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
+                                    <div class="d-flex align-items-center justify-content-between w-100">
+                                        <p class="m-0">-- Vmlg bling --</p>
+                                        <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
+                                    </div>
+                                    <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                        <h6 class="text-left py-2">Salg</h6>
+                                        <div class="d-flex py-2 px-2">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex align-items-center justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Omsaetning</h6>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                             </div>
                                         </div>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <img src="./assets/img/attach.png" class="h_20px " />
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/select@3x.png" height="15px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="divider"></div>
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/selection@3x.png" height="18px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <img src="./assets/img/icon-close.png" class="h_20px" /><span>
-                                            <img src="./assets/img/plus.png" class="h_20px mx-1" /><span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="clr-light font-medium fs-11 px-3 checkbox-container">
-                                            <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
-                                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                                    <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
-                                                    <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
-                                                </div>
+                                        <div class="d-flex py-2 px-2">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
                                             </div>
-                                        </td>
-                                        <td class=" font-medium">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey ">
-                                            <div class="px-0 position-relative calendar-trigger t-grayCard">
-                                                <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
-                                                <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-                                                    <img src="./assets/img/calendar (1).png" alt="" />
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Salg</h6>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                             </div>
                                         </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <p class="m-0">-- Vmlg bling --</p>
-                                                    <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                    <h6 class="text-left py-2">Salg</h6>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="d-flex py-2 px-2">
+                                            <div>    
+                                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex align-items-center justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Omsaetning</h6>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
+                                            <div>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
                                             </div>
                                         </div>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <img src="./assets/img/attach.png" class="h_20px " />
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/select@3x.png" height="15px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="divider"></div>
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/selection@3x.png" height="18px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <img src="./assets/img/icon-close.png" class="h_20px" /><span>
-                                            <img src="./assets/img/plus.png" class="h_20px mx-1" /><span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="clr-light font-medium fs-11 px-3 checkbox-container">
-                                            <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
-                                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                                    <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
-                                                    <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
-                                                </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="clr-dark-grey">
+                                <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                    <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                                </div>
+                            </td>
+                            <td class="clr-dark-grey">
+                                <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                    <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                                </div>
+                            </td>
+                            <td align="right" class="fs-11 clr-dark-grey">
+                                <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                                <div class="d-flex align-items-center justify-content-between w-100">
+                                    <p class="m-0">-- Vmlg bling --</p>
+                                    <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                                </div>
+                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                    <h6 class="text-left py-2">Omsaetning</h6>
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                        </div>
+                                        <div class="px-4">
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                        </div>
+                                        <div class="px-4">
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                        </div>
+                                        <div class="px-4">
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                        </div>
+                                        <div class="px-4">
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                        </div>
+                                        <div class="px-4">
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                </div>
+                            </div>
+                            <td class="fs-11 clr-dark-grey font-medium">
+                                <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
+                                    <div class="d-flex align-items-center justify-content-between w-100">
+                                        <img src="./assets/img/paper-clip.png" height="32px"  />
+                                        <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
+                                    </div>
+                                    <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                <img src="./assets/img/select@3x.png" height="15px" />
                                             </div>
-                                        </td>
-                                        <td class=" font-medium">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td class="clr-dark-grey ">
-                                            <div class="px-0 position-relative calendar-trigger t-grayCard">
-                                                <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
-                                                <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
-                                                    <img src="./assets/img/calendar (1).png" alt="" />
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td align="right" class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Salg</h6>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
-                                                <div class="d-flex py-2 px-2">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                    </div>
-                                                    <div>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                    </div>
-                                                </div>
+                                            <div class="px-3 pt-1">
+                                                <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
                                             </div>
                                         </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <p class="m-0">-- Vmlg bling --</p>
-                                                    <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                    <h6 class="text-left py-2">Salg</h6>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex py-2 px-2">
-                                                        <div>    
-                                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
-                                                        </div>
-                                                        <div>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
-                                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                        <div class="divider"></div>
+                                        <div class="d-flex py-2 px-2 align-items-center">
+                                            <div>    
+                                                <img src="./assets/img/selection@3x.png" height="18px" />
                                             </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td class="clr-dark-grey">
-                                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
-                                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
-                                            </div>
-                                        </td>
-                                        <td align="right" class=" fs-11 clr-dark-grey">
-                                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
-                                            <div class="d-flex align-items-center justify-content-between w-100">
-                                                <p class="m-0">-- Vmlg bling --</p>
-                                                <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
-                                            </div>
-                                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
-                                                <h6 class="text-left py-2">Omsaetning</h6>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
-                                                <div class="d-flex py-2 px-2 align-items-center">
-                                                    <div>    
-                                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
-                                                    </div>
-                                                    <div class="px-4">
-                                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
-                                                    </div>
-                                                </div>
-                                                <div class="divider"></div>
+                                            <div class="px-3 pt-1">
+                                                <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
                                             </div>
                                         </div>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
-                                                <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <img src="./assets/img/attach.png" class="h_20px " />
-                                                </div>
-                                                <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/select@3x.png" height="15px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="divider"></div>
-                                                    <div class="d-flex py-2 px-2 align-items-center">
-                                                        <div>    
-                                                            <img src="./assets/img/selection@3x.png" height="18px" />
-                                                        </div>
-                                                        <div class="px-3 pt-1">
-                                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </td>
-                                        <td class="fs-11 clr-dark-grey font-medium">
-                                            <img src="./assets/img/icon-close.png" class="h_20px" /><span>
-                                            <img src="./assets/img/plus.png" class="h_20px mx-1" /><span>
-                                        </td>
-                                    </tr>
+                                    </div>
+                            </td>
+                            <td class="fs-11 clr-dark-grey font-medium">
+                                <img src="./assets/img/icon-close.png" height="25px" /><span>
+                                <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
+                            </td>
+                    </tr>                                <tr>
+                        <td class="clr-light font-medium fs-11 px-3 checkbox-container">
+                            <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
+                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                    <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
+                                    <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class=" font-medium">
+                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;"> 
+                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                            </div>
+                        </td>
+                        <td class="clr-dark-grey ">
+                            <div class="px-0 position-relative calendar-trigger t-grayCard">
+                                <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
+                                <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+                                    <img src="./assets/img/calendar (1).png" alt="" />
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                        </td>
+                        <td align="right" class="fs-11 clr-dark-grey">
+                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                            <div class="d-flex justify-content-between w-100">
+                                <p class="m-0">-- Vmlg bling --</p>
+                                <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                            </div>
+                            <div class="d-none dropwdown big-dropdown big-dropdown t-card" style="z-index: 1;">
+                                <h6 class="text-left py-2">Salg</h6>
+                                <div class="d-flex py-2 px-2">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex py-2 px-2">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex py-2 px-2">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </td>
+                        <td class="fs-11 clr-dark-grey">
+                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
+                                <div class="d-flex align-items-center justify-content-between w-100">
+                                    <p class="m-0">-- Vmlg bling --</p>
+                                    <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
+                                </div>
+                                <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                    <h6 class="text-left py-2">Salg</h6>
+                                    <div class="d-flex py-2 px-2">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-2 px-2">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-2 px-2">
+                                        <div>    
+                                             <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                        </div>
+                                        <div>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                            <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="clr-dark-grey">
+                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                            </div>
+                        </td>
+                        <td class="clr-dark-grey">
+                            <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                                <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                            </div>
+                        </td>
+                        <td align="right" class="fs-11 clr-dark-grey">
+                            <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                            <div class="d-flex align-items-center justify-content-between w-100">
+                                <p class="m-0">-- Vmlg bling --</p>
+                                <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                            </div>
+                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                <h6 class="text-left py-2">Omsaetning</h6>
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                    </div>
+                                    <div class="px-4">
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                    </div>
+                                    <div class="px-4">
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                    </div>
+                                    <div class="px-4">
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                    </div>
+                                    <div class="px-4">
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                    </div>
+                                    <div class="px-4">
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                            </div>
+                        </div>
+                        <td class="fs-11 clr-dark-grey font-medium">
+                            <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
+                                <div class="d-flex align-items-center justify-content-between w-100">
+                                    <img src="./assets/img/paper-clip.png" height="32px"  />
+                                    <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
+                                </div>
+                                <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                            <img src="./assets/img/select@3x.png" height="15px" />
+                                        </div>
+                                        <div class="px-3 pt-1">
+                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="d-flex py-2 px-2 align-items-center">
+                                        <div>    
+                                            <img src="./assets/img/selection@3x.png" height="18px" />
+                                        </div>
+                                        <div class="px-3 pt-1">
+                                            <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </td>
+                        <td class="fs-11 clr-dark-grey font-medium">
+                            <img src="./assets/img/icon-close.png" height="25px" /><span>
+                            <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
+                        </td>
+                </tr>                                <tr>
+                    <td class="clr-light font-medium fs-11 px-3 checkbox-container">
+                        <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
+                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
+                                <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class=" font-medium">
+                        <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;"> 
+                            <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                        </div>
+                    </td>
+                    <td class="clr-dark-grey ">
+                        <div class="px-0 position-relative calendar-trigger t-grayCard">
+                            <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
+                            <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+                                <img src="./assets/img/calendar (1).png" alt="" />
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                    </td>
+                    <td align="right" class="fs-11 clr-dark-grey">
+                        <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                        <div class="d-flex justify-content-between w-100">
+                            <p class="m-0">-- Vmlg bling --</p>
+                            <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                        </div>
+                        <div class="d-none dropwdown big-dropdown big-dropdown t-card" style="z-index: 1;">
+                            <h6 class="text-left py-2">Salg</h6>
+                            <div class="d-flex py-2 px-2">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                </div>
+                            </div>
+                            <div class="d-flex py-2 px-2">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                </div>
+                            </div>
+                            <div class="d-flex py-2 px-2">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </td>
+                    <td class="fs-11 clr-dark-grey">
+                        <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
+                            <div class="d-flex align-items-center justify-content-between w-100">
+                                <p class="m-0">-- Vmlg bling --</p>
+                                <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
+                            </div>
+                            <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                                <h6 class="text-left py-2">Salg</h6>
+                                <div class="d-flex py-2 px-2">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex py-2 px-2">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex py-2 px-2">
+                                    <div>    
+                                         <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                    </div>
+                                    <div>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                        <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="clr-dark-grey">
+                        <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                            <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                        </div>
+                    </td>
+                    <td class="clr-dark-grey">
+                        <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                            <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                        </div>
+                    </td>
+                    <td align="right" class="fs-11 clr-dark-grey">
+                        <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <p class="m-0">-- Vmlg bling --</p>
+                            <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                        </div>
+                        <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                            <h6 class="text-left py-2">Omsaetning</h6>
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                </div>
+                                <div class="px-4">
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                </div>
+                                <div class="px-4">
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                </div>
+                                <div class="px-4">
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                </div>
+                                <div class="px-4">
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                                </div>
+                                <div class="px-4">
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                    <td class="fs-11 clr-dark-grey font-medium">
+                        <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
+                            <div class="d-flex align-items-center justify-content-between w-100">
+                                <img src="./assets/img/paper-clip.png" height="32px"  />
+                                <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
+                            </div>
+                            <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                        <img src="./assets/img/select@3x.png" height="15px" />
+                                    </div>
+                                    <div class="px-3 pt-1">
+                                        <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
+                                    </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="d-flex py-2 px-2 align-items-center">
+                                    <div>    
+                                        <img src="./assets/img/selection@3x.png" height="18px" />
+                                    </div>
+                                    <div class="px-3 pt-1">
+                                        <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </td>
+                    <td class="fs-11 clr-dark-grey font-medium">
+                        <img src="./assets/img/icon-close.png" height="25px" /><span>
+                        <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
+                    </td>
+            </tr>                                <tr>
+                <td class="clr-light font-medium fs-11 px-3 checkbox-container">
+                    <div class="slectbox mb-0 d-flex align-items-center mr-10" style="width: 16px; height: 16px;">
+                        <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                            <input id="product_no" type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full">
+                            <div class="check-icon hidden box bg-blue" style="margin: 3px 0px 1px 3.2px;"></div>
+                        </div>
+                    </div>
+                </td>
+                <td class=" font-medium">
+                    <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;"> 
+                        <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" value="9" type="number" placeholder="0.00" style="width: 70px;" />
+                    </div>
+                </td>
+                <td class="clr-dark-grey ">
+                    <div class="px-0 position-relative calendar-trigger t-grayCard">
+                        <input id="date_picker" type="date" class="w-100 appearance-none invoice-input font-light fs-16 n-props border-0 m-0 clr-dark-grey py-2" value="12-02-2012" />
+                        <div class="icon position-absolute right-0 top-0 cursor-pointer pointer-events-none h-100 d-flex align-items-center px-3">
+                            <img src="./assets/img/calendar (1).png" alt="" />
+                        </div>
+                    </div>
+                </td>
+                <td>
+                </td>
+                <td align="right" class="fs-11 clr-dark-grey">
+                    <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="m-0">-- Vmlg bling --</p>
+                        <span class="pl-1"> <i class="fa fa-angle-down f-17 clr-blue ml-1"></i></span>
+                    </div>
+                    <div class="d-none dropwdown big-dropdown big-dropdown t-card" style="z-index: 1;">
+                        <h6 class="text-left py-2">Salg</h6>
+                        <div class="d-flex py-2 px-2">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                            </div>
+                            <div>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                            </div>
+                            <div>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                            </div>
+                        </div>
+                        <div class="d-flex py-2 px-2">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                            </div>
+                            <div>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                            </div>
+                            <div>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                            </div>
+                        </div>
+                        <div class="d-flex py-2 px-2">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                            </div>
+                            <div>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                            </div>
+                            <div>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </td>
+                <td class="fs-11 clr-dark-grey">
+                    <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 position-relative">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <p class="m-0">-- Vmlg bling --</p>
+                            <span class="pl-1 d-flex align-items-center"><i class="fa fa-angle-down f-19 clr-blue mx-2"></i> <span class="clr-blue">Ingen</span></span>
+                        </div>
+                        <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                            <h6 class="text-left py-2">Salg</h6>
+                            <div class="d-flex py-2 px-2">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                </div>
+                            </div>
+                            <div class="d-flex py-2 px-2">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                </div>
+                            </div>
+                            <div class="d-flex py-2 px-2">
+                                <div>    
+                                     <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">4068</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">Invoice</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props px-4 font-normal text-left">TEMA Regnskep oslo as...</p>
+                                </div>
+                                <div>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Redgiger kontext</p>
+                                    <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Restbelob: 12.500.00...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td class="clr-dark-grey">
+                    <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                        <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00" value="0.00" style="width: 70px;" />
+                    </div>
+                </td>
+                <td class="clr-dark-grey">
+                    <div class="w-full position-relative clr-dark-grey t-whiteCard" style="width: 70px;">
+                        <input name="reminder fee per month" required="" class="invoice-input py-2 m-0 font-light fs-13 n-props border-0" type="text" placeholder="0.00"  value="0.01" style="width: 70px;" />
+                    </div>
+                </td>
+                <td align="right" class="fs-11 clr-dark-grey">
+                    <div class="px-3 py-2 t-whiteCard d-flex toggle-finance-8 w-100 position-relative">
+                    <div class="d-flex align-items-center justify-content-between w-100">
+                        <p class="m-0">-- Vmlg bling --</p>
+                        <span class="d-flex align-items-center"> <i class="fa fa-angle-down f-19 clr-blue mx-1"></i> <span class="clr-blue">Ingen</span>
+                    </div>
+                    <div class="d-none dropwdown big-dropdown t-card" style="z-index: 1;">
+                        <h6 class="text-left py-2">Omsaetning</h6>
+                        <div class="d-flex py-2 px-2 align-items-center">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                            </div>
+                            <div class="px-4">
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex py-2 px-2 align-items-center">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                            </div>
+                            <div class="px-4">
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex py-2 px-2 align-items-center">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                            </div>
+                            <div class="px-4">
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex py-2 px-2 align-items-center">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                            </div>
+                            <div class="px-4">
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="d-flex py-2 px-2 align-items-center">
+                            <div>    
+                                 <p class="fs-18 clr-dark-grey mb-0 n-props font-normal text-left">1000</p>
+                            </div>
+                            <div class="px-4">
+                                <p class="fs-10 clr-dark-grey mb-0 n-props font-normal text-left">Lorem ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+                <td class="fs-11 clr-dark-grey font-medium">
+                    <div class="px-0 py-2 d-flex toggle-finance-8 w-100 position-relative">
+                        <div class="d-flex align-items-center justify-content-between w-100">
+                            <img src="./assets/img/paper-clip.png" height="32px"  />
+                            <i class="fa fa-angle-down f-19 clr-blue mx-1"></i>
+                        </div>
+                        <div class="d-none dropwdown big-dropdown t-card right-0" style="z-index: 10;">
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                    <img src="./assets/img/select@3x.png" height="15px" />
+                                </div>
+                                <div class="px-3 pt-1">
+                                    <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select File</p>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="d-flex py-2 px-2 align-items-center">
+                                <div>    
+                                    <img src="./assets/img/selection@3x.png" height="18px" />
+                                </div>
+                                <div class="px-3 pt-1">
+                                    <p class="fs-12 clr-dark-grey mb-0 n-props font-normal text-left">Select file from <br> acheivements</p>
+                                </div>
+                            </div>
+                        </div>
+                </td>
+                <td class="fs-11 clr-dark-grey font-medium">
+                    <img src="./assets/img/icon-close.png" height="25px" /><span>
+                    <img src="./assets/img/plus.png" height="25px"  class="mx-1" /><span>
+                </td>
+        </tr>
+
 
                                     
                                 </tbody>
