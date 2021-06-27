@@ -4470,11 +4470,14 @@ p {
         bottom: 10px!important;
         right: 15px!important;
     }
+.not-table-overflow{
+    padding-bottom: 185px;
+}
 }
 
 @media (min-width:1366px) and (max-width:1920px) {
     .table-zoom {
-        zoom: 85%;
+        zoom: 82%;
     }
     .header-badge {
         font-size: 10px;
