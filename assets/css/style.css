@@ -4413,7 +4413,29 @@ p {
     background: #8d9fa9;
 }
 
+.fakhturaindstillinger8-component .box-1{
+  border-radius: 10px;
+}
+.fakhturaindstillinger8-component .fakturain-lastSection-imgBackground{
+  background: #fbfcff;
+  padding: 40px;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
+}
+.fakhturaindstillinger8-component .msgBlock{
+  position:absolute;
+  margin: -78px 5px 0px 228px;
+  box-shadow: 0 ​0px 10px 0 rgb(35 108 252 / 16%);
+  background-color: rgba(33, 108, 252, 0.16);
+  border-radius: 10px;
+}
+.fakhturaindstillinger8-component p{
+  color:  #11193c;
+}
 
+.fakhturaindstillinger8-component .section8-bottom-content{
+  border-left: 17px solid #ffd119;
+}
 /* buttons id kob , financial 13, 14 */
 
 #Gem_button {
