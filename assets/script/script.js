@@ -400,5 +400,5 @@ $(document).ready(function () {
 	$(".recipt-data").mouseout(function () {
 		$(this).children(".opened").addClass("d-none")
 	})
-
+	
 });
