@@ -4421,7 +4421,7 @@ p {
     background: #fbfcff;
     padding: 40px;
     border-radius: 50%;
-    box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
+    box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%) inset;
 }
 
 .fakhturaindstillinger8-component .msgBlock {
@@ -4430,13 +4430,6 @@ p {
     box-shadow: 0 ​0px 10px 0 rgb(35 108 252 / 16%);
     background-color: rgba(33, 108, 252, 0.16);
     border-radius: 10px;
-}
-
-@media (max-width:1366px) {
-    .fakhturaindstillinger8-component .msgBlock {
-        position: relative;
-        margin: 20px 0 0 0;
-    }
 }
 
 .fakhturaindstillinger8-component p {
@@ -4564,6 +4557,11 @@ p {
     left: 0;
 }
 
-left: 0;
-
+@media (max-width:420px) {
+    .fakhturaindstillinger8-component .fakturain-lastSection-imgBackground {
+        margin-left: -80px;
+    }
+    .fakhturaindstillinger8-component .msgBlock {
+        margin: -75px 5px 0px 132px;
+    }
 }
