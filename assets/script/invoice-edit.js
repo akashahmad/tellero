@@ -1,10 +1,10 @@
 // Invoice edit form data
-$(document).ready(function () {
+$(document).ready(function() {
     $("#inventory").select2({
         placeholder: "Revolut",
         allowClear: true,
     });
-    $("#inventory").on("change paste keyup", function () {
+    $("#inventory").on("change paste keyup", function() {
         console.log("Inventory value is ", $(this).val());
     });
 
@@ -12,15 +12,15 @@ $(document).ready(function () {
         placeholder: "1000-Salg af varer/ydelser m/moms",
         allowClear: true,
     });
-    $("#account").on("change paste keyup", function () {
+    $("#account").on("change paste keyup", function() {
         console.log("Account name is ", $(this).val());
     });
 
-    $("#vat").on("change", function () {
+    $("#vat").on("change", function() {
         console.log("VAT ", $(this).is(":checked"));
     });
 
-    $("#product_no").on("change", function () {
+    $("#product_no").on("change", function() {
         console.log("Hide product numbers ", $(this).is(":checked"));
     });
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
         placeholder: "Engelsk",
         allowClear: true,
     });
-    $("#account_language").on("change paste keyup", function () {
+    $("#account_language").on("change paste keyup", function() {
         console.log("Account language is ", $(this).val());
     });
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
         placeholder: "Svenske Kroner (SEK)",
         allowClear: true,
     });
-    $("#valuta").on("change paste keyup", function () {
+    $("#valuta").on("change paste keyup", function() {
         console.log("Account value is ", $(this).val());
     });
 
@@ -44,36 +44,36 @@ $(document).ready(function () {
         placeholder: "73,33",
         allowClear: true,
     });
-    $("#valutakurs").on("change paste keyup", function () {
+    $("#valutakurs").on("change paste keyup", function() {
         console.log("Currency exchange rate is ", $(this).val());
     });
 
-    $("#fi_deposit").on("change", function () {
+    $("#fi_deposit").on("change", function() {
         console.log("Use a FI payment card on the invoice ", $(this).is(":checked"));
     });
 
-    $("#other_bindings").on("change", function () {
+    $("#other_bindings").on("change", function() {
         console.log("Other binding options ", $(this).is(":checked"));
     });
 
-    $("#description").on("change", function () {
+    $("#description").on("change", function() {
         console.log("Description is ", $(this).val());
     });
-    $("#description2").on("change", function () {
+    $("#description2").on("change", function() {
         console.log("Second description is ", $(this).val());
     });
 
-    $("#contactContent").on("click", function (e) {
+    $("#contactContent").on("click", function(e) {
         console.log("Selection contact is", e.target.innerText);
         $("#selectionContact").text(e.target.innerText);
     });
 
-    $("#searchResults").on("click", function (e) {
+    $("#searchResults").on("click", function(e) {
         console.log("Invoice name is", e.target.innerText);
         $("#invoiceText").val(e.target.innerText);
     });
 
-    $("#date_picker").on("change", function () {
+    $("#date_picker").on("change", function() {
         console.log("Choosen date is", $(this).val());
     });
     $("#companyType").select2({
@@ -92,7 +92,7 @@ $(document).ready(function () {
         placeholder: "Netto",
         allowClear: true,
     });
-    $(window).click(function () {
+    $(window).click(function() {
         contactContent.classList.add("max-h-0");
         contactContent.classList.remove("max-h-ease");
         contactFlag = true;
@@ -100,10 +100,10 @@ $(document).ready(function () {
         searchContent.classList.remove("max-h-ease");
         searchFlag = true;
     });
-    $("#contactTrigger").click(function (event) {
+    $("#contactTrigger").click(function(event) {
         event.stopPropagation();
     });
-    $("#invoiceText").click(function (event) {
+    $("#invoiceText").click(function(event) {
         event.stopPropagation();
     });
 });

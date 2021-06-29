@@ -4,15 +4,14 @@ Chart.defaults.global.legend.position = "bottom";
 Chart.defaults.global.legend.labels.usePointStyle = true;
 Chart.defaults.global.legend.labels.boxWidth = 15;
 Chart.defaults.global.tooltips.backgroundColor = "#000";
-Chart.Legend.prototype.afterFit = function () {
+Chart.Legend.prototype.afterFit = function() {
     this.width = this.width - 488;
 };
 var myChart = new Chart(ctx, {
     type: "bar",
     data: {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        datasets: [
-            {
+        datasets: [{
                 label: "Revenue (=)",
                 backgroundColor: "#01e7ff",
                 data: [110, 110, 110, 110, 110, 110, 110, 110, 110, 110, 110, 110],
@@ -38,27 +37,23 @@ var myChart = new Chart(ctx, {
             },
         },
         scales: {
-            xAxes: [
-                {
-                    gridLines: {
-                        drawBorder: false,
-                    },
-                    barThickness: 10,
-                    stacked: true,
+            xAxes: [{
+                gridLines: {
+                    drawBorder: false,
                 },
-            ],
-            yAxes: [
-                {
-                    stacked: true,
-                    ticks: {
-                        beginAtZero: true,
-                    },
-                    type: "linear",
-                    gridLines: {
-                        display: false,
-                    },
+                barThickness: 10,
+                stacked: true,
+            }, ],
+            yAxes: [{
+                stacked: true,
+                ticks: {
+                    beginAtZero: true,
                 },
-            ],
+                type: "linear",
+                gridLines: {
+                    display: false,
+                },
+            }, ],
         },
         responsive: true,
         maintainAspectRatio: false,

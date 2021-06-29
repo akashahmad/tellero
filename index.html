@@ -1,195 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Tellero | Dashboard</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    </head>
-    <body>
-        <div class="d-flex flex-nowrap wrapper w-full">
-            <!-- page loader -->
-            <div id="loader"></div>
-            <!-- sidebar starts-->
-            <div id="sidebarOverlay" class="position-fixed inset-0 sidebar-overlay"></div>
-            <div id="sidebar" class="slideOut sidebar w-sidebar top-0 bottom-0 d-flex flex-column">
-                <div class="sidebar-handle position-fixed right-0 d-flex align-items-center justify-content-center">
-                    <svg onclick="sidebarHandler(false)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<head>
+    <title>Tellero | Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div class="d-flex flex-nowrap wrapper w-full">
+        <!-- page loader -->
+        <div id="loader"></div>
+        <!-- sidebar starts-->
+        <div id="sidebarOverlay" class="position-fixed inset-0 sidebar-overlay"></div>
+        <div id="sidebar" class="slideOut sidebar w-sidebar top-0 bottom-0 d-flex flex-column">
+            <div class="sidebar-handle position-fixed right-0 d-flex align-items-center justify-content-center">
+                <svg onclick="sidebarHandler(false)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
+            </div>
+            <div>
+                <div class="t-card logo-container d-flex align-items-center cursor-pointer">
+                    <a href="./index.html">
+                        <img src="./assets/img/Group 2355.png" alt="" srcset="" />
+                    </a>
                 </div>
-                <div>
-                    <div class="t-card logo-container d-flex align-items-center cursor-pointer">
-                        <a href="./index.html">
-                            <img src="./assets/img/Group 2355.png" alt="" srcset="" />
-                        </a>
-                    </div>
-                    <div class="position-relative">
-                        <div id="userTrigger" onclick="userHandler()" class="tlb-groups t-card d-flex align-items-center justify-content-between cursor-pointer position-relative">
-                            <div class="d-flex align-items-center">
-                                <img class="mr-12" src="./assets/img/hand-shake.png" alt="" srcset="" />
-                                <div>
-                                    <h3 class="fs-18 font-semibold mb-0">TLB Groups</h3>
-                                    <p class="fs-10 font-light mb-0">Chadi Maher</p>
-                                </div>
-                            </div>
-                            <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
-                        </div>
-                        <div id="userSettings" class="max-h-0 popup-7 user-settings position-absolute right-0 top-0">
-                            <div class="d-flex align-items-center">
-                                <img class="mr-10 add-business" src="./assets/img/Path 21.png" alt="" />
-                                <p class="mb-0 fs-20 clr-dark-grey n-props">Add a business</p>
-                            </div>
-                            <hr />
-                            <p class="fs-17 mb-0 n-props clr-dark-grey">Settings</p>
-                            <p class="fs-17 mb-0 n-props clr-dark-grey mt-32">Get Help</p>
-                            <p class="fs-17 mb-0 n-props clr-dark-grey mt-32">Log out</p>
-                        </div>
-                    </div>
-                </div>
-                <ul class="sidemenu">
-                    <li class="mb-32">
-                        <a href="./index.html">
-                            <div class="d-flex align-items-center">
-                                <img class="inactive mr-23" src="./assets/img/dashboard-inactive.png" alt="" />
-                                <img class="active mr-23" src="./assets/img/dashboard-active.png" alt="" />
-                                <span class="fs-18 n-props mb-0 clr-grey">Dashboard</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mb-32">
-                        <div id="sales" class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img class="inactive mr-23" src="./assets/img/discount-inactive.png" alt="" />
-                                <img class="active mr-23" src="./assets/img/discount-active.png" alt="" />
-                                <span class="fs-18 n-props mb-0 clr-grey">Sales</span>
-                            </div>
-                            <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
-                        </div>
-                        <ul id="salesList" class="sublist max-h-0">
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Current</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">All</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Offer</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Products</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Subscription</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mb-32">
+                <div class="position-relative">
+                    <div id="userTrigger" onclick="userHandler()" class="tlb-groups t-card d-flex align-items-center justify-content-between cursor-pointer position-relative">
                         <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/invoice-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/invoice-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Bogforing</span>
+                            <img class="mr-12" src="./assets/img/hand-shake.png" alt="" srcset="" />
+                            <div>
+                                <h3 class="fs-18 font-semibold mb-0">TLB Groups</h3>
+                                <p class="fs-10 font-light mb-0">Chadi Maher</p>
+                            </div>
                         </div>
-                    </li>
-                    <li class="mb-32">
-                        <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/notebook-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/notebook-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Contacts</span>
-                        </div>
-                    </li>
-                    <li class="mb-32">
-                        <a href="./bank.html">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <img class="inactive mr-23" src="./assets/img/bank-inactive.png" alt="" />
-                                    <img class="active mr-23" src="./assets/img/bank-active.png" alt="" />
-                                    <span class="fs-18 n-props mb-0 clr-grey">Bank</span>
-                                </div>
-                                <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" /></div
-                        ></a>
-                    </li>
-                    <li class="mb-32 clr-grey">
-                        <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/agency-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/agency-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Danish Agency</span>
-                        </div>
-                    </li>
-                    <li class="mb-32 clr-grey">
-                        <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/skill-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/skill-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Integrations</span>
-                        </div>
-                    </li>
-                </ul>
-                <div class="user bottom-0">
-                    <div class="profile-img d-flex align-items-center">
-                        <img class="mr-12" src="./assets/img/Image 1.jpg" alt="" srcset="" />
-                        <h5 class="n-props clr-grey fs-18 mb-0">Chadi Maher</h5>
+                        <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
                     </div>
-                    <div class="mt-18 d-flex align-items-center justify-content-between">
-                        <h4 class="mr-20 fs-18 clr-grey">Your Plan:<span class="clr-blue"> Basic</span></h4>
-                        <button class="upgrade-btn">Upgrade</button>
-                    </div>
-                    <div class="mt-30 t-card signoff d-flex align-items-center cursor-pointer">
-                        <img class="mr-18" src="./assets/img/signoff.png" alt="" srcset="" />
-                        <h5 class="fs-18 mb-0 font-medium">Logout</h5>
+                    <div id="userSettings" class="max-h-0 popup-7 user-settings position-absolute right-0 top-0">
+                        <div class="d-flex align-items-center">
+                            <img class="mr-10 add-business" src="./assets/img/Path 21.png" alt="" />
+                            <p class="mb-0 fs-20 clr-dark-grey n-props">Add a business</p>
+                        </div>
+                        <hr />
+                        <p class="fs-17 mb-0 n-props clr-dark-grey">Settings</p>
+                        <p class="fs-17 mb-0 n-props clr-dark-grey mt-32">Get Help</p>
+                        <p class="fs-17 mb-0 n-props clr-dark-grey mt-32">Log out</p>
                     </div>
                 </div>
             </div>
-            <div class="w-sidebar flex-shrink-0 desktop"></div>
-            <!-- sidebar ends -->
-            <div class="w-full">
-                <!-- header starts -->
-                <div class="mobile tab top-header t-card d-flex justify-content-between align-items-center">
-                    <img src="./assets/img/Group 2355.png" alt="" />
-                    <svg onclick="sidebarHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 cursor-pointer" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <ul class="sidemenu">
+                <li class="mb-32">
+                    <a href="./index.html">
+                        <div class="d-flex align-items-center">
+                            <img class="inactive mr-23" src="./assets/img/dashboard-inactive.png" alt="" />
+                            <img class="active mr-23" src="./assets/img/dashboard-active.png" alt="" />
+                            <span class="fs-18 n-props mb-0 clr-grey">Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="mb-32">
+                    <div id="sales" class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img class="inactive mr-23" src="./assets/img/discount-inactive.png" alt="" />
+                            <img class="active mr-23" src="./assets/img/discount-active.png" alt="" />
+                            <span class="fs-18 n-props mb-0 clr-grey">Sales</span>
+                        </div>
+                        <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
+                    </div>
+                    <ul id="salesList" class="sublist max-h-0">
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Current</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">All</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Offer</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Products</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Subscription</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mb-32">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/invoice-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/invoice-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Bogforing</span>
+                    </div>
+                </li>
+                <li class="mb-32">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/notebook-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/notebook-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Contacts</span>
+                    </div>
+                </li>
+                <li class="mb-32">
+                    <a href="./bank.html">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img class="inactive mr-23" src="./assets/img/bank-inactive.png" alt="" />
+                                <img class="active mr-23" src="./assets/img/bank-active.png" alt="" />
+                                <span class="fs-18 n-props mb-0 clr-grey">Bank</span>
+                            </div>
+                            <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" /></div>
+                    </a>
+                </li>
+                <li class="mb-32 clr-grey">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/agency-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/agency-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Danish Agency</span>
+                    </div>
+                </li>
+                <li class="mb-32 clr-grey">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/skill-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/skill-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Integrations</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="user bottom-0">
+                <div class="profile-img d-flex align-items-center">
+                    <img class="mr-12" src="./assets/img/Image 1.jpg" alt="" srcset="" />
+                    <h5 class="n-props clr-grey fs-18 mb-0">Chadi Maher</h5>
+                </div>
+                <div class="mt-18 d-flex align-items-center justify-content-between">
+                    <h4 class="mr-20 fs-18 clr-grey">Your Plan:<span class="clr-blue"> Basic</span></h4>
+                    <button class="upgrade-btn">Upgrade</button>
+                </div>
+                <div class="mt-30 t-card signoff d-flex align-items-center cursor-pointer">
+                    <img class="mr-18" src="./assets/img/signoff.png" alt="" srcset="" />
+                    <h5 class="fs-18 mb-0 font-medium">Logout</h5>
+                </div>
+            </div>
+        </div>
+        <div class="w-sidebar flex-shrink-0 desktop"></div>
+        <!-- sidebar ends -->
+        <div class="w-full">
+            <!-- header starts -->
+            <div class="mobile tab top-header t-card d-flex justify-content-between align-items-center">
+                <img src="./assets/img/Group 2355.png" alt="" />
+                <svg onclick="sidebarHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 cursor-pointer" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <line x1="4" y1="6" x2="20" y2="6" />
                         <line x1="4" y1="12" x2="20" y2="12" />
                         <line x1="4" y1="18" x2="20" y2="18" />
                     </svg>
-                </div>
-                <div class="no-overflow">
-                    <header class="header t-card d-flex justify-content-between align-items-center position-relative">
-                        <h1 class="mb-0 fs-38 n-props clr-dark-grey">Dashboard</h1>
-                        <svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            </div>
+            <div class="no-overflow">
+                <header class="header t-card d-flex justify-content-between align-items-center position-relative">
+                    <h1 class="mb-0 fs-38 n-props clr-dark-grey">Dashboard</h1>
+                    <svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <polyline points="15 6 9 12 15 18" />
                         </svg>
-                        <div id="headerContent" class="icons-dd d-flex align-items-center slide-out">
-                            <div onclick="languagesHandler()" id="languagesTrigger" class="cursor-pointer d-flex align-items-center country-dropdown poition-relative">
+                    <div id="headerContent" class="icons-dd d-flex align-items-center slide-out">
+                        <div onclick="languagesHandler()" id="languagesTrigger" class="cursor-pointer d-flex align-items-center country-dropdown poition-relative">
+                            <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
+                            <img class="cursor-pointer flex-shrink-0" src="./assets/img/Path 8.png" alt="" srcset="" />
+                        </div>
+                        <div id="languagesContent" class="absolute languages top-0 max-h-0">
+                            <div class="d-flex align-items-center">
+                                <img class="denmark-flag mr-10" src="./assets/img/denmark-flag.png" srcset="" />
+                                <p class="mb-0 fs-16">Danish</p>
+                            </div>
+                            <div class="d-flex align-items-center">
                                 <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
-                                <img class="cursor-pointer flex-shrink-0" src="./assets/img/Path 8.png" alt="" srcset="" />
+                                <p class="mb-0 fs-16">English UK</p>
                             </div>
-                            <div id="languagesContent" class="absolute languages top-0 max-h-0">
-                                <div class="d-flex align-items-center">
-                                    <img class="denmark-flag mr-10" src="./assets/img/denmark-flag.png" srcset="" />
-                                    <p class="mb-0 fs-16">Danish</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
-                                    <p class="mb-0 fs-16">English UK</p>
-                                </div>
-                            </div>
+                        </div>
 
-                            <svg class="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" />
                                 <line x1="12" y1="19" x2="12" y2="19.01" />
                             </svg>
-                            <button id="financeTrigger" onclick="financeDropdown()" class="position-relative finance-btn d-flex justify-content-between align-items-center fs-18 n-props clr-dark-grey">
+                        <button id="financeTrigger" onclick="financeDropdown()" class="position-relative finance-btn d-flex justify-content-between align-items-center fs-18 n-props clr-dark-grey">
                                 <div class="d-flex align-items-center mr-50">
                                     <span>Finance-2021</span>
                                 </div>
@@ -199,19 +201,19 @@
                                     <p class="fs-16 clr-dark-grey n-props mb-0">Create new Finance Year</p>
                                 </div>
                             </button>
-                            <img onClick="headerHandler(false)" class="close-icon mobile ml-6 mr-10 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
-                        </div>
-                    </header>
-                </div>
-                <!-- header ends -->
-                <div class="content-container dashboard row m-0">
-                    <div class="col-lg-9 mt-40 relative p-0">
-                        <div class="t-card bank-card d-flex flex-column justify-content-center align-items-center position-relative">
-                            <img class="close-icon position-absolute right-0 top-0 mt-18 mr-18 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
-                            <img class="bank-img" src="./assets/img/bank (-1.png" alt="" />
-                            <h4 class="mt-20 fs-29 n-props font-weight-bold text-center mb-0 clr-dark-grey">Your bank is not connected</h4>
-                            <p class="font-light n-props mt-12 fs-12">Please Connect your Bank with Tellero</p>
-                            <button class="login-button mt-24 n-props d-flex align-items-center">
+                        <img onClick="headerHandler(false)" class="close-icon mobile ml-6 mr-10 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
+                    </div>
+                </header>
+            </div>
+            <!-- header ends -->
+            <div class="content-container dashboard row m-0">
+                <div class="col-lg-9 mt-40 relative p-0">
+                    <div class="t-card bank-card d-flex flex-column justify-content-center align-items-center position-relative">
+                        <img class="close-icon position-absolute right-0 top-0 mt-18 mr-18 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
+                        <img class="bank-img" src="./assets/img/bank (-1.png" alt="" />
+                        <h4 class="mt-20 fs-29 n-props font-weight-bold text-center mb-0 clr-dark-grey">Your bank is not connected</h4>
+                        <p class="font-light n-props mt-12 fs-12">Please Connect your Bank with Tellero</p>
+                        <button class="login-button mt-24 n-props d-flex align-items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-10 icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="3" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <line x1="12" y1="5" x2="12" y2="19" />
@@ -219,346 +221,355 @@
                                 </svg>
                                 <span>Connect my Bank</span>
                             </button>
+                    </div>
+                    <div class="t-card mt-32 overview">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h2 class="fs-23 font-semibold n-props">Overview (Income and Expense)</h2>
+                            <img class="list-icon cursor-pointer" src="./assets/img/dots-to-close-2.png" alt="" />
                         </div>
-                        <div class="t-card mt-32 overview">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="fs-23 font-semibold n-props">Overview (Income and Expense)</h2>
-                                <img class="list-icon cursor-pointer" src="./assets/img/dots-to-close-2.png" alt="" />
-                            </div>
-                            <div class="graph">
-                                <canvas id="myChart4"></canvas>
-                            </div>
+                        <div class="graph">
+                            <canvas id="myChart4"></canvas>
                         </div>
-                        <div class="t-card mt-32 stats">
-                            <div class="row m-0">
-                                <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
-                                    <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Invoice Glow</h5>
-                                    <div class="d-flex align-items-end mb-12">
-                                        <h4 class="mb-0 n-props font-semibold mr-12 fs-24">05</h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
+                    </div>
+                    <div class="t-card mt-32 stats">
+                        <div class="row m-0">
+                            <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
+                                <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Invoice Glow</h5>
+                                <div class="d-flex align-items-end mb-12">
+                                    <h4 class="mb-0 n-props font-semibold mr-12 fs-24">05</h4>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
                                             <path id="Polygon_3" data-name="Polygon 3" d="M6.837,0l6.837,7.24H0Z" fill="#01e7ff" />
                                         </svg>
-                                    </div>
-                                    <a href="#" class="fs-13 font-medium n-props">See all</a>
                                 </div>
-                                <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
-                                    <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Jerks Flow</h5>
-                                    <div class="d-flex align-items-end mb-12">
-                                        <h4 class="mb-0 n-props font-semibold mr-12 fs-24">03</h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
+                                <a href="#" class="fs-13 font-medium n-props">See all</a>
+                            </div>
+                            <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
+                                <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Jerks Flow</h5>
+                                <div class="d-flex align-items-end mb-12">
+                                    <h4 class="mb-0 n-props font-semibold mr-12 fs-24">03</h4>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
                                             <path id="Polygon_3" data-name="Polygon 3" d="M6.837,0l6.837,7.24H0Z" fill="#021668" />
                                         </svg>
-                                    </div>
-                                    <a href="#" class="fs-13 font-medium n-props">See all</a>
                                 </div>
-                                <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
-                                    <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Debt. Collection</h5>
-                                    <div class="d-flex align-items-end mb-12">
-                                        <h4 class="mb-0 n-props font-semibold mr-12 fs-24">04</h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
+                                <a href="#" class="fs-13 font-medium n-props">See all</a>
+                            </div>
+                            <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
+                                <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Debt. Collection</h5>
+                                <div class="d-flex align-items-end mb-12">
+                                    <h4 class="mb-0 n-props font-semibold mr-12 fs-24">04</h4>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
                                             <path id="Polygon_3" data-name="Polygon 3" d="M6.837,0l6.837,7.24H0Z" fill="#021668" />
                                         </svg>
-                                    </div>
-                                    <a href="#" class="fs-13 font-medium n-props">See all</a>
                                 </div>
-                                <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
-                                    <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Inactive Invoice</h5>
-                                    <div class="d-flex align-items-end mb-12">
-                                        <h4 class="mb-0 n-props font-semibold mr-12 fs-24">03</h4>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
+                                <a href="#" class="fs-13 font-medium n-props">See all</a>
+                            </div>
+                            <div class="col-lg-3 d-flex flex-column align-items-center justify-content-center">
+                                <h5 class="fs-13 n-props font-medium mb-15 clr-blue">Inactive Invoice</h5>
+                                <div class="d-flex align-items-end mb-12">
+                                    <h4 class="mb-0 n-props font-semibold mr-12 fs-24">03</h4>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13.675" height="7.239" viewBox="0 0 13.675 7.239">
                                             <path id="Polygon_3" data-name="Polygon 3" d="M6.837,0l6.837,7.24H0Z" fill="#ff6868" />
                                         </svg>
-                                    </div>
-                                    <a href="#" class="fs-13 font-medium n-props">See all</a>
                                 </div>
+                                <a href="#" class="fs-13 font-medium n-props">See all</a>
                             </div>
                         </div>
-                        <div class="mt-32 top-customer">
-                            <div class="row m-0">
-                                <div class="col-lg-4 t-card">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="fs-22 font-weight-bold n-props mb-0">Top Customer</h2>
-                                        <p class="fs-11 n-props mb-0">Highest Balance</p>
-                                    </div>
-                                    <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Ray Douglas</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
-                                    <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Gussie Shelton</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
-                                    <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Ora Hill</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
-                                    <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Brian Dean</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
-                                    <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Olive Bridges</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
-                                    <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Gussie Shelton</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
-                                    <div class="customer border-0 d-flex mt-32 align-items-center justify-content-between">
-                                        <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Brian Dean</h3>
-                                        <p class="fs-15 n-props mb-0">21.077 DDK</p>
-                                    </div>
+                    </div>
+                    <div class="mt-32 top-customer">
+                        <div class="row m-0">
+                            <div class="col-lg-4 t-card">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h2 class="fs-22 font-weight-bold n-props mb-0">Top Customer</h2>
+                                    <p class="fs-11 n-props mb-0">Highest Balance</p>
                                 </div>
-                                <div class="col-lg-8 pr-0 pl-26">
-                                    <div class="t-card vat">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <h2 class="fs-22 font-weight-bold n-props mb-0 text-uppercase">vat</h2>
-                                            <img class="cursor-pointer list-icon" src="./assets/img/dots-to-close-2.png" alt="" />
-                                        </div>
-                                        <div class="w-full overflow-x-auto">
-                                            <table style="white-space: nowrap" class="table mb-0">
-                                                <thead>
-                                                    <tr class="border-0">
-                                                        <th scope="col">Status</th>
-                                                        <th scope="col">Periode</th>
-                                                        <th scope="col">Date</th>
-                                                        <th scope="col">Amount</th>
-                                                        <td class="opacity-0">
-                                                            <div class="option clr-light-black">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Ray Douglas</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                                <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Gussie Shelton</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                                <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Ora Hill</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                                <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Brian Dean</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                                <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Olive Bridges</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                                <div class="customer d-flex mt-32 align-items-center justify-content-between pb-20">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Gussie Shelton</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                                <div class="customer border-0 d-flex mt-32 align-items-center justify-content-between">
+                                    <h3 class="fs-16 font-weight-bold n-props mb-0 clr-blue">Brian Dean</h3>
+                                    <p class="fs-15 n-props mb-0">21.077 DDK</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 pr-0 pl-26">
+                                <div class="t-card vat">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <h2 class="fs-22 font-weight-bold n-props mb-0 text-uppercase">vat</h2>
+                                        <img class="cursor-pointer list-icon" src="./assets/img/dots-to-close-2.png" alt="" />
+                                    </div>
+                                    <div class="w-full overflow-x-auto">
+                                        <table style="white-space: nowrap" class="table mb-0">
+                                            <thead>
+                                                <tr class="border-0">
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Periode</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Amount</th>
+                                                    <td class="opacity-0">
+                                                        <div class="option clr-light-black">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr class="striped">
-                                                        <td><div class="badge badge-paid fs-7">Paid</div></td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-paid fs-7">Paid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td>
-                                                            <div class="badge badge-unpaid fs-7">Unpaid</div>
-                                                        </td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-unpaid fs-7">Unpaid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td>
-                                                            <div class="badge badge-pending fs-7">Pending</div>
-                                                        </td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-pending fs-7">Pending</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td><div class="badge badge-paid fs-7">Paid</div></td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-paid fs-7">Paid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td>
-                                                            <div class="badge badge-unpaid fs-7">Unpaid</div>
-                                                        </td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-unpaid fs-7">Unpaid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td><div class="badge badge-paid fs-7">Paid</div></td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-paid fs-7">Paid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td>
-                                                            <div class="badge badge-unpaid fs-7">Unpaid</div>
-                                                        </td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-unpaid fs-7">Unpaid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td>
-                                                            <div class="badge badge-unpaid fs-7">Unpaid</div>
-                                                        </td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-unpaid fs-7">Unpaid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="striped">
-                                                        <td><div class="badge badge-paid fs-7">Paid</div></td>
-                                                        <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
-                                                        <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
-                                                        <td class="fs-13 font-medium clr-light-black">500 DKK</td>
-                                                        <td>
-                                                            <div class="option clr-light-black cursor-pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr class="striped">
+                                                    <td>
+                                                        <div class="badge badge-paid fs-7">Paid</div>
+                                                    </td>
+                                                    <td class="fs-13 clr-blue font-semibold">1January - 30. September 2021</td>
+                                                    <td class="fs-13 font-medium clr-light-black">3.12.2018</td>
+                                                    <td class="fs-13 font-medium clr-light-black">500 DKK</td>
+                                                    <td>
+                                                        <div class="option clr-light-black cursor-pointer">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-dots" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                                     <circle cx="5" cy="12" r="1" />
                                                                     <circle cx="12" cy="12" r="1" />
                                                                     <circle cx="19" cy="12" r="1" />
                                                                 </svg>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-40 col-lg-3 pl-40 right-col">
-                        <div class="t-card gallery">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h2 class="fs-23 font-semibold n-props clr-dark-grey">Annual Report</h2>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                </div>
+                <div class="mt-40 col-lg-3 pl-40 right-col">
+                    <div class="t-card gallery">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h2 class="fs-23 font-semibold n-props clr-dark-grey">Annual Report</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path d="M13.25 7c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25zm10.75 5c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-2 0c0-5.514-4.486-10-10-10s-10 4.486-10 10 4.486 10 10 10 10-4.486 10-10zm-13-2v2h2v6h2v-8h-4z" />
                                 </svg>
+                        </div>
+                        <p class="mb-0 fs-15 n-props clr-dark-grey">You're not quite finished yet.</p>
+                        <img class="w-full" src="./assets/img/gallery.png" alt="" />
+                        <div class="d-flex w-full justify-content-center">
+                            <button class="finish-btn n-props border-0">Finish</button>
+                        </div>
+                    </div>
+                    <div class="mt-32 t-card settle">
+                        <div class="d-flex">
+                            <div class="col-md-6 pr-10">
+                                <div class="d-flex align-items-center mb-10">
+                                    <div class="dot bg-red rounded-full"></div>
+                                    <p class="fs-10 font-medium clr-dark-grey n-props mb-0">Settled with Danish Tax Agency</p>
+                                </div>
+                                <h5 class="fs-20 clr-dark-grey n-props mb-0 font-weight-bold">16.824 DKK</h5>
+                                <div class="w-full position-relative line">
+                                    <div class="position-absolute top-0 dominant bg-red w-50"></div>
+                                </div>
+                                <p class="mt-10 mb-0 fs-8 n-props">For the period 1st quarter 2021</p>
                             </div>
-                            <p class="mb-0 fs-15 n-props clr-dark-grey">You're not quite finished yet.</p>
-                            <img class="w-full" src="./assets/img/gallery.png" alt="" />
-                            <div class="d-flex w-full justify-content-center">
-                                <button class="finish-btn n-props border-0">Finish</button>
+                            <div class="col-md-6 pl-10">
+                                <div class="d-flex align-items-center mb-10">
+                                    <div class="dot bg-blue rounded-full flex-shrink-0"></div>
+                                    <p class="fs-10 font-medium clr-dark-grey n-props mb-0">Please include VAT as latest</p>
+                                </div>
+                                <h5 class="fs-20 clr-dark-grey n-props mb-0 font-weight-bold">33 days</h5>
+                                <div class="w-full position-relative line">
+                                    <div class="position-absolute top-0 dominant bg-blue w-25"></div>
+                                </div>
+                                <p class="mb-0 fs-8 n-props mt-10">june 1,02021</p>
                             </div>
                         </div>
-                        <div class="mt-32 t-card settle">
-                            <div class="d-flex">
-                                <div class="col-md-6 pr-10">
-                                    <div class="d-flex align-items-center mb-10">
-                                        <div class="dot bg-red rounded-full"></div>
-                                        <p class="fs-10 font-medium clr-dark-grey n-props mb-0">Settled with Danish Tax Agency</p>
-                                    </div>
-                                    <h5 class="fs-20 clr-dark-grey n-props mb-0 font-weight-bold">16.824 DKK</h5>
-                                    <div class="w-full position-relative line">
-                                        <div class="position-absolute top-0 dominant bg-red w-50"></div>
-                                    </div>
-                                    <p class="mt-10 mb-0 fs-8 n-props">For the period 1st quarter 2021</p>
-                                </div>
-                                <div class="col-md-6 pl-10">
-                                    <div class="d-flex align-items-center mb-10">
-                                        <div class="dot bg-blue rounded-full flex-shrink-0"></div>
-                                        <p class="fs-10 font-medium clr-dark-grey n-props mb-0">Please include VAT as latest</p>
-                                    </div>
-                                    <h5 class="fs-20 clr-dark-grey n-props mb-0 font-weight-bold">33 days</h5>
-                                    <div class="w-full position-relative line">
-                                        <div class="position-absolute top-0 dominant bg-blue w-25"></div>
-                                    </div>
-                                    <p class="mb-0 fs-8 n-props mt-10">june 1,02021</p>
-                                </div>
-                            </div>
-                            <div class="w-full d-flex flex-column align-items-center mt-24">
-                                <button class="border-0 fs-15 font-semibold n-props clr-blue mx-auto">Settle VAT</button>
-                            </div>
+                        <div class="w-full d-flex flex-column align-items-center mt-24">
+                            <button class="border-0 fs-15 font-semibold n-props clr-blue mx-auto">Settle VAT</button>
                         </div>
-                        <p class="pay fs-10 font-light n-props clr-blue text-center">Messy number = You have to pay / Green number = you have to have money again</p>
-                        <div class="t-card gallery support">
-                            <h2 class="fs-23 font-semibold n-props clr-dark-grey">Free Support</h2>
-                            <ul class="mt-12 p-0 ml-10 fs-13 font-light">
-                                <li>Email: tellero@banking.com</li>
-                                <li>Phone: 012 23 43 32</li>
-                                <li>(Monday-Sunday: 8-23)</li>
-                                <li>Help Center: tellero.bk/support</li>
-                            </ul>
-                            <div class="btn-container mx-auto">
-                                <button class="clr-blue fs-16 font-medium n-props border-0">Upload company logo</button>
-                            </div>
+                    </div>
+                    <p class="pay fs-10 font-light n-props clr-blue text-center">Messy number = You have to pay / Green number = you have to have money again</p>
+                    <div class="t-card gallery support">
+                        <h2 class="fs-23 font-semibold n-props clr-dark-grey">Free Support</h2>
+                        <ul class="mt-12 p-0 ml-10 fs-13 font-light">
+                            <li>Email: tellero@banking.com</li>
+                            <li>Phone: 012 23 43 32</li>
+                            <li>(Monday-Sunday: 8-23)</li>
+                            <li>Help Center: tellero.bk/support</li>
+                        </ul>
+                        <div class="btn-container mx-auto">
+                            <button class="clr-blue fs-16 font-medium n-props border-0">Upload company logo</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="./assets/script/script.js"></script>
-        <script src="./assets/script/graph.js"></script>
-    </body>
+    </div>
+    <script src="./assets/script/script.js"></script>
+    <script src="./assets/script/graph.js"></script>
+</body>
+
 </html>

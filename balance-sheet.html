@@ -1,196 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Tellero | Balance Sheet</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <div class="d-flex flex-nowrap wrapper w-full">
-            <!-- page loader -->
-            <div id="loader"></div>
-            <!-- sidebar starts-->
-            <div id="sidebarOverlay" class="position-fixed inset-0 sidebar-overlay"></div>
-            <div id="sidebar" class="slideOut sidebar w-sidebar top-0 bottom-0 d-flex flex-column">
-                <div class="sidebar-handle position-absolute right-0 d-flex align-items-center justify-content-center">
-                    <svg onclick="sidebarHandler(false)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<head>
+    <title>Tellero | Balance Sheet</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="d-flex flex-nowrap wrapper w-full">
+        <!-- page loader -->
+        <div id="loader"></div>
+        <!-- sidebar starts-->
+        <div id="sidebarOverlay" class="position-fixed inset-0 sidebar-overlay"></div>
+        <div id="sidebar" class="slideOut sidebar w-sidebar top-0 bottom-0 d-flex flex-column">
+            <div class="sidebar-handle position-absolute right-0 d-flex align-items-center justify-content-center">
+                <svg onclick="sidebarHandler(false)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
+            </div>
+            <div>
+                <div class="t-card logo-container d-flex align-items-center cursor-pointer">
+                    <a href="./index.html">
+                        <img src="./assets/img/Group 2355.png" alt="" srcset="" />
+                    </a>
                 </div>
-                <div>
-                    <div class="t-card logo-container d-flex align-items-center cursor-pointer">
-                        <a href="./index.html">
-                            <img src="./assets/img/Group 2355.png" alt="" srcset="" />
-                        </a>
-                    </div>
-                    <div class="position-relative">
-                        <div id="userTrigger" onclick="userHandler()" class="tlb-groups t-card d-flex align-items-center justify-content-between cursor-pointer position-relative">
-                            <div class="d-flex align-items-center">
-                                <img class="mr-12" src="./assets/img/hand-shake.png" alt="" srcset="" />
-                                <div>
-                                    <h3 class="fs-18 font-semibold mb-0">TLB Groups</h3>
-                                    <p class="fs-10 font-light mb-0">Chadi Maher</p>
-                                </div>
-                            </div>
-                            <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
-                        </div>
-                        <div id="userSettings" class="max-h-0 popup-7 user-settings position-absolute right-0 top-0">
-                            <div class="d-flex align-items-center">
-                                <img class="mr-10" src="./assets/img/Path 21.png" alt="" />
-                                <p class="mb-0 fs-20 clr-dark-grey n-props">Add a business</p>
-                            </div>
-                            <hr />
-                            <p class="fs-17 n-props clr-dark-grey">Settings</p>
-                            <p class="fs-17 n-props clr-dark-grey mt-32">Get Help</p>
-                            <p class="fs-17 n-props clr-dark-grey mt-32">Log out</p>
-                        </div>
-                    </div>
-                </div>
-                <ul class="sidemenu">
-                    <li class="mb-32">
-                        <a href="./index.html">
-                            <div class="d-flex align-items-center">
-                                <img class="inactive mr-23" src="./assets/img/dashboard-inactive.png" alt="" />
-                                <img class="active mr-23" src="./assets/img/dashboard-active.png" alt="" />
-                                <span class="fs-18 n-props mb-0 clr-grey">Dashboard</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="mb-32">
-                        <div id="sales" class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img class="inactive mr-23" src="./assets/img/discount-inactive.png" alt="" />
-                                <img class="active mr-23" src="./assets/img/discount-active.png" alt="" />
-                                <span class="fs-18 n-props mb-0 clr-grey">Sales</span>
-                            </div>
-                            <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
-                        </div>
-                        <ul id="salesList" class="sublist max-h-0">
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Current</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">All</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Offer</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Products</a>
-                            </li>
-                            <li class="mb-12">
-                                <a class="fs-14 clr-grey" href="#">Subscription</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mb-32">
+                <div class="position-relative">
+                    <div id="userTrigger" onclick="userHandler()" class="tlb-groups t-card d-flex align-items-center justify-content-between cursor-pointer position-relative">
                         <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/invoice-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/invoice-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Bogforing</span>
+                            <img class="mr-12" src="./assets/img/hand-shake.png" alt="" srcset="" />
+                            <div>
+                                <h3 class="fs-18 font-semibold mb-0">TLB Groups</h3>
+                                <p class="fs-10 font-light mb-0">Chadi Maher</p>
+                            </div>
                         </div>
-                    </li>
-                    <li class="mb-32">
-                        <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/notebook-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/notebook-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Contacts</span>
-                        </div>
-                    </li>
-                    <li class="mb-32">
-                        <a href="./bank.html">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <img class="inactive mr-23" src="./assets/img/bank-inactive.png" alt="" />
-                                    <img class="active mr-23" src="./assets/img/bank-active.png" alt="" />
-                                    <span class="fs-18 n-props mb-0 clr-grey">Bank</span>
-                                </div>
-                                <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" /></div
-                        ></a>
-                    </li>
-                    <li class="mb-32 clr-grey">
-                        <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/agency-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/agency-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Danish Agency</span>
-                        </div>
-                    </li>
-                    <li class="mb-32 clr-grey">
-                        <div class="d-flex align-items-center">
-                            <img class="inactive mr-23" src="./assets/img/skill-inactive.png" alt="" />
-                            <img class="active mr-23" src="./assets/img/skill-active.png" alt="" />
-                            <span class="fs-18 n-props mb-0 clr-grey">Integrations</span>
-                        </div>
-                    </li>
-                </ul>
-                <div class="user bottom-0">
-                    <div class="profile-img d-flex align-items-center">
-                        <img class="mr-12" src="./assets/img/Image 1.jpg" alt="" srcset="" />
-                        <h5 class="n-props clr-grey fs-18 mb-0">Chadi Maher</h5>
+                        <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
                     </div>
-                    <div class="mt-18 d-flex align-items-center justify-content-between">
-                        <h4 class="mr-20 fs-18 clr-grey">Your Plan:<span class="clr-blue"> Basic</span></h4>
-                        <button class="upgrade-btn">Upgrade</button>
-                    </div>
-                    <div class="mt-30 t-card signoff d-flex align-items-center cursor-pointer">
-                        <img class="mr-18" src="./assets/img/signoff.png" alt="" srcset="" />
-                        <h5 class="fs-18 mb-0 font-medium">Logout</h5>
+                    <div id="userSettings" class="max-h-0 popup-7 user-settings position-absolute right-0 top-0">
+                        <div class="d-flex align-items-center">
+                            <img class="mr-10" src="./assets/img/Path 21.png" alt="" />
+                            <p class="mb-0 fs-20 clr-dark-grey n-props">Add a business</p>
+                        </div>
+                        <hr />
+                        <p class="fs-17 n-props clr-dark-grey">Settings</p>
+                        <p class="fs-17 n-props clr-dark-grey mt-32">Get Help</p>
+                        <p class="fs-17 n-props clr-dark-grey mt-32">Log out</p>
                     </div>
                 </div>
             </div>
-            <div class="w-sidebar flex-shrink-0 desktop"></div>
-            <!-- sidebar ends -->
-            <div class="w-full">
-                <!-- header starts -->
-                <div class="mobile tab top-header t-card d-flex justify-content-between align-items-center">
-                    <img src="./assets/img/Group 2355.png" alt="" />
-                    <svg onclick="sidebarHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 cursor-pointer" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <ul class="sidemenu">
+                <li class="mb-32">
+                    <a href="./index.html">
+                        <div class="d-flex align-items-center">
+                            <img class="inactive mr-23" src="./assets/img/dashboard-inactive.png" alt="" />
+                            <img class="active mr-23" src="./assets/img/dashboard-active.png" alt="" />
+                            <span class="fs-18 n-props mb-0 clr-grey">Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="mb-32">
+                    <div id="sales" class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img class="inactive mr-23" src="./assets/img/discount-inactive.png" alt="" />
+                            <img class="active mr-23" src="./assets/img/discount-active.png" alt="" />
+                            <span class="fs-18 n-props mb-0 clr-grey">Sales</span>
+                        </div>
+                        <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" />
+                    </div>
+                    <ul id="salesList" class="sublist max-h-0">
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Current</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">All</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Offer</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Products</a>
+                        </li>
+                        <li class="mb-12">
+                            <a class="fs-14 clr-grey" href="#">Subscription</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mb-32">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/invoice-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/invoice-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Bogforing</span>
+                    </div>
+                </li>
+                <li class="mb-32">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/notebook-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/notebook-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Contacts</span>
+                    </div>
+                </li>
+                <li class="mb-32">
+                    <a href="./bank.html">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <img class="inactive mr-23" src="./assets/img/bank-inactive.png" alt="" />
+                                <img class="active mr-23" src="./assets/img/bank-active.png" alt="" />
+                                <span class="fs-18 n-props mb-0 clr-grey">Bank</span>
+                            </div>
+                            <img class="cursor-pointer" src="./assets/img/Path 8.png" alt="" srcset="" /></div>
+                    </a>
+                </li>
+                <li class="mb-32 clr-grey">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/agency-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/agency-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Danish Agency</span>
+                    </div>
+                </li>
+                <li class="mb-32 clr-grey">
+                    <div class="d-flex align-items-center">
+                        <img class="inactive mr-23" src="./assets/img/skill-inactive.png" alt="" />
+                        <img class="active mr-23" src="./assets/img/skill-active.png" alt="" />
+                        <span class="fs-18 n-props mb-0 clr-grey">Integrations</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="user bottom-0">
+                <div class="profile-img d-flex align-items-center">
+                    <img class="mr-12" src="./assets/img/Image 1.jpg" alt="" srcset="" />
+                    <h5 class="n-props clr-grey fs-18 mb-0">Chadi Maher</h5>
+                </div>
+                <div class="mt-18 d-flex align-items-center justify-content-between">
+                    <h4 class="mr-20 fs-18 clr-grey">Your Plan:<span class="clr-blue"> Basic</span></h4>
+                    <button class="upgrade-btn">Upgrade</button>
+                </div>
+                <div class="mt-30 t-card signoff d-flex align-items-center cursor-pointer">
+                    <img class="mr-18" src="./assets/img/signoff.png" alt="" srcset="" />
+                    <h5 class="fs-18 mb-0 font-medium">Logout</h5>
+                </div>
+            </div>
+        </div>
+        <div class="w-sidebar flex-shrink-0 desktop"></div>
+        <!-- sidebar ends -->
+        <div class="w-full">
+            <!-- header starts -->
+            <div class="mobile tab top-header t-card d-flex justify-content-between align-items-center">
+                <img src="./assets/img/Group 2355.png" alt="" />
+                <svg onclick="sidebarHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 cursor-pointer" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <line x1="4" y1="6" x2="20" y2="6" />
                         <line x1="4" y1="12" x2="20" y2="12" />
                         <line x1="4" y1="18" x2="20" y2="18" />
                     </svg>
-                </div>
-                <div class="no-overflow">
-                    <header class="header t-card d-flex justify-content-between align-items-center position-relative">
-                        <div class="d-flex align-items-center">
-                            <img class="mr-15 profit-img" src="./assets/img/profit-report.png" alt="" />
-                            <h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">Reports</h1>
-                        </div>
-                        <svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            </div>
+            <div class="no-overflow">
+                <header class="header t-card d-flex justify-content-between align-items-center position-relative">
+                    <div class="d-flex align-items-center">
+                        <img class="mr-15 profit-img" src="./assets/img/profit-report.png" alt="" />
+                        <h1 class="mb-0 fs-38 n-props clr-dark-grey text-uppercase">Reports</h1>
+                    </div>
+                    <svg onClick="headerHandler(true)" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left mobile" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <polyline points="15 6 9 12 15 18" />
                         </svg>
-                        <div id="headerContent" class="icons-dd d-flex align-items-center slide-out">
-                            <div onclick="languagesHandler()" id="languagesTrigger" class="cursor-pointer d-flex align-items-center country-dropdown poition-relative">
+                    <div id="headerContent" class="icons-dd d-flex align-items-center slide-out">
+                        <div onclick="languagesHandler()" id="languagesTrigger" class="cursor-pointer d-flex align-items-center country-dropdown poition-relative">
+                            <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
+                            <img class="cursor-pointer flex-shrink-0" src="./assets/img/Path 8.png" alt="" srcset="" />
+                        </div>
+                        <div id="languagesContent" class="absolute languages top-0 max-h-0">
+                            <div class="d-flex align-items-center">
+                                <img class="denmark-flag mr-10" src="./assets/img/denmark-flag.png" srcset="" />
+                                <p class="mb-0 fs-16">Danish</p>
+                            </div>
+                            <div class="d-flex align-items-center">
                                 <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
-                                <img class="cursor-pointer flex-shrink-0" src="./assets/img/Path 8.png" alt="" srcset="" />
+                                <p class="mb-0 fs-16">English UK</p>
                             </div>
-                            <div id="languagesContent" class="absolute languages top-0 max-h-0">
-                                <div class="d-flex align-items-center">
-                                    <img class="denmark-flag mr-10" src="./assets/img/denmark-flag.png" srcset="" />
-                                    <p class="mb-0 fs-16">Danish</p>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <img src="./assets/img/Image 2.png" srcset="" class="mr-10" />
-                                    <p class="mb-0 fs-16">English UK</p>
-                                </div>
-                            </div>
-                            <svg class="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        </div>
+                        <svg class="info" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-question-mark" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" />
                                 <line x1="12" y1="19" x2="12" y2="19.01" />
                             </svg>
-                            <button id="financeTrigger" onclick="financeDropdown()" class="position-relative finance-btn d-flex justify-content-between align-items-center fs-18 n-props clr-dark-grey">
+                        <button id="financeTrigger" onclick="financeDropdown()" class="position-relative finance-btn d-flex justify-content-between align-items-center fs-18 n-props clr-dark-grey">
                                 <div class="d-flex align-items-center mr-50">
                                     <span>Finance-2021</span>
                                 </div>
@@ -200,322 +202,322 @@
                                     <p class="fs-16 clr-dark-grey n-props mb-0">Create new Finance Year</p>
                                 </div>
                             </button>
-                            <img onClick="headerHandler(false)" class="close-icon mobile ml-6 mr-10 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
+                        <img onClick="headerHandler(false)" class="close-icon mobile ml-6 mr-10 cursor-pointer" src="./assets/img/Group 2255.png" alt="" />
+                    </div>
+                </header>
+            </div>
+            <!-- header ends -->
+            <div class="content-container reports row m-0">
+                <div class="col-lg-9 mt-115 relative p-0">
+                    <div class="date absolute right-0">
+                        <div onclick="dateHandler()" class="d-flex align-items-center cursor-pointer">
+                            <p class="fs-12 clr-blue n-props font-semibold mr-12 mb-0">31 / 12 / 2021</p>
+                            <img src="./assets/img/Path.png" alt="" />
                         </div>
-                    </header>
-                </div>
-                <!-- header ends -->
-                <div class="content-container reports row m-0">
-                    <div class="col-lg-9 mt-115 relative p-0">
-                        <div class="date absolute right-0">
-                            <div onclick="dateHandler()" class="d-flex align-items-center cursor-pointer">
-                                <p class="fs-12 clr-blue n-props font-semibold mr-12 mb-0">31 / 12 / 2021</p>
-                                <img src="./assets/img/Path.png" alt="" />
-                            </div>
-                            <div id="dateDropdown" class="max-h-0 absolute right-0 date-dropdown">
-                                <div class="popup-5 position-relative">
-                                    <div class="tabs d-flex align-items-start position-absolute top-0 right-0">
-                                        <div id="dateTrigger" onclick="dateSwicher('date')" class="first-nav-item active-nav-item nav-item justify-content-center d-flex align-items-center fs-10 font-semibold">Date Range</div>
-                                        <div id="monthTrigger" onclick="dateSwicher('month')" class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-10 font-semibold">Month</div>
-                                        <div id="periodTrigger" onclick="dateSwicher('period')" class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-10 font-semibold last-nav-item">Period</div>
-                                    </div>
-                                    <div id="dateContent" class="dd-container position-relative">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <div class="dropdown d-flex w-1/2 align-items-center justify-content-between">
-                                                <p class="fs-9 font-light n-props mb-0">01/02/2021</p>
-                                                <div class="icon-dd cursor-pointer">
-                                                    <img src="../assets/img/calendar (1).png" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="dropdown d-flex w-1/2 align-items-center justify-content-between">
-                                                <p class="fs-9 font-light n-props mb-0">01/02/2021</p>
-                                                <div class="icon-dd cursor-pointer">
-                                                    <img src="../assets/img/calendar (1).png" alt="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="position-absolute right-0 bottom-0 border-0 fs-10 n-props">Choose</button>
-                                    </div>
-                                    <div id="monthContent" class="hidden dd-container position-relative">
-                                        <div class="dropdown d-flex align-items-center justify-content-between">
-                                            <p class="fs-9 font-light n-props mb-0">January 2021</p>
+                        <div id="dateDropdown" class="max-h-0 absolute right-0 date-dropdown">
+                            <div class="popup-5 position-relative">
+                                <div class="tabs d-flex align-items-start position-absolute top-0 right-0">
+                                    <div id="dateTrigger" onclick="dateSwicher('date')" class="first-nav-item active-nav-item nav-item justify-content-center d-flex align-items-center fs-10 font-semibold">Date Range</div>
+                                    <div id="monthTrigger" onclick="dateSwicher('month')" class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-10 font-semibold">Month</div>
+                                    <div id="periodTrigger" onclick="dateSwicher('period')" class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-10 font-semibold last-nav-item">Period</div>
+                                </div>
+                                <div id="dateContent" class="dd-container position-relative">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="dropdown d-flex w-1/2 align-items-center justify-content-between">
+                                            <p class="fs-9 font-light n-props mb-0">01/02/2021</p>
                                             <div class="icon-dd cursor-pointer">
-                                                <img src="../assets/img/Path.png" alt="" />
+                                                <img src="../assets/img/calendar (1).png" alt="" />
                                             </div>
                                         </div>
-                                        <button class="position-absolute right-0 bottom-0 border-0 fs-10 n-props">Choose</button>
-                                    </div>
-                                    <div id="periodContent" class="hidden dd-container position-relative">
-                                        <div class="dropdown d-flex align-items-center justify-content-between">
-                                            <p class="fs-9 font-light n-props mb-0">The Entire Final Year 2021</p>
+                                        <div class="dropdown d-flex w-1/2 align-items-center justify-content-between">
+                                            <p class="fs-9 font-light n-props mb-0">01/02/2021</p>
                                             <div class="icon-dd cursor-pointer">
-                                                <img src="../assets/img/Path.png" alt="" />
+                                                <img src="../assets/img/calendar (1).png" alt="" />
                                             </div>
                                         </div>
-                                        <button class="position-absolute right-0 bottom-0 border-0 fs-10 n-props">Choose</button>
                                     </div>
+                                    <button class="position-absolute right-0 bottom-0 border-0 fs-10 n-props">Choose</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start position-absolute top-0 left-0">
-                            <a href="./reports.html">
-                                <div class="first-nav-item nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-12 font-semibold">Profile Statement</div>
-                            </a>
-                            <a href="./balance.html">
-                                <div class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-12 font-semibold">Balance</div>
-                            </a>
-                            <a href="./balance-sheet.html">
-                                <div class="active-nav-item justify-content-center d-flex align-items-center clr-blue fs-12 font-semibold">Balance Sheet</div>
-                            </a>
-                            <a href="./opening-balance.html">
-                                <div class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-12 font-semibold">Opening Balance</div>
-                            </a>
-                        </div>
-                        <div class="report-main-card w-full tabs-content position-relative">
-                            <div class="px-35">
-                                <p class="fs-12 mb-0 font-semibold">Balance on : 31 /12 /2021</p>
-                            </div>
-                            <div class="mt-32 report-card">
-                                <h3 class="clr-dark-grey fs-22 font-semibold n-props mb-0">Turn-Over</h3>
-                                <hr />
-                                <div class="items">
-                                    <div class="mb-15 d-flex align-items-center justify-content-between">
-                                        <p class="fs-13 clr-dark-grey n-props mb-0">Sales of goods / service mimoms</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-56,757,70</p>
-                                            <img src="./assets/img/list.png" alt="" />
+                                <div id="monthContent" class="hidden dd-container position-relative">
+                                    <div class="dropdown d-flex align-items-center justify-content-between">
+                                        <p class="fs-9 font-light n-props mb-0">January 2021</p>
+                                        <div class="icon-dd cursor-pointer">
+                                            <img src="../assets/img/Path.png" alt="" />
                                         </div>
                                     </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="fs-13 clr-dark-grey n-props mb-0">Sales of goods / service VAT</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">--92,757,70</p>
-                                            <img src="./assets/img/list.png" alt="" />
+                                    <button class="position-absolute right-0 bottom-0 border-0 fs-10 n-props">Choose</button>
+                                </div>
+                                <div id="periodContent" class="hidden dd-container position-relative">
+                                    <div class="dropdown d-flex align-items-center justify-content-between">
+                                        <p class="fs-9 font-light n-props mb-0">The Entire Final Year 2021</p>
+                                        <div class="icon-dd cursor-pointer">
+                                            <img src="../assets/img/Path.png" alt="" />
                                         </div>
                                     </div>
-                                </div>
-
-                                <hr />
-                                <div onclick="totalHandler(true)" class="total cursor-pointer">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h4 class="mb-0 n-props font-semibold fs-15">Total Turnover</h4>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-13 clr-blue n-props mr-10 mb-0">--92,757,70</p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="10.142" height="9.596" viewBox="0 0 10.142 9.596">
-                                                <g id="list" transform="translate(0 -64.267)">
-                                                    <path fill="#0077ff" id="Path_3590" data-name="Path 3590" d="M9.209,64.267H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" />
-                                                    <path fill="#0077ff" id="Path_3591" data-name="Path 3591" d="M9.209,208.867H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -140.736)" />
-                                                    <path fill="#0077ff" id="Path_3592" data-name="Path 3592" d="M9.209,353.467H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -281.471)" />
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card">
-                                <h3 class="clr-dark-grey fs-22 font-semibold n-props mb-0">Cover Contribution</h3>
-                                <hr />
-                                <div class="items">
-                                    <div class="mb-15">
-                                        <p class="fs-13 clr-dark-grey n-props mb-0">Administration</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="fs-13 clr-dark-grey n-props mb-0">Registration</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
-                                            <img src="./assets/img/list.png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <hr />
-                                <div onclick="totalHandler(true)" class="total cursor-pointer">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h4 class="mb-0 n-props font-semibold fs-15">Registration</h4>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-13 clr-blue n-props mr-10 mb-0">76,757,70</p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="10.142" height="9.596" viewBox="0 0 10.142 9.596">
-                                                <g id="list" transform="translate(0 -64.267)">
-                                                    <path fill="#0077ff" id="Path_3590" data-name="Path 3590" d="M9.209,64.267H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" />
-                                                    <path fill="#0077ff" id="Path_3591" data-name="Path 3591" d="M9.209,208.867H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -140.736)" />
-                                                    <path fill="#0077ff" id="Path_3592" data-name="Path 3592" d="M9.209,353.467H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -281.471)" />
-                                                </g>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Profit before tax</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Profit before tax</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-80 report-card">
-                                <h3 class="clr-dark-grey fs-22 font-semibold n-props mb-0">Activate</h3>
-                                <hr />
-                                <div class="items">
-                                    <div class="mb-15 d-flex align-items-center justify-content-between">
-                                        <p class="fs-15 font-semibold clr-dark-grey n-props mb-0">Receivable</p>
-                                    </div>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="fs-13 clr-dark-grey n-props mb-0">Debtors, unpaid invoices</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,757,70</p>
-                                            <img src="./assets/img/list.png" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="fs-15 font-semibold clr-dark-grey n-props mb-0">Debtors</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Receivables</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="mb-15 px-25">
-                                    <p class="fs-13 clr-dark-grey n-props mb-0">Cash and cash equivalents</p>
-                                </div>
-                                <div class="mb-15 d-flex align-items-center justify-content-between">
-                                    <p class="fs-13 clr-dark-grey n-props mb-0">Revolut</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="fs-13 clr-dark-grey n-props mb-0">Cash</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Cash Inventories</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Omsaetningsaltiver</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Activates</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="mb-15 d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Liabilities</h4>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="fs-13 clr-dark-grey n-props mb-0">The Periods Result</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-162,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Equity</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-142,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="mb-15 d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">VAT due</h4>
-                                </div>
-                                <div class="mb-15 d-flex align-items-center justify-content-between">
-                                    <p class="fs-13 clr-dark-grey n-props mb-0">Sales VAT (outgong VAT)</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                                <div class="mb-15 d-flex align-items-center justify-content-between">
-                                    <p class="fs-13 clr-dark-grey n-props mb-0">Purchase moms (incoming VAT)</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Gulity VAT</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Short-term debt <span class="time-span">(1 year)</span></h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-142,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-10 report-card card-row">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <h4 class="mb-0 n-props font-semibold fs-15">Passiver</h4>
-                                    <div class="d-flex align-items-center">
-                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-162,757,70</p>
-                                        <img src="./assets/img/list.png" alt="" />
-                                    </div>
+                                    <button class="position-absolute right-0 bottom-0 border-0 fs-10 n-props">Choose</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-32 col-lg-3 pl-40 right-col">
-                        <button class="w-full bg-white d-flex justify-content-center fs-22 n-props font-medium border-0">Print</button>
-                        <div class="mt-15 position-relative w-full">
-                            <button id="csvTrigger" onclick="csvHandler()" class="w-full d-flex clr-white justify-content-center align-items-center fs-22 n-props font-medium border-0 bg-blue">
+                    <div class="d-flex align-items-start position-absolute top-0 left-0">
+                        <a href="./reports.html">
+                            <div class="first-nav-item nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-12 font-semibold">Profile Statement</div>
+                        </a>
+                        <a href="./balance.html">
+                            <div class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-12 font-semibold">Balance</div>
+                        </a>
+                        <a href="./balance-sheet.html">
+                            <div class="active-nav-item justify-content-center d-flex align-items-center clr-blue fs-12 font-semibold">Balance Sheet</div>
+                        </a>
+                        <a href="./opening-balance.html">
+                            <div class="nav-item justify-content-center d-flex align-items-center clr-dark-grey fs-12 font-semibold">Opening Balance</div>
+                        </a>
+                    </div>
+                    <div class="report-main-card w-full tabs-content position-relative">
+                        <div class="px-35">
+                            <p class="fs-12 mb-0 font-semibold">Balance on : 31 /12 /2021</p>
+                        </div>
+                        <div class="mt-32 report-card">
+                            <h3 class="clr-dark-grey fs-22 font-semibold n-props mb-0">Turn-Over</h3>
+                            <hr />
+                            <div class="items">
+                                <div class="mb-15 d-flex align-items-center justify-content-between">
+                                    <p class="fs-13 clr-dark-grey n-props mb-0">Sales of goods / service mimoms</p>
+                                    <div class="d-flex align-items-center">
+                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-56,757,70</p>
+                                        <img src="./assets/img/list.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="fs-13 clr-dark-grey n-props mb-0">Sales of goods / service VAT</p>
+                                    <div class="d-flex align-items-center">
+                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">--92,757,70</p>
+                                        <img src="./assets/img/list.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <div onclick="totalHandler(true)" class="total cursor-pointer">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 n-props font-semibold fs-15">Total Turnover</h4>
+                                    <div class="d-flex align-items-center">
+                                        <p class="fs-13 clr-blue n-props mr-10 mb-0">--92,757,70</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.142" height="9.596" viewBox="0 0 10.142 9.596">
+                                                <g id="list" transform="translate(0 -64.267)">
+                                                    <path fill="#0077ff" id="Path_3590" data-name="Path 3590" d="M9.209,64.267H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" />
+                                                    <path fill="#0077ff" id="Path_3591" data-name="Path 3591" d="M9.209,208.867H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -140.736)" />
+                                                    <path fill="#0077ff" id="Path_3592" data-name="Path 3592" d="M9.209,353.467H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -281.471)" />
+                                                </g>
+                                            </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card">
+                            <h3 class="clr-dark-grey fs-22 font-semibold n-props mb-0">Cover Contribution</h3>
+                            <hr />
+                            <div class="items">
+                                <div class="mb-15">
+                                    <p class="fs-13 clr-dark-grey n-props mb-0">Administration</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="fs-13 clr-dark-grey n-props mb-0">Registration</p>
+                                    <div class="d-flex align-items-center">
+                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
+                                        <img src="./assets/img/list.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr />
+                            <div onclick="totalHandler(true)" class="total cursor-pointer">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h4 class="mb-0 n-props font-semibold fs-15">Registration</h4>
+                                    <div class="d-flex align-items-center">
+                                        <p class="fs-13 clr-blue n-props mr-10 mb-0">76,757,70</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10.142" height="9.596" viewBox="0 0 10.142 9.596">
+                                                <g id="list" transform="translate(0 -64.267)">
+                                                    <path fill="#0077ff" id="Path_3590" data-name="Path 3590" d="M9.209,64.267H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" />
+                                                    <path fill="#0077ff" id="Path_3591" data-name="Path 3591" d="M9.209,208.867H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -140.736)" />
+                                                    <path fill="#0077ff" id="Path_3592" data-name="Path 3592" d="M9.209,353.467H.933a.934.934,0,0,0,0,1.867H9.209a.934.934,0,0,0,0-1.867Z" transform="translate(0 -281.471)" />
+                                                </g>
+                                            </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Profit before tax</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Profit before tax</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-80 report-card">
+                            <h3 class="clr-dark-grey fs-22 font-semibold n-props mb-0">Activate</h3>
+                            <hr />
+                            <div class="items">
+                                <div class="mb-15 d-flex align-items-center justify-content-between">
+                                    <p class="fs-15 font-semibold clr-dark-grey n-props mb-0">Receivable</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="fs-13 clr-dark-grey n-props mb-0">Debtors, unpaid invoices</p>
+                                    <div class="d-flex align-items-center">
+                                        <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,757,70</p>
+                                        <img src="./assets/img/list.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="fs-15 font-semibold clr-dark-grey n-props mb-0">Debtors</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Receivables</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="mb-15 px-25">
+                                <p class="fs-13 clr-dark-grey n-props mb-0">Cash and cash equivalents</p>
+                            </div>
+                            <div class="mb-15 d-flex align-items-center justify-content-between">
+                                <p class="fs-13 clr-dark-grey n-props mb-0">Revolut</p>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="fs-13 clr-dark-grey n-props mb-0">Cash</p>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Cash Inventories</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Omsaetningsaltiver</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Activates</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="mb-15 d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Liabilities</h4>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="fs-13 clr-dark-grey n-props mb-0">The Periods Result</p>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-162,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Equity</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-142,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="mb-15 d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">VAT due</h4>
+                            </div>
+                            <div class="mb-15 d-flex align-items-center justify-content-between">
+                                <p class="fs-13 clr-dark-grey n-props mb-0">Sales VAT (outgong VAT)</p>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="mb-15 d-flex align-items-center justify-content-between">
+                                <p class="fs-13 clr-dark-grey n-props mb-0">Purchase moms (incoming VAT)</p>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">76,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Gulity VAT</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">132,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Short-term debt <span class="time-span">(1 year)</span></h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-142,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 report-card card-row">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="mb-0 n-props font-semibold fs-15">Passiver</h4>
+                                <div class="d-flex align-items-center">
+                                    <p class="fs-13 clr-dark-grey n-props mr-10 mb-0">-162,757,70</p>
+                                    <img src="./assets/img/list.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-32 col-lg-3 pl-40 right-col">
+                    <button class="w-full bg-white d-flex justify-content-center fs-22 n-props font-medium border-0">Print</button>
+                    <div class="mt-15 position-relative w-full">
+                        <button id="csvTrigger" onclick="csvHandler()" class="w-full d-flex clr-white justify-content-center align-items-center fs-22 n-props font-medium border-0 bg-blue">
                                 <span>Download as</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35.775" height="28.137" viewBox="0 0 35.775 28.137">
                                     <defs>
@@ -532,234 +534,235 @@
                                     </g>
                                 </svg>
                             </button>
-                            <div id="csv" class="max-h-0 popup-1 absolute right-0 top-0 csv-dropdown">
-                                <button class="w-full border-0 font-medium n-props text-uppercase fs-22 d-flex align-items-center justify-content-center">
+                        <div id="csv" class="max-h-0 popup-1 absolute right-0 top-0 csv-dropdown">
+                            <button class="w-full border-0 font-medium n-props text-uppercase fs-22 d-flex align-items-center justify-content-center">
                                     <img class="mr-18" src="./assets/img/csv-file-format-extension.png" alt="" />
                                     <span>csv</span>
                                 </button>
-                                <button class="w-full mt-10 border-0 font-medium n-props text-uppercase fs-22 d-flex align-items-center justify-content-center">
+                            <button class="w-full mt-10 border-0 font-medium n-props text-uppercase fs-22 d-flex align-items-center justify-content-center">
                                     <img class="mr-18" src="./assets/img/pdf-file-format-symbol.png" alt="" />
                                     <span>pdf</span>
                                 </button>
-                            </div>
                         </div>
-                        <ul class="list">
-                            <li class="d-flex align-items-center">
-                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                    <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
-                                    <div class="check-icon hidden text-white rounded-sm">
-                                        <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <path d="M5 12l5 5l10 -10" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p class="fs-15 n-props clr-dark-grey mb-0">View account with 0 balance</p>
-                            </li>
-                            <li class="d-flex align-items-center mt-20">
-                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                    <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
-                                    <div class="check-icon hidden text-white rounded-sm">
-                                        <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <path d="M5 12l5 5l10 -10" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p class="fs-15 n-props clr-dark-grey mb-0">Show account no</p>
-                            </li>
-                            <li class="d-flex align-items-center mt-20">
-                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                    <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
-                                    <div class="check-icon hidden text-white rounded-sm">
-                                        <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <path d="M5 12l5 5l10 -10" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p class="fs-15 n-props clr-dark-grey mb-0">Show mom type</p>
-                            </li>
-                            <li class="d-flex align-items-center mt-20">
-                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                    <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
-                                    <div class="check-icon hidden text-white rounded-sm">
-                                        <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <path d="M5 12l5 5l10 -10" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p class="fs-15 n-props clr-dark-grey mb-0">Include cash journal entries</p>
-                            </li>
-                            <li class="d-flex align-items-center mt-20">
-                                <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
-                                    <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
-                                    <div class="check-icon hidden text-white rounded-sm">
-                                        <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <path d="M5 12l5 5l10 -10" />
-                                        </svg>
-                                    </div>
-                                </div>
-                                <p class="fs-15 n-props clr-dark-grey mb-0">Show comparison with the previous year</p>
-                            </li>
-                        </ul>
                     </div>
+                    <ul class="list">
+                        <li class="d-flex align-items-center">
+                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+                                <div class="check-icon hidden text-white rounded-sm">
+                                    <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M5 12l5 5l10 -10" />
+                                        </svg>
+                                </div>
+                            </div>
+                            <p class="fs-15 n-props clr-dark-grey mb-0">View account with 0 balance</p>
+                        </li>
+                        <li class="d-flex align-items-center mt-20">
+                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+                                <div class="check-icon hidden text-white rounded-sm">
+                                    <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M5 12l5 5l10 -10" />
+                                        </svg>
+                                </div>
+                            </div>
+                            <p class="fs-15 n-props clr-dark-grey mb-0">Show account no</p>
+                        </li>
+                        <li class="d-flex align-items-center mt-20">
+                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+                                <div class="check-icon hidden text-white rounded-sm">
+                                    <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M5 12l5 5l10 -10" />
+                                        </svg>
+                                </div>
+                            </div>
+                            <p class="fs-15 n-props clr-dark-grey mb-0">Show mom type</p>
+                        </li>
+                        <li class="d-flex align-items-center mt-20">
+                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+                                <div class="check-icon hidden text-white rounded-sm">
+                                    <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M5 12l5 5l10 -10" />
+                                        </svg>
+                                </div>
+                            </div>
+                            <p class="fs-15 n-props clr-dark-grey mb-0">Include cash journal entries</p>
+                        </li>
+                        <li class="d-flex align-items-center mt-20">
+                            <div class="custom-checkbox flex flex-shrink-0 justify-content-center align-items-center relative">
+                                <input type="checkbox" class="checkbox position-absolute cursor-pointer w-full h-full" />
+                                <div class="check-icon hidden text-white rounded-sm">
+                                    <svg class="icon icon-tabler icon-tabler-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M5 12l5 5l10 -10" />
+                                        </svg>
+                                </div>
+                            </div>
+                            <p class="fs-15 n-props clr-dark-grey mb-0">Show comparison with the previous year</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- total popup -->
-        <div id="totalContent" class="popup-12 position-fixed inset-0 d-flex align-items-center justify-content-center z-50 off-screen">
-            <div onclick="totalHandler(false)" class="overlay absolute inset-0"></div>
-            <div class="popup-card position-relative">
-                <img onclick="totalHandler(false)" class="absolute right-0 top-0 close-icon cursor-pointer" src="../assets/img/Group 2255.png" alt="" />
-                <h2 class="fs-19 font-semibold n-props">Entries</h2>
-                <div class="scroller overflow-x-auto mb-25">
-                    <table style="white-space: nowrap" class="table mb-0 mt-32">
-                        <thead>
-                            <tr class="border-0">
-                                <th scope="col">Serial No.</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Text</th>
-                                <th scope="col">Account</th>
-                                <th scope="col">Amount</th>
-                                <th scope="col">Excl. VAT</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr class="striped">
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>29 Mar 2021</td>
-                                <td>#Typesetting industry...</td>
-                                <td>7280-Regnskabsp</td>
-                                <td>235,00</td>
-                                <td class="clr-blue">235,00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="ml-28 mb-15 rounded-full draft position-absolute left-0 bottom-0 fs-10 clr-white">Draft posting have grey background</p>
-                <div class="d-flex align-items-center justify-content-end w-full">
-                    <button onclick="totalHandler(false)" class="save border-0 fs-16 n-props clr-white font-medium">Download account card</button>
-                    <button onclick="totalHandler(false)" class="cancel border-0 fs-16 n-props font-medium clr-blue ml-15">Sheet</button>
-                </div>
+    </div>
+    <!-- total popup -->
+    <div id="totalContent" class="popup-12 position-fixed inset-0 d-flex align-items-center justify-content-center z-50 off-screen">
+        <div onclick="totalHandler(false)" class="overlay absolute inset-0"></div>
+        <div class="popup-card position-relative">
+            <img onclick="totalHandler(false)" class="absolute right-0 top-0 close-icon cursor-pointer" src="../assets/img/Group 2255.png" alt="" />
+            <h2 class="fs-19 font-semibold n-props">Entries</h2>
+            <div class="scroller overflow-x-auto mb-25">
+                <table style="white-space: nowrap" class="table mb-0 mt-32">
+                    <thead>
+                        <tr class="border-0">
+                            <th scope="col">Serial No.</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Text</th>
+                            <th scope="col">Account</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Excl. VAT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr class="striped">
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>29 Mar 2021</td>
+                            <td>#Typesetting industry...</td>
+                            <td>7280-Regnskabsp</td>
+                            <td>235,00</td>
+                            <td class="clr-blue">235,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="ml-28 mb-15 rounded-full draft position-absolute left-0 bottom-0 fs-10 clr-white">Draft posting have grey background</p>
+            <div class="d-flex align-items-center justify-content-end w-full">
+                <button onclick="totalHandler(false)" class="save border-0 fs-16 n-props clr-white font-medium">Download account card</button>
+                <button onclick="totalHandler(false)" class="cancel border-0 fs-16 n-props font-medium clr-blue ml-15">Sheet</button>
             </div>
         </div>
-        <script src="./assets/script/script.js"></script>
-        <script>
-            $(window).click(function () {
-                csvContent.classList.add("max-h-0");
-                csvContent.classList.remove("max-h-ease");
-                csvFlag = true;
-            });
-            $("#csvTrigger").click(function (event) {
-                event.stopPropagation();
-            });
-        </script>
-    </body>
+    </div>
+    <script src="./assets/script/script.js"></script>
+    <script>
+        $(window).click(function() {
+            csvContent.classList.add("max-h-0");
+            csvContent.classList.remove("max-h-ease");
+            csvFlag = true;
+        });
+        $("#csvTrigger").click(function(event) {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+
 </html>
