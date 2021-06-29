@@ -4413,29 +4413,41 @@ p {
     background: #8d9fa9;
 }
 
-.fakhturaindstillinger8-component .box-1{
-  border-radius: 10px;
-}
-.fakhturaindstillinger8-component .fakturain-lastSection-imgBackground{
-  background: #fbfcff;
-  padding: 40px;
-  border-radius: 50%;
-  box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
-}
-.fakhturaindstillinger8-component .msgBlock{
-  position:absolute;
-  margin: -78px 5px 0px 228px;
-  box-shadow: 0 ​0px 10px 0 rgb(35 108 252 / 16%);
-  background-color: rgba(33, 108, 252, 0.16);
-  border-radius: 10px;
-}
-.fakhturaindstillinger8-component p{
-  color:  #11193c;
+.fakhturaindstillinger8-component .box-1 {
+    border-radius: 10px;
 }
 
-.fakhturaindstillinger8-component .section8-bottom-content{
-  border-left: 17px solid #ffd119;
+.fakhturaindstillinger8-component .fakturain-lastSection-imgBackground {
+    background: #fbfcff;
+    padding: 40px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px 0 rgb(33 108 252 / 16%);
 }
+
+.fakhturaindstillinger8-component .msgBlock {
+    position: absolute;
+    margin: -78px 5px 0px 228px;
+    box-shadow: 0 ​0px 10px 0 rgb(35 108 252 / 16%);
+    background-color: rgba(33, 108, 252, 0.16);
+    border-radius: 10px;
+}
+
+@media (max-width:1366px) {
+    .fakhturaindstillinger8-component .msgBlock {
+        position: relative;
+        margin: 20px 0 0 0;
+    }
+}
+
+.fakhturaindstillinger8-component p {
+    color: #11193c;
+}
+
+.fakhturaindstillinger8-component .section8-bottom-content {
+    border-left: 5px solid #ffd119;
+}
+
+
 /* buttons id kob , financial 13, 14 */
 
 #Gem_button {
@@ -4492,9 +4504,9 @@ p {
         bottom: 10px!important;
         right: 15px!important;
     }
-.not-table-overflow{
-    padding-bottom: 185px;
-}
+    .not-table-overflow {
+        padding-bottom: 185px;
+    }
 }
 
 @media (min-width:1366px) and (max-width:1920px) {
@@ -4518,4 +4530,40 @@ p {
         bottom: 10px!important;
         right: 15px!important;
     }
+    .kaskalde-select-file {
+        left: unset!important;
+        right: 0
+    }
+}
+
+.fir-input .icon {
+    border-radius: 4px;
+    box-shadow: 0 6px 20px 0 rgb(90 113 208 / 11%);
+    background-color: #ffffff;
+    margin-right: 11px;
+    margin-top: 18px;
+    height: 23px;
+}
+
+.fir-input .select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.fir-input input::placeholder {
+    font-size: 12px;
+    font-weight: 500;
+    color: #999;
+}
+
+.produkter-subnav {
+    margin-top: 23px!important;
+}
+
+.kaskalde-select-file {
+    left: 0;
+}
+
+left: 0;
+
 }
