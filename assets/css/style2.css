@@ -14,8 +14,31 @@
     src: local('Arial Bold'), url('../fonts/ARIALBD-1.woff') format('woff');
 }
 
+.arial-regular {
+    font-family: 'Arial Regular';
+}
+
+.arial-bold {
+    font-family: 'Arial Bold';
+}
+
+.montserrat-light {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.montserrat-bold {
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-black {
+    color: black;
+}
+
 .landing-content {
     zoom: 115%!important;
+    background-color: white;
 }
 
 @media (min-width:1280px) {
@@ -179,4 +202,53 @@ footer .footer-first-container {
     font-family: 'Arial Regular';
     font-size: 15px;
     color: #1e1c24;
+}
+
+footer .footer-select-div .flag {
+    height: 26px;
+    width: 26px;
+}
+
+footer .footer-select-div p {
+    font-size: 14px;
+    color: black;
+}
+
+footer .footer-select-div .down-icon {
+    padding-left: 15px;
+    width: 25px;
+}
+
+footer .footer-text {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+
+/* common contact section starts */
+
+.common-contact-section {
+    padding-top: 127px;
+    margin-top: 200px;
+    background-image: url("../img/landing/contact-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.common-contact-section h1 {
+    font-size: 45px;
+}
+
+.common-contact-section p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.common-contact-section input {
+    border: 1px solid white;
+    background-color: transparent;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 45px;
 }

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/style2.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -83,9 +85,22 @@
             <!-- Collapsible content -->
 
         </nav>
+        <!-- nav ends -->
+        <!-- Common Contact section starts -->
+        <div class="w-full common-contact-section">
+            <div class="col-md-8 mx-auto mx-auto d-flex flex-column justify-content-center">
+                <h1 class="montserrat-bold text-center text-white">Get better Knowlegde</h1>
+                <p class="text-white text-center montserrat-light mt-4">Interested in hearing more about Tellero?</p>
+                <div class="input-field mx-auto">
+                    <input type="email" placeholder="Your company email" />
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <!-- Common Contact section ends -->
         <!-- Footer starts -->
         <footer>
-            <div class="landing-container mx-auto footer-first-container">
+            <div class="landing-container mx-auto footer-first-container pb-4">
                 <img src="./assets/img/landing/landing-logo.svg" class="footer-logo" />
                 <div class="footer-columns-list d-flex col-md-10 mx-auto">
                     <div class="single-footer-column col-md-3">
@@ -132,14 +147,50 @@
                     </div>
                 </div>
             </div>
+            <div class="landing-container mx-auto mt-4 d-flex flex-column align-items-center">
+                <div class="d-flex aling-items-center justify-content-center">
+                    <a href="#" class="mr-4"><img src="./assets/img/landing/facebook.svg" /></a>
+                    <a href="#" class="mr-4"><img src="./assets/img/landing/twitter.svg" /></a>
+                    <a href="#" class="mr-4"><img src="./assets/img/landing/instagram.svg" /></a>
+                    <a href="#" class="mr-4"><img src="./assets/img/landing/youtube.svg" /></a>
+                </div>
+                <div class="footer-select-div my-5">
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <div class="d-flex align-items-center">
+                            <img src="./assets/img/landing/footer-select-im.png" class="flag" />
+                            <p class="text-black px-3 m-0">United Kingdom</p>
+                        </div>
+                        <div class="cursor-pointer">
+                            <img src="/assets/img/landing/footer-select-down.svg" class="down-icon" id="footer-down-icon" />
+                        </div>
+                    </div>
+                    <div id="language-show" class="d-none">
+                        <div class="d-flex justify-content-between align-items-center py-2">
+                            <div class="d-flex align-items-center">
+                                <img src="./assets/img/landing/footer-select-im.png" class="flag" />
+                                <p class="px-3 m-0">Sweden</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 mx-auto">
+                    <p class="footer-text text-center text-black arial-regular">The Pleo Card is issued by Pleo Financial Services A/S pursuant to a license from Mastercard International Incorporated. Mastercard and the Mastercard Brand Mark are registered trademarks of Mastercard International Incorporated. Pleo
+                        Financial Services A/S is a regulated Electronic Money Institution, authorised by the Financial Supervisory Authority, Denmark. Registered Office of Pleo Financial Services A/S: Ravnsborg Tværgade 5 C, 4. Copenhagen N, 2200, Denmark.
+                        CVR Number: 39155435. All communications should be sent to Pleo Technologies A/S, Ravnsborg Tværgade 5C, 2200 Copenhagen N, Denmark.</p>
+                    <p class="footer-text text-center text-black arial-regular">Pleo Technologies Ltd., 2021. All rights reserved</p>
+                </div>
+            </div>
         </footer>
     </div>
     <script>
         $(document).ready(function() {
             $('.hamburger-button').on('click', function() {
-                console.log("called")
                 $('.hamburger-icon').toggleClass('open');
             });
+            $("#footer-down-icon").click(function() {
+                console.log("called")
+                $("#language-show").toggleClass('d-none')
+            })
         })
     </script>
 </body>
