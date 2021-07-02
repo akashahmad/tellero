@@ -34,7 +34,7 @@
   </head>
   <body>
     <div class="landing-content">
-      <div class="section1-bookkeeping bg-bookkeeping">
+      <div class="section1-bookkeeping bg-landing2">
         <!-- Desktop nav -->
         <nav
           class="
@@ -73,7 +73,6 @@
             <button class="btn header-button">Sign up</button>
           </div>
         </nav>
-        <!-- navigaton -->
         <!-- Mobile nav -->
         <nav
           class="navbar navbar-light amber lighten-4 mb-4 d-lg-none mobile-nav"
@@ -95,25 +94,38 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
-              >&#9776;</span
-            >
+            <div class="hamburger-icon">
+              <span></span><span></span><span></span>
+            </div>
           </button>
+
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent20">
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">You get it </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Customers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">The team behind</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Support</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign up</a>
+              </li>
+            </ul>
+            <!-- Links -->
+          </div>
           <!-- Collapsible content -->
         </nav>
-        <div class="mobile-menu-container">
-          <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-              >&times;</a
-            >
-            <a class="clr-dark-blue" href="#">You get it</a>
-            <a class="clr-dark-blue" href="#">Customers</a>
-            <a class="clr-dark-blue" href="#">The team behind</a>
-            <a class="clr-dark-blue" href="#">The team behind</a>
-            <a class="clr-dark-blue" href="#">Support</a>
-          </div>
-        </div>
-        <!-- mobile navigation ends here -->
         <!-- content -->
         <div
           class="
@@ -129,7 +141,7 @@
           "
         >
           <!-- left side -->
-          <div class="col-12 col-lg-6 col-xl-6 py-5 overflow-hidden" data-aos="fade-up">
+          <div class="col-12 col-lg-6 col-xl-6 py-5" data-aos="fade-up">
             <div>
               <h3
                 class="
@@ -137,7 +149,7 @@
                   text-black text-center text-lg-left text-xl-left
                 "
               >
-                We make your bookkeeping,
+                You get that +
               </h3>
               <h3
                 class="
@@ -158,77 +170,6 @@
                 team of accountants who manage all your accounts for you.
               </p>
             </div>
-            <div class="col-12 col-lg-10 col-xl-10 px-2 px-lg-0 px-xl-0">
-              <div class="input-btn-container d-flex">
-                <div class="col-8 px-0">
-                  <input
-                    class="w-100 h-100 px-2 py-2 px-lg-3 py-lg-3"
-                    value="Your company email"
-                  />
-                </div>
-                <div class="col-4 btn-container px-0">
-                  <button class="w-100 h-100 px-2 py-2 px-lg-3 py-lg-3">
-                    Get Started
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div
-              class="
-                Group39066@3x.png
-                d-flex
-                flex-column flex-lg-row flex-xl-row
-                justify-content-center
-                py-5
-              "
-            >
-              <!-- left side  -->
-              <div class="col-12 col-lg-6 col-xl-6 py-2 d-flex">
-                <div>
-                  <img
-                    src="./assets/img/Group39066@3x.png"
-                    alt=""
-                    height="40px"
-                  />
-                </div>
-                <div class="px-2">
-                  <h6 class="m-0 font-weight-bold fs_15px">
-                    We are best in market
-                  </h6>
-                  <p class="py-1 m-0 text-black fs_15px">like shining stars</p>
-                </div>
-              </div>
-              <!-- right side -->
-              <div class="col-12 col-lg-6 col-xl-6 py-2 d-flex">
-                <div>
-                  <img
-                    src="./assets/img/Group39065@3x.png"
-                    alt=""
-                    height="40px"
-                  />
-                </div>
-                <div class="px-2">
-                  <h6 class="m-0 font-weight-bold fs_15px">
-                    Security Levels Like Bank.
-                  </h6>
-                  <p class="py-1 m-0 text-black fs_15px">
-                    We will provide you Best Security.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- right side -->
-          <div
-            class="
-              col-12 col-lg-6 col-xl-6
-              d-flex
-              justify-content-end
-              right-img-bookkeeping
-              px-0
-            "
-          >
-            <img class="overflow-hidden" src="./assets/img/laptop.png" alt="" />
           </div>
         </div>
       </div>
@@ -244,16 +185,15 @@
             section2-apps-container
             py-5
           "
+          data-aos="fade-down"
         >
-          <div class="pt-5 overflow-hidden" data-aos="fade-down">
+          <div class="pt-5">
             <p class="arial-regular text-center m-0">
               TRUSTED BY 15,000+ COMPANIES OF DIFFERENT SIZES AND INDUSTRIES
             </p>
           </div>
           <div
-            data-aos="fade-down"
             class="
-            overflow-hidden
               col-12 col-lg-11 col-xl-11
               d-flex
               justify-content-around
@@ -264,29 +204,29 @@
             "
           >
             <!-- 1st box -->
-            <div class="pr-2 py-3">
+            <div class="pr-2 py-2">
               <img
                 src="./assets/img/Cartoon_Network_logo@3x.png"
                 height="30px"
               />
             </div>
             <!-- 1st box -->
-            <div class="pr-2 py-3">
+            <div class="pr-2 py-2">
               <img src="./assets/img/Booking.com_logo@3x.png" height="30px" />
             </div>
-            <div class="pr-2 py-3">
+            <div class="pr-2 py-2">
               <img src="./assets/img/slack@3x.png" height="30px" />
             </div>
             <!-- 1st box -->
-            <div class="pr-2 py-3">
+            <div class="pr-2 py-2">
               <img src="./assets/img/spotify-1@3x.png" height="30px" />
             </div>
             <!-- 1st box -->
-            <div class="pr-2 py-3">
+            <div class="pr-2 py-2">
               <img src="./assets/img/Dropbox_logo@3x.png" height="30px" />
             </div>
             <!-- 1st box -->
-            <div class="px-2 py-3">
+            <div class="px-2 py-2">
               <img src="./assets/img/Toshiba_logo@3x.png" height="20px" />
             </div>
           </div>
@@ -307,96 +247,90 @@
             <img src="./assets/img/111.png" width="100%" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-6 col-xl-6 col-12">
-            <div class="overflow-hidden" data-aos="fade-left">
-              <!-- title -->
-              <div class="">
-                <p
-                  class="
-                    fs_20px
-                    m-0
-                    title-sm
-                    text-center text-lg-left text-xl-left
-                  "
-                >
-                  Voucher Pay
-                </p>
-              </div>
-              <div class="py-4">
-                <p
-                  class="
-                    fs_30px
-                    m-0
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  We post all your vouchers for you at no extra cost
-                </p>
-              </div>
+          <div class="col-lg-6 col-xl-6 col-12" data-aos="fade-left">
+            <!-- title -->
+            <div class="">
+              <p
+                class="
+                  fs_20px
+                  m-0
+                  title-sm
+                  text-center text-lg-left text-xl-left
+                "
+              >
+                Voucher Pay
+              </p>
+            </div>
+            <div class="py-4">
+              <p
+                class="
+                  fs_30px
+                  m-0
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                We post all your vouchers for you at no extra cost
+              </p>
+            </div>
+            <div>
+              <p
+                class="
+                  fs_18px
+                  arial-regular
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                You can send us all the attachments you want. The price is the
+                same - whether you send us 40 or 100 vouchers a month. You do
+                not get any sudden extra bills!
+              </p>
+            </div>
+            <div class="d-flex py-3 px-2">
               <div>
-                <p
-                  class="
-                    fs_18px
-                    arial-regular
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  You can send us all the attachments you want. The price is the
-                  same - whether you send us 40 or 100 vouchers a month. You do
-                  not get any sudden extra bills!
+                <img src="./assets/img/Group39070@3x.png" height="40px" />
+              </div>
+              <div class="px-3">
+                <p class="arial-bold text-black m-0 fs_18px">
+                  Keep track of your bookkeeping
+                </p>
+                <p class="arial-regular text-black py-1 fs_18px">
+                  You will always have an overview of which documents have been
+                  posted and which are missing. And if we have questions, we
+                  will write to you - so we ensure you the right deductions.
                 </p>
               </div>
-              <div class="d-flex py-3 px-2">
-                <div>
-                  <img src="./assets/img/Group39070@3x.png" height="40px" />
-                </div>
-                <div class="px-3">
-                  <p class="arial-bold text-black m-0 fs_18px">
-                    Keep track of your bookkeeping
-                  </p>
-                  <p class="arial-regular text-black py-1 fs_18px">
-                    You will always have an overview of which documents have
-                    been posted and which are missing. And if we have questions,
-                    we will write to you - so we ensure you the right
-                    deductions.
-                  </p>
-                </div>
+            </div>
+            <div class="d-flex py-1 px-2">
+              <div>
+                <img src="./assets/img/Group39071@3x.png" height="40px" />
               </div>
-              <div class="d-flex py-1 px-2">
-                <div>
-                  <img src="./assets/img/Group39071@3x.png" height="40px" />
-                </div>
-                <div class="px-3">
-                  <p class="arial-bold text-black m-0 fs_18px">
-                    Send invoices and receive payment online
-                  </p>
-                  <p class="arial-regular text-black py-1 fs_18px">
-                    Use Meneto's invoicing module to send invoices. Your
-                    customers can easily pay online with card or MobilePay.
-                  </p>
-                </div>
+              <div class="px-3">
+                <p class="arial-bold text-black m-0 fs_18px">
+                  Send invoices and receive payment online
+                </p>
+                <p class="arial-regular text-black py-1 fs_18px">
+                  Use Meneto's invoicing module to send invoices. Your customers
+                  can easily pay online with card or MobilePay.
+                </p>
               </div>
-              <div class="d-flex py-5 px-2 align-items-center">
-                <div class="px-3">
-                  <p class="arial-bold m-0 fs_18px">
-                    See all other services you get in Tellero
-                  </p>
-                </div>
-                <div class="px-4">
-                  <img src="./assets/img/login.png" height="15px" />
-                </div>
+            </div>
+            <div class="d-flex py-5 px-2 align-items-center">
+              <div class="px-3">
+                <p class="arial-bold m-0 fs_18px">
+                  See all other services you get in Tellero
+                </p>
+              </div>
+              <div class="px-4">
+                <img src="./assets/img/login.png" height="15px" />
               </div>
             </div>
           </div>
           <!-- right side -->
-          <div class="col-lg-5 col-xl-5 col-12 right-img-container">
-            <img
-              src="./assets/img/img.png"
-              alt=""
-              width="100%"
-              data-aos="fade-right"
-              class="overflow-hidden"
-            />
+          <div
+            class="col-lg-5 col-xl-5 col-12 right-img-container"
+            data-aos="fade-right"
+          >
+            <img src="./assets/img/img.png" alt="" width="100%" />
           </div>
         </div>
       </div>
@@ -415,80 +349,72 @@
             <img src="./assets/img/img2.png" width="100%" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-6 col-xl-6 col-12 z-index-1">
-            <img
-              src="./assets/img/Group39073@3x.png"
-              alt=""
-              width="100%"
-              data-aos="fade-left"
-              class="overflow-hidden"
-            />
+          <div class="col-lg-6 col-xl-6 col-12 z-index-1" data-aos="fade-left">
+            <img src="./assets/img/Group39073@3x.png" alt="" width="100%" />
           </div>
           <!-- right side -->
-          <div class="col-lg-5 col-xl-5 col-12 z-index-1">
-            <div class="overflow-hidden" data-aos="fade-right">
-              <!-- title -->
-              <div class="">
-                <p
-                  class="
-                    fs_20px
-                    m-0
-                    title-sm
-                    text-center text-lg-left text-xl-left
-                    primary_color
-                  "
-                >
-                  Team View
+          <div class="col-lg-5 col-xl-5 col-12 z-index-1" data-aos="fade-right">
+            <!-- title -->
+            <div class="">
+              <p
+                class="
+                  fs_20px
+                  m-0
+                  title-sm
+                  text-center text-lg-left text-xl-left
+                  primary_color
+                "
+              >
+                Team View
+              </p>
+            </div>
+            <div class="py-4">
+              <p
+                class="
+                  fs_30px
+                  m-0
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                We do everything for your VAT return and your annual accounts
+              </p>
+            </div>
+            <div>
+              <p
+                class="
+                  fs_18px
+                  arial-regular
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                Our skilled team of accountants and auditors prepares everything
+                for your VAT return and your annual accounts.
+              </p>
+            </div>
+            <div>
+              <p
+                class="
+                  fs_18px
+                  arial-regular
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                Let go of worrying about the accounts up to the deadline and pay
+                yourself back instead. All deadlines are met so you avoid
+                mistakes and fines.
+              </p>
+            </div>
+            <div class="py-3">
+              <img src="./assets/img/Image1.png" alt="" height="50px" />
+            </div>
+            <div class="d-flex py-3 px-0 align-items-center">
+              <div class="px-3 px-0">
+                <p class="arial-bold m-0 fs_18px">
+                  See all other services you get in Tellero
                 </p>
               </div>
-              <div class="py-4">
-                <p
-                  class="
-                    fs_30px
-                    m-0
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  We do everything for your VAT return and your annual accounts
-                </p>
-              </div>
-              <div>
-                <p
-                  class="
-                    fs_18px
-                    arial-regular
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  Our skilled team of accountants and auditors prepares
-                  everything for your VAT return and your annual accounts.
-                </p>
-              </div>
-              <div>
-                <p
-                  class="
-                    fs_18px
-                    arial-regular
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  Let go of worrying about the accounts up to the deadline and
-                  pay yourself back instead. All deadlines are met so you avoid
-                  mistakes and fines.
-                </p>
-              </div>
-              <div class="py-3">
-                <img src="./assets/img/Image1.png" alt="" height="50px" />
-              </div>
-              <div class="d-flex py-3 px-0 align-items-center">
-                <div class="px-3 px-0">
-                  <p class="arial-bold m-0 fs_18px">
-                    See all other services you get in Tellero
-                  </p>
-                </div>
-                <div class="px-4">
-                  <img src="./assets/img/login.png" height="15px" />
-                </div>
+              <div class="px-4">
+                <img src="./assets/img/login.png" height="15px" />
               </div>
             </div>
           </div>
@@ -510,75 +436,65 @@
             <img src="./assets/img/leftDotsImg.png" width="100%" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-5 col-xl-5 col-12 z-index-1">
-            <div class="overflow-hidden" data-aos="fade-left">
-              <!-- title -->
-              <div class="">
-                <p
-                  class="
-                    fs_20px
-                    m-0
-                    title-sm
-                    text-center text-lg-left text-xl-left
-                    primary_color
-                  "
-                >
-                  Voucher Pay
+          <div class="col-lg-5 col-xl-5 col-12 z-index-1" data-aos="fade-left">
+            <!-- title -->
+            <div class="">
+              <p
+                class="
+                  fs_20px
+                  m-0
+                  title-sm
+                  text-center text-lg-left text-xl-left
+                  primary_color
+                "
+              >
+                Voucher Pay
+              </p>
+            </div>
+            <div class="py-4">
+              <p
+                class="
+                  fs_30px
+                  m-0
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                Easy accounting program included in the price
+              </p>
+            </div>
+            <div>
+              <p
+                class="
+                  fs_18px
+                  arial-regular
+                  text-black text-center text-lg-left text-xl-left
+                "
+              >
+                In our user-friendly accounting program, you have access to
+                invoicing, EAN invoicing, reminder module, subscription
+                invoicing, offer module, good financial overview and much more.
+              </p>
+            </div>
+            <div class="py-3 box-shadow">
+              <img src="./assets/img/Group-39075@3x.png" alt="" width="100%" />
+            </div>
+            <div class="d-flex py-5 px-0 align-items-center">
+              <div class="px-3 px-0">
+                <p class="arial-bold m-0 fs_18px">
+                  See all other services you get in Tellero
                 </p>
               </div>
-              <div class="py-4">
-                <p
-                  class="
-                    fs_30px
-                    m-0
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  Easy accounting program included in the price
-                </p>
-              </div>
-              <div>
-                <p
-                  class="
-                    fs_18px
-                    arial-regular
-                    text-black text-center text-lg-left text-xl-left
-                  "
-                >
-                  In our user-friendly accounting program, you have access to
-                  invoicing, EAN invoicing, reminder module, subscription
-                  invoicing, offer module, good financial overview and much
-                  more.
-                </p>
-              </div>
-              <div class="py-3 box-shadow">
-                <img
-                  src="./assets/img/Group-39075@3x.png"
-                  alt=""
-                  width="100%"
-                />
-              </div>
-              <div class="d-flex py-5 px-0 align-items-center">
-                <div class="px-3 px-0">
-                  <p class="arial-bold m-0 fs_18px">
-                    See all other services you get in Tellero
-                  </p>
-                </div>
-                <div class="px-4">
-                  <img src="./assets/img/login.png" height="15px" />
-                </div>
+              <div class="px-4">
+                <img src="./assets/img/login.png" height="15px" />
               </div>
             </div>
           </div>
           <!-- right side -->
-          <div class="col-lg-6 col-xl-6 col-12 section5-right-image px-0">
-            <img
-              src="./assets/img/img11.png"
-              alt=""
-              width="100%"
-              class="overflow-hidden"
-              data-aos="fade-right"
-            />
+          <div
+            class="col-lg-6 col-xl-6 col-12 section5-right-image px-0"
+            data-aos="fade-right"
+          >
+            <img src="./assets/img/img11.png" alt="" width="100%" />
           </div>
         </div>
       </div>
@@ -598,14 +514,13 @@
             <img src="./assets/img/back-trello.png" class="w-100" alt="" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-5 col-xl-5 col-12 z-index-1">
+          <div class="col-lg-5 col-xl-5 col-12 z-index-1" data-aos="fade-left">
             <!-- title -->
+            <div class=""></div>
             <div class="py-4">
               <div class="d-flex align-items-end">
                 <p
-                  data-aos="fade-left"
                   class="
-                  overflow-hidden
                     fs_30px
                     m-0
                     text-black text-center text-lg-left text-xl-left
@@ -615,7 +530,6 @@
                 </p>
                 <div class="px-3">
                   <img
-                    data-aos="fade-left"
                     src="./assets/img/validation@3x.png"
                     alt=""
                     height="70px"
@@ -623,9 +537,7 @@
                 </div>
               </div>
               <p
-                data-aos="fade-left"
                 class="
-                overflow-hidden
                   fs_30px
                   m-0
                   primary_color
@@ -635,9 +547,7 @@
                 solution at a fraction of
               </p>
               <p
-                data-aos="fade-left"
                 class="
-                overflow-hidden
                   fs_30px
                   m-0
                   text-black text-center text-lg-left text-xl-left
@@ -648,9 +558,7 @@
             </div>
             <div>
               <p
-                data-aos="fade-left"
                 class="
-                overflow-hidden
                   fs_18px
                   arial-regular
                   text-black text-center text-lg-left text-xl-left
@@ -660,9 +568,7 @@
                 turnover and company form.
               </p>
               <p
-                data-aos="fade-left"
                 class="
-                overflow-hidden
                   py-3
                   fs_18px
                   arial-regular
@@ -679,12 +585,12 @@
               </p>
             </div>
             <div class="py-2">
-              <button class="common-active-btn px-4 py-3 overflow-hidden" data-aos="fade-left">
+              <button class="common-active-btn px-4 py-3">
                 Book a no-obligation interview
               </button>
             </div>
             <div class="d-flex py-2 px-0 align-items-center">
-              <div class="px-1 overflow-hidden" data-aos="fade-left">
+              <div class="px-1">
                 <p class="arial-bold m-0 fs_14px opacity-point5">
                   Get a no-obligation quote and the first month for free
                 </p>
@@ -693,6 +599,7 @@
           </div>
           <!-- right side -->
           <div
+            data-aos="fade-right"
             class="
               col-lg-5 col-xl-5 col-12
               section5-right-image
@@ -700,19 +607,14 @@
               px-0
             "
           >
-            <img
-              src="./assets/img/Group39220.png"
-              width="100%"
-              class="overflow-hidden"
-              data-aos="fade-right"
-            />
+            <img src="./assets/img/Group39220.png" alt="" width="100%" />
           </div>
         </div>
       </div>
       <!-- section7 -->
       <div class="landing-container mx-auto py-5">
         <div class="py-4">
-          <h5 class="fs_30px overflow-hidden text-center" data-aos="fade-down">
+          <h5 class="fs_30px text-center" data-aos="fade-down">
             Why 15,000+ companies trust Tellero
           </h5>
         </div>
@@ -728,17 +630,12 @@
           "
         >
           <!-- left-side -->
-          <div class="col-lg-5 col-xl-5 col-12">
-            <img
-              src="./assets/img/Group38750@3x.png"
-              alt=""
-              width="100%"
-              class="overflow-hidden"
-              data-aos="fade-left"
-            />
+          <div class="col-lg-5 col-xl-5 col-12" data-aos="fade-left">
+            <img src="./assets/img/Group38750@3x.png" alt="" width="100%" />
           </div>
           <!-- right side -->
           <div
+            data-aos="fade-right"
             class="
               col-lg-6 col-xl-6 col-12
               d-flex
@@ -748,7 +645,7 @@
               py-4 py-lg-0 py-xl-0
             "
           >
-            <div class="overflow-hidden" data-aos="fade-right">
+            <div>
               <div
                 class="
                   d-flex
@@ -845,9 +742,10 @@
               justify-content-around
               section8-savings-container
             "
+            data-aos="fade-down"
           >
             <!-- 1st box  -->
-            <div class="col-10 col-lg-4 col-xl-4 px-3 overflow-hidden" data-aos="fade-down">
+            <div class="col-10 col-lg-4 col-xl-4 px-3">
               <div class="d-flex justify-content-center img-container h-50">
                 <img src="./assets/img/Group39159.png" alt="" width="" />
               </div>
@@ -862,7 +760,7 @@
               </div>
             </div>
             <!-- 2nd box  -->
-            <div class="col-10 col-lg-4 col-xl-4 px-3 overflow-hidden" data-aos="fade-down">
+            <div class="col-10 col-lg-4 col-xl-4 px-3">
               <div class="d-flex justify-content-center img-container h-50">
                 <img src="./assets/img/Group39159-2.png" width="" alt="" />
               </div>
@@ -877,7 +775,7 @@
               </div>
             </div>
             <!-- 3rd box  -->
-            <div class="col-10 col-lg-4 col-xl-4 px-3 overflow-hidden" data-aos="fade-down">
+            <div class="col-10 col-lg-4 col-xl-4 px-3">
               <div class="d-flex justify-content-center img-container h-50">
                 <img src="./assets/img/Group39159-3.png" width="" alt="" />
               </div>
@@ -897,15 +795,14 @@
       </div>
       <!-- section9 -->
       <div class="landing-container mx-auto py-5 section9-landing-page">
-        <div class="d-flex justify-content-center">
-          <div class="col-12 col-lg-8 col-xl-8">
+        <div class="d-flex justify-content-center" >
+          <div class="col-12 col-lg-8 col-xl-8" data-aos="fade-down">
             <h5
-              data-aos="fade-down"
-              class="text-center overflow-hidden font-weight-bold fs_35px title1 arial-regular"
+              class="text-center font-weight-bold fs_35px title1 arial-regular"
             >
               Do as 800+ other freelancers
             </h5>
-            <p class="py-4 fs_20px text-center overflow-hidden" data-aos="fade-down">
+            <p class="py-4 fs_20px text-center">
               Get rid of accounting hassle today and save a lot of time. Time
               you can instead spend on growing your business, nurturing your
               family or something completely third.
@@ -913,8 +810,8 @@
           </div>
         </div>
       </div>
-      <div class="pb-5">
-        <div class="my-4 overflow-hidden" data-aos="fade-top">
+      <div class="pb-5" data-aos="fade-top">
+        <div class="my-4">
           <!--Carousel Wrapper-->
           <div
             id="multi-item-example"
@@ -1054,8 +951,8 @@
       </div>
       <!-- section10 -->
       <div class="section10-icons pt-5 pb-3">
-        <div class="landing-container mx-auto pt-5 section9-landing-page">
-          <div data-aos="fade-right" class="overflow-hidden">
+        <div class="landing-container mx-auto pt-5 section9-landing-page" data-aos="fade-right">
+          <div >
             <h5
               class="
                 text-center
@@ -1072,7 +969,7 @@
               We are Working with these Clients from last 18 years
             </p>
           </div>
-          <div class="d-flex justify-content-center py-5 overflow-hidden" data-aos="fade-right">
+          <div class="d-flex justify-content-center py-5">
             <img src="./assets/img/icons.png" width="100%" alt="" />
           </div>
         </div>
@@ -1081,6 +978,7 @@
       <!-- Common Contact section starts -->
       <div class="w-full common-contact-section">
         <div
+        data-aos="fade-left"
           class="
             col-md-8
             mx-auto mx-auto
@@ -1090,22 +988,13 @@
             section11
           "
         >
-          <h1
-            class="montserrat-bold text-center text-white overflow-hidden"
-            data-aos="fade-left"
-          >
+          <h1 class="montserrat-bold text-center text-white">
             Get better Knowlegde
           </h1>
-          <p
-            class="text-white overflow-hidden text-center montserrat-light mt-4"
-            data-aos="fade-left"
-          >
+          <p class="text-white text-center montserrat-light mt-4">
             Interested in hearing more about Tellero?
           </p>
-          <div
-            class="input-field mx-auto overflow-hidden input-btn-container"
-            data-aos="fade-left"
-          >
+          <div class="input-field mx-auto input-btn-container">
             <input type="email" placeholder="Your company email" />
             <button>Get Started</button>
           </div>
@@ -1266,17 +1155,10 @@
           $("#language-show").toggleClass("d-none");
         });
       });
-      function openNav() {
-        document.getElementById("mySidenav").classList.add("active");
-      }
-
-      function closeNav() {
-        document.getElementById("mySidenav").classList.remove("active");
-      }
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({ duration: 500, once: true });
+      AOS.init({duration: 500});
     </script>
   </body>
 </html>
