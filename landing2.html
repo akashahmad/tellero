@@ -73,6 +73,7 @@
             <button class="btn header-button">Sign up</button>
           </div>
         </nav>
+        <!-- navigaton -->
         <!-- Mobile nav -->
         <nav
           class="navbar navbar-light amber lighten-4 mb-4 d-lg-none mobile-nav"
@@ -94,140 +95,104 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <div class="hamburger-icon">
-              <span></span><span></span><span></span>
-            </div>
+            <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+              >&#9776;</span
+            >
           </button>
-
-          <!-- Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent20">
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">You get it </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Customers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">The team behind</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Support</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sign up</a>
-              </li>
-            </ul>
-            <!-- Links -->
-          </div>
           <!-- Collapsible content -->
         </nav>
+        <div class="mobile-menu-container">
+          <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <a class="clr-dark-blue" href="#">You get it</a>
+            <a class="clr-dark-blue" href="#">Customers</a>
+            <a class="clr-dark-blue" href="#">The team behind</a>
+            <a class="clr-dark-blue" href="#">The team behind</a>
+            <a class="clr-dark-blue" href="#">Support</a>
+          </div>
+        </div>
+        <!-- mobile navigation ends here -->
         <!-- content -->
         <div
           class="
             landing-container
             mx-auto
-            bookkeeping-content-container
             d-flex
             flex-column flex-lg-row flex-xl-row
             justify-content-center
             justify-content-lg-between
             justify-content-xl-between
             py-5
+            section2-landingPage2
           "
         >
           <!-- left side -->
-          <div class="col-12 col-lg-6 col-xl-6 py-5" data-aos="fade-up">
+          <div
+            class="col-12 col-lg-6 col-xl-6 py-5 overflow-hidden"
+            data-aos="fade-up"
+          >
             <div>
               <h3
                 class="
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
+                  arial-bold
+                  font-weight-bold
+                  text-center text-lg-left text-xl-left
+                  common-dark-blue-color
+                  fs_70px
                 "
               >
-                You get that +
+                You get that with
               </h3>
               <h3
                 class="
                   focus-text
-                  arial-regular
-                  text-center text-lg-left text-xl-left
+                  arial-bold
+                  font-weight-bold
+                  text-center
+                  primary_color
+                  text-lg-left text-xl-left
+                  fs_70px
                 "
               >
-                VAT andannual account from
-              </h3>
-              <h3 class="arial-regular text-center text-lg-left text-xl-left">
-                DKK 595 / month.
+                Trello
               </h3>
             </div>
-            <div class="below-title pt-5 pb-5">
-              <p class="text-center arial-regular text-lg-left text-xl-left">
-                With Tellero you get a user-friendly accounting program and a
-                team of accountants who manage all your accounts for you.
-              </p>
+            <div class="below-title-button py-4">
+              <button
+                class="
+                  common-dark-blue-btn
+                  px-4
+                  fs_20px
+                  py-3
+                  common-br-radius10
+                "
+              >
+                GET STARTED
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- sections 2 apps -->
-      <div class="py-5">
-        <div
-          class="
-            landing-container
-            mx-auto
-            d-flex
-            flex-column
-            align-items-center
-            section2-apps-container
-            py-5
-          "
-          data-aos="fade-down"
-        >
-          <div class="pt-5">
-            <p class="arial-regular text-center m-0">
-              TRUSTED BY 15,000+ COMPANIES OF DIFFERENT SIZES AND INDUSTRIES
-            </p>
-          </div>
-          <div
-            class="
-              col-12 col-lg-11 col-xl-11
-              d-flex
-              justify-content-around
-              align-items-center
-              flex-wrap
-              pt-4
-              pb-5
-            "
-          >
-            <!-- 1st box -->
-            <div class="pr-2 py-2">
-              <img
-                src="./assets/img/Cartoon_Network_logo@3x.png"
-                height="30px"
-              />
-            </div>
-            <!-- 1st box -->
-            <div class="pr-2 py-2">
-              <img src="./assets/img/Booking.com_logo@3x.png" height="30px" />
-            </div>
-            <div class="pr-2 py-2">
-              <img src="./assets/img/slack@3x.png" height="30px" />
-            </div>
-            <!-- 1st box -->
-            <div class="pr-2 py-2">
-              <img src="./assets/img/spotify-1@3x.png" height="30px" />
-            </div>
-            <!-- 1st box -->
-            <div class="pr-2 py-2">
-              <img src="./assets/img/Dropbox_logo@3x.png" height="30px" />
-            </div>
-            <!-- 1st box -->
-            <div class="px-2 py-2">
-              <img src="./assets/img/Toshiba_logo@3x.png" height="20px" />
+      <!-- section2 -->
+      <div class="landing-container mx-auto py-5">
+        <div class="py-5">
+          <h4 class="text-black font-weight-bold fs_35px text-center">
+            How It Works
+          </h4>
+        </div>
+        <div class="d-flex justify-content-around flex-wrap">
+          <!-- 1st box -->
+          <div>
+            <!-- icon -->
+            <div class="d-flex">
+              <div>
+                <img src="./assets/img/step1" />
+              </div>
+              <div>
+                <img />
+              </div>
             </div>
           </div>
         </div>
@@ -243,94 +208,104 @@
             section3-voucher
           "
         >
-          <div class="position-absolute left-0 w-15per">
-            <img src="./assets/img/111.png" width="100%" />
-          </div>
           <!-- left-side -->
-          <div class="col-lg-6 col-xl-6 col-12" data-aos="fade-left">
-            <!-- title -->
-            <div class="">
-              <p
-                class="
-                  fs_20px
-                  m-0
-                  title-sm
-                  text-center text-lg-left text-xl-left
-                "
-              >
-                Voucher Pay
-              </p>
-            </div>
-            <div class="py-4">
-              <p
-                class="
-                  fs_30px
-                  m-0
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                We post all your vouchers for you at no extra cost
-              </p>
-            </div>
-            <div>
-              <p
-                class="
-                  fs_18px
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                You can send us all the attachments you want. The price is the
-                same - whether you send us 40 or 100 vouchers a month. You do
-                not get any sudden extra bills!
-              </p>
-            </div>
-            <div class="d-flex py-3 px-2">
+          <div class="col-lg-6 col-xl-6 col-12">
+            <div class="overflow-hidden" data-aos="fade-left">
+              <div class="py-4">
+                <p
+                  class="
+                    fs_30px
+                    m-0
+                    text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
+                  "
+                >
+                  Upload your vouchers and we will post them for you
+                </p>
+              </div>
               <div>
-                <img src="./assets/img/Group39070@3x.png" height="40px" />
-              </div>
-              <div class="px-3">
-                <p class="arial-bold text-black m-0 fs_18px">
-                  Keep track of your bookkeeping
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Your team of accountants regularly posts for you, and the
+                  price is the same - whether you send us 10 or 100 vouchers a
+                  month.
                 </p>
-                <p class="arial-regular text-black py-1 fs_18px">
-                  You will always have an overview of which documents have been
-                  posted and which are missing. And if we have questions, we
-                  will write to you - so we ensure you the right deductions.
-                </p>
-              </div>
-            </div>
-            <div class="d-flex py-1 px-2">
-              <div>
-                <img src="./assets/img/Group39071@3x.png" height="40px" />
-              </div>
-              <div class="px-3">
-                <p class="arial-bold text-black m-0 fs_18px">
-                  Send invoices and receive payment online
-                </p>
-                <p class="arial-regular text-black py-1 fs_18px">
-                  Use Meneto's invoicing module to send invoices. Your customers
-                  can easily pay online with card or MobilePay.
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Forward your attachments to your unique Meneto email, take a
+                  picture of the attachment via our free mobile app, or "drag"
+                  the attachment directly into our web app. Your vouchers will
+                  be posted within 72 hours.
                 </p>
               </div>
-            </div>
-            <div class="d-flex py-5 px-2 align-items-center">
-              <div class="px-3">
-                <p class="arial-bold m-0 fs_18px">
-                  See all other services you get in Tellero
-                </p>
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
               </div>
-              <div class="px-4">
-                <img src="./assets/img/login.png" height="15px" />
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <!-- right side -->
           <div
-            class="col-lg-5 col-xl-5 col-12 right-img-container"
-            data-aos="fade-right"
+            class="
+              col-lg-5 col-xl-5 col-12
+              d-flex
+              flex-column
+              justify-content-center
+            "
           >
-            <img src="./assets/img/img.png" alt="" width="100%" />
+            <img
+              src="./assets/img/video.png"
+              alt=""
+              width="100%"
+              data-aos="fade-right"
+              class="overflow-hidden"
+            />
+            <div class="d-flex justify-content-center">
+              <img
+                src="./assets/img/Ellipse 255@3x.png"
+                alt=""
+                width="100px"
+                height="100px"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -345,76 +320,94 @@
             team-view-container
           "
         >
-          <div class="arrow-section4">
+          <div class="arrow-section-common">
             <img src="./assets/img/img2.png" width="100%" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-6 col-xl-6 col-12 z-index-1" data-aos="fade-left">
-            <img src="./assets/img/Group39073@3x.png" alt="" width="100%" />
+          <div class="col-lg-6 col-xl-6 col-12" data-aos="fade-left">
+            <div class="d-flex justify-content-end">
+              <img
+                src="./assets/img/Ellipse 255@3x.png"
+                class="position-absolute"
+                height="250px"
+              />
+            </div>
+            <img
+              src="./assets/img/Group 39163.png"
+              alt=""
+              width="100%"
+              class="overflow-hidden z-index-1 position-relative"
+            />
           </div>
-          <!-- right side -->
-          <div class="col-lg-5 col-xl-5 col-12 z-index-1" data-aos="fade-right">
-            <!-- title -->
-            <div class="">
-              <p
-                class="
-                  fs_20px
-                  m-0
-                  title-sm
-                  text-center text-lg-left text-xl-left
-                  primary_color
-                "
-              >
-                Team View
-              </p>
-            </div>
-            <div class="py-4">
-              <p
-                class="
-                  fs_30px
-                  m-0
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                We do everything for your VAT return and your annual accounts
-              </p>
-            </div>
-            <div>
-              <p
-                class="
-                  fs_18px
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                Our skilled team of accountants and auditors prepares everything
-                for your VAT return and your annual accounts.
-              </p>
-            </div>
-            <div>
-              <p
-                class="
-                  fs_18px
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                Let go of worrying about the accounts up to the deadline and pay
-                yourself back instead. All deadlines are met so you avoid
-                mistakes and fines.
-              </p>
-            </div>
-            <div class="py-3">
-              <img src="./assets/img/Image1.png" alt="" height="50px" />
-            </div>
-            <div class="d-flex py-3 px-0 align-items-center">
-              <div class="px-3 px-0">
-                <p class="arial-bold m-0 fs_18px">
-                  See all other services you get in Tellero
+          <!-- right-side -->
+          <div class="col-lg-5 col-xl-5 col-12">
+            <div class="overflow-hidden" data-aos="fade-left">
+              <div class="py-4">
+                <p
+                  class="
+                    fs_30px
+                    m-0
+                    text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
+                  "
+                >
+                  Connect your bank with your accounts
                 </p>
               </div>
-              <div class="px-4">
-                <img src="./assets/img/login.png" height="15px" />
+              <div>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  You can easily connect Meneto's accounting program with your
+                  bank. Then we automatically retrieve all your postings in real
+                  time and reconcile them with the posting.
+                </p>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Our bank connection supports most Danish banks. All you have
+                  to do is select your bank and choose which account to link to.
+                </p>
+              </div>
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
+              </div>
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -430,71 +423,102 @@
             justify-content-lg-between justify-content-xl-between
             team-view-container
             accounting-program
+            landing2-commonImg-container
           "
         >
           <div class="position-absolute left-0 w-18per dotted-imgContainer">
             <img src="./assets/img/leftDotsImg.png" width="100%" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-5 col-xl-5 col-12 z-index-1" data-aos="fade-left">
-            <!-- title -->
-            <div class="">
-              <p
-                class="
-                  fs_20px
-                  m-0
-                  title-sm
-                  text-center text-lg-left text-xl-left
-                  primary_color
-                "
-              >
-                Voucher Pay
-              </p>
-            </div>
-            <div class="py-4">
-              <p
-                class="
-                  fs_30px
-                  m-0
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                Easy accounting program included in the price
-              </p>
-            </div>
-            <div>
-              <p
-                class="
-                  fs_18px
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                In our user-friendly accounting program, you have access to
-                invoicing, EAN invoicing, reminder module, subscription
-                invoicing, offer module, good financial overview and much more.
-              </p>
-            </div>
-            <div class="py-3 box-shadow">
-              <img src="./assets/img/Group-39075@3x.png" alt="" width="100%" />
-            </div>
-            <div class="d-flex py-5 px-0 align-items-center">
-              <div class="px-3 px-0">
-                <p class="arial-bold m-0 fs_18px">
-                  See all other services you get in Tellero
+          <div class="col-lg-5 col-xl-5 col-12">
+            <div class="overflow-hidden" data-aos="fade-left">
+              <div class="py-4">
+                <p
+                  class="
+                    fs_30px
+                    m-0
+                    text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
+                  "
+                >
+                  Upload your vouchers and we will post them for you
                 </p>
               </div>
-              <div class="px-4">
-                <img src="./assets/img/login.png" height="15px" />
+              <div>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Your team of accountants regularly posts for you, and the
+                  price is the same - whether you send us 10 or 100 vouchers a
+                  month.
+                </p>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Forward your attachments to your unique Meneto email, take a
+                  picture of the attachment via our free mobile app, or "drag"
+                  the attachment directly into our web app. Your vouchers will
+                  be posted within 72 hours.
+                </p>
+              </div>
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
+              </div>
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <!-- right side -->
-          <div
-            class="col-lg-6 col-xl-6 col-12 section5-right-image px-0"
-            data-aos="fade-right"
-          >
-            <img src="./assets/img/img11.png" alt="" width="100%" />
+          <div class="col-lg-6 col-xl-6 col-12 px-0">
+            <div>
+              <img
+                src="./assets/img/Group 38416@3x.png"
+                alt=""
+                width="100%"
+                class="common-landing2-sections-img"
+              />
+              <img
+                src="./assets/img/Ellipse 259@3x.png"
+                alt=""
+                height="100%"
+                width="100%"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -507,470 +531,447 @@
             flex-column flex-lg-row flex-xl-row
             justify-content-lg-between justify-content-xl-between
             team-view-container
-            accounting-program
           "
         >
-          <div class="position-absolute w-50 tellerto-backImg">
-            <img src="./assets/img/back-trello.png" class="w-100" alt="" />
+          <div class="arrow-section-common">
+            <img src="./assets/img/img2.png" width="100%" />
           </div>
           <!-- left-side -->
-          <div class="col-lg-5 col-xl-5 col-12 z-index-1" data-aos="fade-left">
-            <!-- title -->
-            <div class=""></div>
-            <div class="py-4">
-              <div class="d-flex align-items-end">
+          <div class="col-lg-6 col-xl-6 col-12" data-aos="fade-left">
+            <div class="d-flex justify-content-end">
+              <img src="./assets/img/Group 39161.png" alt="" width="100%" />
+            </div>
+          </div>
+          <!-- right-side -->
+          <div class="col-lg-5 col-xl-5 col-12">
+            <div class="overflow-hidden" data-aos="fade-left">
+              <div class="py-4">
                 <p
                   class="
                     fs_30px
                     m-0
                     text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
                   "
                 >
-                  Digital accounting
+                  Connect your bank with your accounts
                 </p>
+              </div>
+              <div>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  You can easily connect Meneto's accounting program with your
+                  bank. Then we automatically retrieve all your postings in real
+                  time and reconcile them with the posting.
+                </p>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Our bank connection supports most Danish banks. All you have
+                  to do is select your bank and choose which account to link to.
+                </p>
+              </div>
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
+              </div>
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
+                </div>
                 <div class="px-3">
-                  <img
-                    src="./assets/img/validation@3x.png"
-                    alt=""
-                    height="70px"
-                  />
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
                 </div>
               </div>
-              <p
-                class="
-                  fs_30px
-                  m-0
-                  primary_color
-                  text-center text-lg-left text-xl-left
-                "
-              >
-                solution at a fraction of
-              </p>
-              <p
-                class="
-                  fs_30px
-                  m-0
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                the cost
-              </p>
-            </div>
-            <div>
-              <p
-                class="
-                  fs_18px
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                The price starts from only DKK 595 / month. depending on your
-                turnover and company form.
-              </p>
-              <p
-                class="
-                  py-3
-                  fs_18px
-                  arial-regular
-                  text-black text-center text-lg-left text-xl-left
-                "
-              >
-                We offer a 30 day
-                <span class="font-weight-bold"
-                  >trial period with free bookings</span
-                >
-                so you can try us out without obligation. If you like Meneto, we
-                will move you completely free of charge from your current
-                solution.
-              </p>
-            </div>
-            <div class="py-2">
-              <button class="common-active-btn px-4 py-3">
-                Book a no-obligation interview
-              </button>
-            </div>
-            <div class="d-flex py-2 px-0 align-items-center">
-              <div class="px-1">
-                <p class="arial-bold m-0 fs_14px opacity-point5">
-                  Get a no-obligation quote and the first month for free
-                </p>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- right side -->
-          <div
-            data-aos="fade-right"
-            class="
-              col-lg-5 col-xl-5 col-12
-              section5-right-image
-              section6-imgcontainer
-              px-0
-            "
-          >
-            <img src="./assets/img/Group39220.png" alt="" width="100%" />
           </div>
         </div>
       </div>
       <!-- section7 -->
-      <div class="landing-container mx-auto py-5">
-        <div class="py-4">
-          <h5 class="fs_30px text-center" data-aos="fade-down">
-            Why 15,000+ companies trust Tellero
-          </h5>
-        </div>
+      <div class="landing-container mx-auto">
         <div
           class="
-            py-3
             d-flex
             justify-content-center
             flex-column flex-lg-row flex-xl-row
             justify-content-lg-between justify-content-xl-between
-            companies-trust-trello
-            py-5
+            team-view-container
+            accounting-program
+            landing2-commonImg-container
           "
         >
-          <!-- left-side -->
-          <div class="col-lg-5 col-xl-5 col-12" data-aos="fade-left">
-            <img src="./assets/img/Group38750@3x.png" alt="" width="100%" />
-          </div>
-          <!-- right side -->
           <div
-            data-aos="fade-right"
             class="
-              col-lg-6 col-xl-6 col-12
+              position-absolute
+              left-0
+              right-0
               d-flex
-              flex-column
-              right-side-container
+              mb-5
               justify-content-center
-              py-4 py-lg-0 py-xl-0
+              ellipse-margin-s7
             "
           >
-            <div>
-              <div
-                class="
-                  d-flex
-                  justify-content-center
-                  justify-content-lg-start
-                  justify-content-xl-start
-                "
-              >
-                <button class="common-active-btn px-3 py-2">
-                  Company Logo
-                </button>
-              </div>
+            <img src="./assets/img/Ellipse 861@3x.png" height="300px" />
+          </div>
+          <!-- left-side -->
+          <div class="col-lg-5 col-xl-5 col-12 pt-0 pt-lg-5 pt-xl-5">
+            <div class="overflow-hidden" data-aos="fade-left">
               <div class="py-4">
                 <p
                   class="
-                    text-black
-                    fs_20px
+                    fs_30px
                     m-0
-                    text-center text-lg-left text-xl-left
+                    text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
                   "
                 >
-                  Tellero works seamlessly with various accounting systems and
-                  saves you precious time on repetitive tasks. You can now
-                  import all expenses and associated data with a single click.
+                  Upload your vouchers and we will post them for you
                 </p>
               </div>
-              <div class="py-2">
+              <div>
                 <p
                   class="
                     fs_18px
-                    text-center text-lg-left text-xl-left text-black
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
                   "
                 >
-                  Tellero works seamlessly with
+                  Your team of accountants regularly posts for you, and the
+                  price is the same - whether you send us 10 or 100 vouchers a
+                  month.
+                </p>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Forward your attachments to your unique Meneto email, take a
+                  picture of the attachment via our free mobile app, or "drag"
+                  the attachment directly into our web app. Your vouchers will
+                  be posted within 72 hours.
                 </p>
               </div>
-              <div
-                class="
-                  pt-5
-                  d-flex
-                  justify-content-center
-                  justify-content-lg-start
-                  justify-content-xl-start
-                "
-              >
-                <div class="px-2">
-                  <img
-                    src="./assets/img/inActiveDot.png"
-                    alt=""
-                    height="10px"
-                    width="9px"
-                  />
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
+              </div>
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
                 </div>
-                <div class="px-2">
-                  <img
-                    src="./assets/img/activeDot.png"
-                    alt=""
-                    height="10px"
-                    width="9px"
-                  />
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
                 </div>
-                <div class="px-2">
-                  <img
-                    src="./assets/img/activeDot.png"
-                    alt=""
-                    height="10px"
-                    width="9px"
-                  />
+              </div>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
                 </div>
-                <div class="px-2">
-                  <img
-                    src="./assets/img/activeDot.png"
-                    alt=""
-                    height="10px"
-                    width="9px"
-                  />
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- section8 -->
-      <div class="landing-container mx-auto py-5 section8-landing-page">
-        <div class="arrow-section8 w-22per">
-          <img src="./assets/img/img2.png" width="100%" />
-        </div>
-        <div class="py-5 d-flex justify-content-center">
-          <div
-            class="
-              col-12 col-lg-10 col-xl-10
-              d-flex
-              flex-wrap
-              justify-content-around
-              section8-savings-container
-            "
-            data-aos="fade-down"
-          >
-            <!-- 1st box  -->
-            <div class="col-10 col-lg-4 col-xl-4 px-3">
-              <div class="d-flex justify-content-center img-container h-50">
-                <img src="./assets/img/Group39159.png" alt="" width="" />
-              </div>
-              <div class="content-container">
-                <h4 class="fs_30px primary_color text-center">15,246</h4>
-                <p class="text-center m-0 text-black fs_18px">
-                  posted documents per. month
-                </p>
-                <p class="text-center py-1 fs_15px description">
-                  Your vouchers will be posted within 72 hours.
-                </p>
-              </div>
-            </div>
-            <!-- 2nd box  -->
-            <div class="col-10 col-lg-4 col-xl-4 px-3">
-              <div class="d-flex justify-content-center img-container h-50">
-                <img src="./assets/img/Group39159-2.png" width="" alt="" />
-              </div>
-              <div class="content-container">
-                <h4 class="fs_30px primary_color text-center">5.300 kr</h4>
-                <p class="text-center text-black m-0 fs_18px">
-                  Average Annual Savings
-                </p>
-                <p class="text-center py-1 fs_15px description">
-                  Compared To Traditional Accounting Solutions.
-                </p>
-              </div>
-            </div>
-            <!-- 3rd box  -->
-            <div class="col-10 col-lg-4 col-xl-4 px-3">
-              <div class="d-flex justify-content-center img-container h-50">
-                <img src="./assets/img/Group39159-3.png" width="" alt="" />
-              </div>
-              <div class="content-container">
-                <h4 class="fs_30px primary_color text-center">800+</h4>
-                <p class="text-center text-black m-0 fs_18px">
-                  Happy Tellero Customers
-                </p>
-                <p class="text-center py-1 fs_15px description">
-                  Who Have More Time To Grow Their Business Or Something
-                  Completely Third.
-                </p>
-              </div>
+          <!-- right side -->
+          <div class="col-lg-6 col-xl-6 col-12 px-0">
+            <div>
+              <img
+                src="./assets/img/Group39073@3x.png"
+                alt=""
+                width="100%"
+                class="common-landing2-sections-img2"
+              />
             </div>
           </div>
         </div>
       </div>
-      <!-- section9 -->
-      <div class="landing-container mx-auto py-5 section9-landing-page">
-        <div class="d-flex justify-content-center" >
-          <div class="col-12 col-lg-8 col-xl-8" data-aos="fade-down">
-            <h5
-              class="text-center font-weight-bold fs_35px title1 arial-regular"
-            >
-              Do as 800+ other freelancers
-            </h5>
-            <p class="py-4 fs_20px text-center">
-              Get rid of accounting hassle today and save a lot of time. Time
-              you can instead spend on growing your business, nurturing your
-              family or something completely third.
-            </p>
+      <!-- section 8 -->
+      <div class="landing-container mx-auto">
+        <div
+          class="
+            d-flex
+            justify-content-center
+            flex-column flex-lg-row flex-xl-row
+            justify-content-lg-between justify-content-xl-between
+            team-view-container
+          "
+        >
+          <!-- left-side -->
+          <div class="col-lg-6 col-xl-6 col-12" data-aos="fade-left">
+            <div class="d-flex justify-content-end">
+              <img src="./assets/img/Mask Group 33.png" alt="" width="100%" />
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="pb-5" data-aos="fade-top">
-        <div class="my-4">
-          <!--Carousel Wrapper-->
-          <div
-            id="multi-item-example"
-            class="carousel slide carousel-multi-item"
-            data-ride="carousel"
-          >
-            <!--Indicators-->
-            <ol class="carousel-indicators">
-              <li
-                data-target="#multi-item-example"
-                data-slide-to="0"
-                class="active"
-              ></li>
-              <li data-target="#multi-item-example" data-slide-to="1"></li>
-              <li data-target="#multi-item-example" data-slide-to="2"></li>
-            </ol>
-            <!--/.Indicators-->
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-              <div class="carousal-left-sideOpacity"></div>
-              <!--First slide-->
-              <div class="carousel-item active">
-                <div class="d-flex">
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
+          <!-- right-side -->
+          <div class="col-lg-5 col-xl-5 col-12">
+            <div class="overflow-hidden" data-aos="fade-left">
+              <div class="py-4">
+                <p
+                  class="
+                    fs_30px
+                    m-0
+                    text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
+                  "
+                >
+                  Connect your bank with your accounts
+                </p>
+              </div>
+              <div>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  You can easily connect Meneto's accounting program with your
+                  bank. Then we automatically retrieve all your postings in real
+                  time and reconcile them with the posting.
+                </p>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Our bank connection supports most Danish banks. All you have
+                  to do is select your bank and choose which account to link to.
+                </p>
+              </div>
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
+              </div>
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
                 </div>
               </div>
-              <!--Second slide-->
-              <div class="carousel-item">
-                <div class="d-flex">
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
                 </div>
               </div>
-              <!--/.Second slide-->
-              <!--Third slide-->
-              <div class="carousel-item">
-                <div class="d-flex">
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                  <div class="col-6 col-lg-3 box-shadow">
-                    <img
-                      src="./assets/img/Group-39075@3x.png"
-                      width="100%"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                style="
-                  position: absolute;
-                  left: 0;
-                  opacity: 0.3;
-                  background-color: #fff;
-                "
-              ></div>
-              <div class="carousal-right-sideOpacity"></div>
             </div>
           </div>
         </div>
       </div>
       <!-- section10 -->
-      <div class="section10-icons pt-5 pb-3">
-        <div class="landing-container mx-auto pt-5 section9-landing-page" data-aos="fade-right">
-          <div >
-            <h5
-              class="
-                text-center
-                font-weight-bold
-                m-0
-                fs_35px
-                title1
-                arial-regular
-              "
-            >
-              Our Clients
-            </h5>
-            <p class="py-4 text-center fs_20px">
-              We are Working with these Clients from last 18 years
-            </p>
+      <div class="landing-container mx-auto">
+        <div
+          class="
+            d-flex
+            justify-content-center
+            flex-column flex-lg-row flex-xl-row
+            justify-content-lg-between justify-content-xl-between
+            team-view-container
+            accounting-program
+            landing2-commonImg-container
+          "
+        >
+          <!-- left-side -->
+          <div class="col-lg-5 col-xl-5 col-12">
+            <div class="overflow-hidden" data-aos="fade-left">
+              <div class="py-4">
+                <p
+                  class="
+                    fs_30px
+                    m-0
+                    text-black text-center text-lg-left text-xl-left
+                    arial-bold
+                    font-weight-bold
+                  "
+                >
+                  Upload your vouchers and we will post them for you
+                </p>
+              </div>
+              <div>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Your team of accountants regularly posts for you, and the
+                  price is the same - whether you send us 10 or 100 vouchers a
+                  month.
+                </p>
+                <p
+                  class="
+                    fs_18px
+                    arial-regular
+                    text-black text-center text-lg-left text-xl-left
+                  "
+                >
+                  Forward your attachments to your unique Meneto email, take a
+                  picture of the attachment via our free mobile app, or "drag"
+                  the attachment directly into our web app. Your vouchers will
+                  be posted within 72 hours.
+                </p>
+              </div>
+              <div class="py-3 px-4">
+                <hr class="bg-black py-1" />
+              </div>
+              <div class="d-flex py-3 px-2">
+                <div>
+                  <img src="./assets/img/boxes.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Keep an eye on your VAT
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    Be at the forefront of upcoming VAT periods. We show you
+                    regularly how much VAT you have to pay.
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex py-1 px-2">
+                <div>
+                  <img src="./assets/img/listImg.png" height="30px" />
+                </div>
+                <div class="px-3">
+                  <p class="arial-bold text-black m-0 fs_18px">
+                    Report with a few clicks
+                  </p>
+                  <p class="arial-regular text-black py-1 fs_18px">
+                    You get everything you need for your VAT return from us - so
+                    you can report VAT in minutes.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="d-flex justify-content-center py-5">
-            <img src="./assets/img/icons.png" width="100%" alt="" />
+          <!-- right side -->
+          <div class="col-lg-6 col-xl-6 col-12 px-0">
+            <div>
+              <img
+                src="./assets/img/Group 38693@3x.png"
+                alt=""
+                width="100%"
+                class="common-landing2-sections-img"
+              />
+              <img
+                src="./assets/img/Ellipse 859@3x.png"
+                alt=""
+                height="100%"
+                width="100%"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section11 -->
+      <div class="landing-container mx-auto">
+        <div class="d-flex justify-content-center section11-landing2">
+          <div class="col-11 col-lg-9 col-xl-9">
+            <div>
+              <img src="./assets/img/Group 38740@3x.png" alt="" width="100%" />
+            </div>
+            <div class="py-4">
+              <h5
+                class="
+                  clr-dark-blue
+                  font-weight-bold
+                  text-center
+                  arial-bold
+                  fs_50px
+                "
+              >
+                Start your FREE trial month today
+              </h5>
+            </div>
+            <div class="py-2">
+              <p class="clr-dark-blue text-center arial-regular fs_20px px-3">
+                During your trial month, you have access to our accounting
+                program, and when you upload your vouchers, we will have them
+                posted for you. A perfect non-binding way to try us out:
+              </p>
+            </div>
+            <div class="py-3 d-flex justify-content-center">
+              <button class="common-active-btn px-4 py-3 common-br-radius10">
+                Try Tellero - FREE
+              </button>
+            </div>
+            <div>
+              <p
+                class="
+                  clr-dark-blue
+                  text-center
+                  arial-regular
+                  fs_15px
+                  pt-3
+                  pb-5
+                "
+              >
+                Start a free, no-obligation trial month
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -978,9 +979,9 @@
       <!-- Common Contact section starts -->
       <div class="w-full common-contact-section">
         <div
-        data-aos="fade-left"
           class="
-            col-md-8
+            col-12
+            col-lg-10
             mx-auto mx-auto
             d-flex
             flex-column
@@ -991,7 +992,9 @@
           <h1 class="montserrat-bold text-center text-white">
             Get better Knowlegde
           </h1>
-          <p class="text-white text-center montserrat-light mt-4">
+          <p
+            class="text-white text-center montserrat-light mt-4"
+          >
             Interested in hearing more about Tellero?
           </p>
           <div class="input-field mx-auto input-btn-container">
@@ -1155,10 +1158,17 @@
           $("#language-show").toggleClass("d-none");
         });
       });
+      function openNav() {
+        document.getElementById("mySidenav").classList.add("active");
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").classList.remove("active");
+      }
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({duration: 500});
+      AOS.init({ duration: 500, once: true });
     </script>
   </body>
 </html>
