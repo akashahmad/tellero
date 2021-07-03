@@ -2462,27 +2462,53 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* for smaller desktops */
 
+@media (max-width: 1279px) {
+  .landing-content{
+    overflow: hidden;
+  }
+}
 @media (min-width: 1280px) and (max-width: 1364px) {
-  body {
+  .body-zoom-container {
     zoom: 65%;
+  }
+  .landing-content{
+    overflow: hidden;
   }
 }
 
 @media (min-width: 1365px) and (max-width: 1439px) {
-  body {
+  .body-zoom-container {
     zoom: 75%;
+  }
+  .landing-pages-zoom-container{
+    zoom: 95%;  
+  }
+  .landing-content{
+    overflow: hidden;
   }
 }
 
 @media (min-width: 1440px) and (max-width: 1919px) {
-  body {
+  .body-zoom-container {
     zoom: 85%;
+  }
+  .landing-pages-zoom-container{
+    zoom: 92%;  
+  }
+  .landing-content{
+    overflow: hidden;
   }
 }
 
 @media (min-width: 1920px) {
-  body {
+  .body-zoom-container {
     zoom: 100%;
+  }
+  .landing-pages-zoom-container{
+    zoom: 92%;  
+  }
+  .landing-content{
+    overflow: hidden;
   }
 }
 
@@ -4584,6 +4610,9 @@ p {
 .landing-content .fs_50px {
   font-size: 50px;
 }
+.landing-content .fs_60px {
+  font-size: 50px;
+}
 .landing-content .fs_55px {
   font-size: 55px;
 }
@@ -4758,13 +4787,14 @@ p {
   color: #0b62d3;
 }
 .landing-content {
-  zoom: 100% !important;
+  /* zoom: 100% !important; */
   background-color: white;
+  overflow: hidden!important;
 }
 
 @media (min-width: 1280px) {
   .landing-container {
-    max-width: 1280px;
+    max-width: 1070px;
   }
 }
 
@@ -4945,7 +4975,7 @@ p {
   }
 }
 .landing-container .team-view-container {
-  padding: 15% 0px;
+  padding: 130px 0px;
 }
 .landing-container .z-index-1 {
   z-index: 1;
@@ -5092,7 +5122,7 @@ p {
   width: 710px;
 }
 .section3-landing2 .circle-s3-right{
-  margin: -82px 0px 0px 0px;
+  margin: -92px 0px 0px 0px;
 }
 .landing-content .ellipse-margin-s7{
   margin-top: -60px;
@@ -5101,7 +5131,6 @@ p {
   background:url("../img/Group\ 38410@3x.png");
   background-size: contain;
   background-repeat: no-repeat;
-  margin-bottom: -50px;
 }
 @media (max-width: 991px) and (min-width: 320px) {
   .landing-content .section11-landing2 h5{
