@@ -997,7 +997,17 @@
       </div>
     </footer>
   </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+               AOS.init({
+            duration:1500
+        });
+        let scrollRef = 0;
+
+window.addEventListener('scroll', function() {
+  // increase value up to 10, then refresh AOS
+  scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+});
     $(document).ready(function () {
       $(".hamburger-button").on("click", function () {
         $(".hamburger-icon").toggleClass("open");
@@ -1017,10 +1027,7 @@
       document.getElementById("mySidenav").classList.remove("active");
     }
   </script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 500, once: true });
-  </script>
+
 </body>
 
 </html>
