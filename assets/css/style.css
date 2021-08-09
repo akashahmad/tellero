@@ -2471,6 +2471,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .landing-pages-zoom-container {
     zoom: 95%;
   }
+  .landing-pages-zoom-container2 {
+    zoom: 90%;
+  }
   .landing-content {
     overflow: hidden;
   }
@@ -2483,6 +2486,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .landing-pages-zoom-container {
     zoom: 92%;
   }
+  .landing-pages-zoom-container2 {
+    zoom: 100%;
+  }
   .landing-content {
     overflow: hidden;
   }
@@ -2494,6 +2500,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
   .landing-pages-zoom-container {
     zoom: 92%;
+  }
+  .landing-pages-zoom-container2 {
+    zoom: 90%;
   }
   .landing-content {
     overflow: hidden;
@@ -4733,6 +4742,12 @@ p {
 }
 
 @media (min-width: 1280px) {
+  .landing-container2 {
+    max-width: 1370px;
+  }
+}
+
+@media (min-width: 1280px) {
   .landing-container {
     max-width: 1070px;
   }
@@ -4747,9 +4762,6 @@ p {
     top: 0; */
 }
 
-.desktop-logo {
-  width: 180px;
-}
 .desktop-nav .nav-list li{
   margin-right: 30px;
 }
@@ -4876,7 +4888,7 @@ p {
   margin: 0;
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container .right-img-bookkeeping img {
-  width: 100%;
+  width: 92%;
 }
 
 @media (max-width: 1024px) and (min-width: 320px) {
@@ -5300,3 +5312,30 @@ footer .footer-text {
 }
 
 /* mobile menu container starts ends here*/
+
+.header_images_container:hover .withOutHover_img {
+  display: none;
+}
+.header_images_container .hover_img{
+  display: none;
+}
+.header_images_container:hover .hover_img{
+  display: block;
+}
+.desktop-logo {
+  width: 160px;
+  height: 50px;
+} 
+/* .header_images_container:hover .desktop-logo {
+  width: 0px;
+  height: 0px;
+} */
+/* .desktop-logo2 {
+  width: 0px;
+  height: 0px;
+  transition: width , height  1s;
+}
+.header_images_container:hover .desktop-logo2 {
+  width: 160px;
+  height: 50px;
+} */
