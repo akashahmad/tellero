@@ -4463,8 +4463,27 @@ p {
   .not-table-overflow {
     overflow: unset !important;
   }
+  .dektop-nav-w{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .dektop-landing-page-w{
+    padding-left: 5%;
+   
+  }
+  .dektop-landing-right-col-w{
+    max-width: 647px;
+  }
+  .landing-content .bg-bookkeeping{
+    background-size: cover!important;
+  }
 }
-
+@media (max-width:768px) {
+  .landing-content .bg-bookkeeping{
+    background-size: cover!important;
+  }
+  
+}
 .modal-backdrop {
   height: 100% !important;
   width: 100% !important;
@@ -4688,7 +4707,7 @@ p {
 .landing-content .bg-bookkeeping {
   background: url("../img/hero.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container h3 {
   font-size: 35px;
@@ -4884,7 +4903,7 @@ p {
 .landing-content .section1-bookkeeping .bookkeeping-content-container .right-img-bookkeeping {
   position: absolute;
   right: 0;
-  height: 630px;
+  /* height: 630px; */
   margin: 0;
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container .right-img-bookkeeping img {
@@ -4897,7 +4916,7 @@ p {
   }
   .landing-content .section1-bookkeeping .bookkeeping-content-container .right-img-bookkeeping img {
     width: 100%;
-    height: max-content;
+    /* height: max-content; */
   }
 }
 /* section2  */
