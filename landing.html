@@ -945,6 +945,7 @@
             </div>
           </div>
         </div>
+        
         <div class="pb-5">
           <div class="my-4 overflow-hidden">
             <!--Carousel Wrapper-->
@@ -952,6 +953,7 @@
               id="multi-item-example"
               class="carousel slide carousel-multi-item"
               data-ride="carousel"
+             
             >
               <!--Indicators-->
               <ol class="carousel-indicators">
@@ -970,7 +972,7 @@
                 <!--First slide-->
                 <div class="carousel-item active carousal_section_container">
                   <div class="d-flex py-5">
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1039,7 +1041,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1108,7 +1110,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1177,7 +1179,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1251,7 +1253,7 @@
                 <!--Second slide-->
                 <div class="carousel-item carousal_section_container">
                   <div class="d-flex py-5">
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1320,7 +1322,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1389,7 +1391,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1458,7 +1460,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1533,7 +1535,7 @@
                 <!--Third slide-->
                 <div class="carousel-item carousal_section_container">
                   <div class="d-flex py-5">
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1602,7 +1604,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1671,7 +1673,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1740,7 +1742,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="px-3 col-6 col-lg-3">
+                    <div class="px-3 col-12 col-md-6 col-lg-3">
                       <div
                         class="
                           w-full
@@ -1823,6 +1825,9 @@
               </div>
             </div>
           </div>
+        
+        
+       
         </div>
       </div>
       <!-- section10 -->
@@ -2047,6 +2052,11 @@
           console.log("called");
           $("#language-show").toggleClass("d-none");
         });
+        $("#multi-item-example").carousel({
+          touch: true,
+          interval:2000
+          
+        })
       });
       function openNav() {
         document.getElementById("mySidenav").classList.add("active");
