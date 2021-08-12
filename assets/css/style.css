@@ -4735,6 +4735,7 @@ p {
   }
   .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container button {
     font-size: 12px !important;
+     padding: 1rem!important;
   }
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container button {
@@ -4744,7 +4745,7 @@ p {
   color: #fff;
   background-color: #021668;
   font-size: 25px;
-  padding: 30px 30px !important;
+  padding: 30px 30px
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container button:hover {
   background-color: #06175a;
