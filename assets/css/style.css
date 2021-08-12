@@ -4471,7 +4471,7 @@ p {
     padding-left: 4%;
   }
   .dektop-landing-right-col-w {
-    max-width: 647px;
+    /* max-width: 647px; */
   }
   .landing-content .bg-bookkeeping {
     background-size: cover !important;
@@ -4634,14 +4634,14 @@ p {
   width: 15%;
   border-top-right-radius: 5px;
   z-index: 1;
-  background-image: linear-gradient(to right, #fff,rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   border-bottom-right-radius: 5px;
 }
 .carousal-right-sideOpacity {
   position: absolute;
   right: 0;
   opacity: 0.5;
-  background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to left, #fff, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   padding: 10px;
   height: 100%;
   width: 15%;
@@ -4708,7 +4708,7 @@ p {
   background-size: contain;
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container h3 {
-  font-size: 35px;
+  font-size: 50px;
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container .below-title p {
   font-size: 22px;
@@ -4724,7 +4724,7 @@ p {
   border-bottom-left-radius: 40px;
   border: none;
   color: #021668;
-  font-size: 16px;
+  font-size: 22px;
 }
 @media (max-width: 991px) {
   .landing-content {
@@ -4743,7 +4743,8 @@ p {
   border: none;
   color: #fff;
   background-color: #021668;
-  font-size: 18px;
+  font-size: 25px;
+  padding: 30px 30px !important;
 }
 .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container button:hover {
   background-color: #06175a;
@@ -5367,7 +5368,7 @@ footer .footer-text {
 }
 .carousal_section_container .bottom_box_bar {
   width: 40%;
-  background-color: #0e77ff  ;
+  background-color: #0e77ff;
   padding: 4px 0px;
   transition: width 0.5s;
 }
@@ -5382,4 +5383,19 @@ footer .footer-text {
 .carousal_section_container .single_card_container:hover .bottom_box_bar {
   width: 100% !important;
   background-color: #061d66 !important;
+}
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .landing-content .section1-bookkeeping .bookkeeping-content-container h3{
+    font-size: 35px;
+  }
+  .landing-content .section1-bookkeeping .bookkeeping-content-container .below-title p{
+    font-size: 22px;
+  }
+  .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container button{
+    padding: 1rem!important;
+    font-size: 18px;
+  }
+  .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container input{
+    font-size: 16px;
+  }
 }
