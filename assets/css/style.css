@@ -4457,6 +4457,9 @@ p {
 }
 
 @media (min-width: 1366px) {
+  .bg-landing2{
+    background-size: cover!important;
+  }
   .big-column {
     width: 78%;
   }
@@ -4481,6 +4484,7 @@ p {
   .landing-content .bg-bookkeeping {
     background-size: cover !important;
   }
+ 
 }
 .modal-backdrop {
   height: 100% !important;
@@ -4518,6 +4522,9 @@ p {
 }
 
 @media (max-width: 991px) {
+  .bg-landing2{
+    background-size: cover!important;
+  }
   .popup-5 {
     width: 365px;
   }
@@ -5041,7 +5048,7 @@ p {
 .bg-landing2 {
   background: url("../img/Tellero-how-1.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 1000px;
 }
 @media (max-width: 991px) and (min-width: 320px) {
@@ -5420,4 +5427,5 @@ footer .footer-text {
   .landing-content .bg-bookkeeping {
     background-size: cover !important;
   }
+ 
 }
