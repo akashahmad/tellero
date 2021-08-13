@@ -4782,7 +4782,7 @@ p {
 }
 
 .desktop-nav .nav-list li {
-  margin-right: 30px;
+  margin-right: 60px;
 }
 .desktop-nav .nav-list li img {
   margin-top: 5px;
@@ -5398,5 +5398,26 @@ footer .footer-text {
   }
   .landing-content .section1-bookkeeping .bookkeeping-content-container .input-btn-container input{
     font-size: 16px;
+  }
+}
+@media (min-width: 1600px) {
+  .big-column {
+    width: 78%;
+  }
+  .not-table-overflow {
+    overflow: unset !important;
+  }
+  .dektop-nav-w {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .dektop-landing-page-w {
+    padding-left: 8%;
+  }
+  .dektop-landing-right-col-w {
+    /* max-width: 647px; */
+  }
+  .landing-content .bg-bookkeeping {
+    background-size: cover !important;
   }
 }
